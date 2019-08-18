@@ -1,0 +1,20 @@
+{
+  "name": "react-foundation",
+  "version": "1.0.0",
+  "description": "Generate enterprise scale React templates on the fly.",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dzervoudakes/react-foundation.git"
+  },
+  "author": "dzervoudakes",
+  "license": "MIT",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^4.0.1"
+  }
+}
