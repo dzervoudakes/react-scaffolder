@@ -1,5 +1,5 @@
 {
-  "name": "react-foundation",
+  "name": "react-ui-foundation",
   "version": "1.0.0",
   "description": "Generate enterprise scale React templates on the fly.",
   "repository": {
@@ -12,12 +12,12 @@
     "generators"
   ],
   "keywords": [
-		"yeoman-generator",
-		"yeoman",
-		"generator",
-		"react",
-		"foundation",
-		"scaffolding"
+    "yeoman-generator",
+    "yeoman",
+    "generator",
+    "react",
+    "foundation",
+    "scaffolding"
   ],
   "dependencies": {
     "yeoman-generator": "^4.0.1"
