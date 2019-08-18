@@ -1,0 +1,4 @@
+coverage/**/*.js
+dist/**/*.js
+docs/**/*.js
+node_modules/**/*.js
