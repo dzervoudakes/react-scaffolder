@@ -12,7 +12,12 @@
     "generators"
   ],
   "keywords": [
-    "yeoman-generator"
+		"yeoman-generator",
+		"yeoman",
+		"generator",
+		"react",
+		"foundation",
+		"scaffolding"
   ],
   "dependencies": {
     "yeoman-generator": "^4.0.1"
