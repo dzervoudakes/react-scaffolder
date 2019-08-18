@@ -1,2 +1,4 @@
-# react-foundation
-Yeoman Generator for new React templates.
+# React Foundation
+> Yeoman Generator for new React templates.
+
+_More info coming soon..._
