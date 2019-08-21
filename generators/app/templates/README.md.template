@@ -50,6 +50,11 @@ npm run test:coverage
 npm run test:verbose
 ```
 
+### Run Unit Tests and Watch for Changes
+```
+npm run test:watch
+```
+
 ### Build for Production
 ```
 npm run build
