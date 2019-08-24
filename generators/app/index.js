@@ -41,7 +41,7 @@ module.exports = class extends Generator {
     );
 
     this._writeFile(
-      this.templatePath('templates/common/READEME.md.template'),
+      this.templatePath('templates/common/README.md.template'),
       this.destinationPath(applicationName, 'README.md'),
       { applicationName }
     );
