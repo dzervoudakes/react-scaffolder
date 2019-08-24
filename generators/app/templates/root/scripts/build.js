@@ -12,25 +12,25 @@ spinner.start();
 process.env.BABEL_ENV = 'production';
 
 webpack(webpackConfig, (err, stats) => {
-	spinner.stop();
-	if (err) {
-		throw err;
-	}
+  spinner.stop();
+  if (err) {
+    throw err;
+  }
 
-	process.stdout.write(
-		`${stats.toString({
-			colors: true,
-			modules: false,
-			children: false,
-			chunks: false,
-			chunkModules: false
-		})}\n\n`
-	);
+  process.stdout.write(
+    `${stats.toString({
+      colors: true,
+      modules: false,
+      children: false,
+      chunks: false,
+      chunkModules: false
+    })}\n\n`
+  );
 
-	if (stats.hasErrors()) {
-		console.log(chalk.red('Build failed with errors.\n'));
-		process.exit(1);
-	}
+  if (stats.hasErrors()) {
+    console.log(chalk.red('Build failed with errors.\n'));
+    process.exit(1);
+  }
 
-	console.log(chalk.cyan('Built files from dist are ready to be deployed.\n'));
+  console.log(chalk.cyan('Built files from dist are ready to be deployed.\n'));
 });

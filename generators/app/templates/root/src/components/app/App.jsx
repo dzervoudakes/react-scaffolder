@@ -6,16 +6,16 @@ import Header from './header';
 import Footer from './footer';
 
 const App = () => (
-	<>
-		<Header />
-		<Switch>
-			{routes.map(route => (
-				<Route exact key={route.path} {...route} />
-			))}
-			<Route component={Missing} />
-		</Switch>
-		<Footer />
-	</>
+  <>
+    <Header />
+    <Switch>
+      {routes.map(route => (
+        <Route exact key={route.path} {...route} />
+      ))}
+      <Route component={Missing} />
+    </Switch>
+    <Footer />
+  </>
 );
 
 export default App;

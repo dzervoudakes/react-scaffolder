@@ -5,7 +5,7 @@ module.exports = {
 	rules: {
 		'declaration-block-no-duplicate-properties': true,
 		'declaration-block-no-redundant-longhand-properties': true,
-		indentation: 'tab',
+		indentation: 2,
 		'order/properties-alphabetical-order': true,
 		'property-no-vendor-prefix': true,
 		'selector-list-comma-newline-after': 'always-multi-line',

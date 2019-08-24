@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import './ContentContainer.scss';
 
 const propTypes = {
-	children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired
 };
 
 const ContentContainer = ({ children }) => (
-	<div className="content-container">{children}</div>
+  <div className="content-container">{children}</div>
 );
 
 ContentContainer.propTypes = propTypes;

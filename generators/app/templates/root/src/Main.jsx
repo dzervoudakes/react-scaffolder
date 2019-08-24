@@ -5,9 +5,9 @@ import App from './components/app';
 import './scss/style';
 
 const Main = () => (
-	<Router basename="/">
-		<App />
-	</Router>
+  <Router basename="/">
+    <App />
+  </Router>
 );
 
 ReactDOM.render(<Main />, document.getElementById('root'));

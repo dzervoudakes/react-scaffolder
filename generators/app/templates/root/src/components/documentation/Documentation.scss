@@ -1,33 +1,33 @@
 @import '~@src/scss/_constants';
 
 .readme-container {
-	margin-bottom: 3.6rem;
+  margin-bottom: 3.6rem;
 
-	h2 {
-		margin-top: 2rem;
-	}
+  h2 {
+    margin-top: 2rem;
+  }
 
-	blockquote {
-		background: $color-light-gray;
-		border-left: 0.125rem solid $color-green;
-		margin: 1rem 0;
-		padding: 1rem;
+  blockquote {
+    background: $color-light-gray;
+    border-left: 0.125rem solid $color-green;
+    margin: 1rem 0;
+    padding: 1rem;
 
-		p {
-			line-height: 1.25rem;
-			margin-bottom: 0;
-		}
-	}
+    p {
+      line-height: 1.25rem;
+      margin-bottom: 0;
+    }
+  }
 
-	pre {
-		border: 0.0625rem solid $color-gray;
-		border-radius: 0.25rem;
-		color: $color-purple;
-		margin-bottom: 1.5rem;
-		padding: 1rem;
-	}
+  pre {
+    border: 0.0625rem solid $color-gray;
+    border-radius: 0.25rem;
+    color: $color-purple;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+  }
 
-	code {
-		color: $color-purple;
-	}
+  code {
+    color: $color-purple;
+  }
 }

@@ -4,22 +4,22 @@ import { render } from '@testing-library/react';
 import Documentation from './Documentation';
 
 jest.mock('../../../README.md', () => {
-	const Readme = () => <div>Readme</div>;
-	return Readme;
+  const Readme = () => <div>Readme</div>;
+  return Readme;
 });
 
 describe('Documentation', () => {
-	const Component = () => (
-		<Router basename="/">
-			<Switch>
-				<Documentation />
-			</Switch>
-		</Router>
-	);
+  const Component = () => (
+    <Router basename="/">
+      <Switch>
+        <Documentation />
+      </Switch>
+    </Router>
+  );
 
-	it('renders the Readme', () => {
-		const { getByText } = render(<Component />);
+  it('renders the Readme', () => {
+    const { getByText } = render(<Component />);
 
-		expect(getByText('Readme')).toBeVisible();
-	});
+    expect(getByText('Readme')).toBeVisible();
+  });
 });

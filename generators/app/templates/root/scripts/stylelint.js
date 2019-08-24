@@ -6,7 +6,7 @@ const chalk = require('chalk');
 const ora = require('ora');
 
 process.on('unhandledRejection', err => {
-	throw err;
+  throw err;
 });
 
 const spinner = ora('Linting all styles...');
@@ -16,17 +16,17 @@ const fix = process.argv.indexOf('--fix') !== -1;
 const opts = { files: '**/*.scss', fix, formatter: 'string' };
 
 stylelint
-	.lint(opts)
-	.then(result => {
-		spinner.stop();
-		console.log(result.output);
+  .lint(opts)
+  .then(result => {
+    spinner.stop();
+    console.log(result.output);
 
-		if (!result.errored) {
-			console.log(chalk.green('Style linting complete: no warnings or errors found.\n'));
-		} else {
-			throw new Error('Stylelint errors found.\n');
-		}
-	})
-	.catch(error => {
-		console.error(error.stack);
-	});
+    if (!result.errored) {
+      console.log(chalk.green('Style linting complete: no warnings or errors found.\n'));
+    } else {
+      throw new Error('Stylelint errors found.\n');
+    }
+  })
+  .catch(error => {
+    console.error(error.stack);
+  });
