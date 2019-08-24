@@ -10,7 +10,7 @@ const {
 
 module.exports = {
   entry: {
-    app: [`${APP_DIR}/polyfills.js`, `${APP_DIR}/Main.jsx`]
+    app: [`${APP_DIR}/polyfills.js`, `${APP_DIR}/index.jsx`]
   },
   module: {
     rules: [

@@ -2,7 +2,7 @@ module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{js,jsx}',
     '!**/index.js',
-    '!<rootDir>/src/Main.jsx',
+    '!<rootDir>/src/index.jsx',
     '!<rootDir>/src/polyfills.js',
     '!<rootDir>/src/routes/**'
   ],
