@@ -1,7 +1,7 @@
 {
   "name": "generator-react-scaffolder",
   "version": "0.1.0",
-  "description": "Generate enterprise scale React templates on the fly.",
+  "description": "Scaffolding for new enterprise scale React applications on the fly.",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/dzervoudakes/react-scaffolder.git"
