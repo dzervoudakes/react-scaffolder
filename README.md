@@ -57,4 +57,6 @@ growing development force in mind. As such, this template is highly opinionated 
 > Don't like any of the default configuration or want to tweak it at all? I do not hide the build or configuration
 > in the way `react-scripts` does before ejection, so tinker away to your heart's content. ❤️
 
-_Happy React-ing!_
+## License
+
+[MIT License](https://opensource.org/licenses/mit-license.php)
