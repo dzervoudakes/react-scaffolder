@@ -42,7 +42,7 @@ yo react-scaffolder --typescript
 ## What's included?
 
 When looking at the initial build, you'll come to realize that I can be very nitpicky in terms of file/folder structure,
-unit testing frameworks, formatting and linting (including an unholy combination of `eslint:recommended`, `Airbnb`,
+unit testing libraries, formatting and linting (including an unholy combination of `eslint:recommended`, `Airbnb`,
 and `Prettier` configurations), etc. I have tailored this configuration to scale with the growing pains of a large and
 growing development force in mind. As such, this template is highly opinionated out of the box.
 
