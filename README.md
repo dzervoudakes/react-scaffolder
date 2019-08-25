@@ -44,7 +44,7 @@ yo react-scaffolder --typescript
 When looking at the initial build, you'll come to realize that I can be very nitpicky in terms of file/folder structure,
 unit testing libraries, formatting and linting (including an unholy combination of `eslint:recommended`, `Airbnb`,
 and `Prettier` configurations), etc. I have tailored this configuration to scale with the growing pains of a large and
-growing development force in mind. As such, this template is highly opinionated out of the box.
+expanding development force in mind. As such, this template is highly opinionated out of the box.
 
 *  Build instructions are provided within the `README.md` file generated with each new scaffold
 *  The base Webpack configuration is set up to handle basically any and all file import types you may think of
@@ -53,6 +53,8 @@ growing development force in mind. As such, this template is highly opinionated 
 *  Because I am a masochist, I have also wired up some stringent `stylelint` rules (forewarning, `px` are blacklisted for accessibility purposes, you will need to add `px` to the whitelist in `.stylelintrc.js` if you wish to use this unit)
 *  `lint-staged` is wired up along with `husky` to further maintain quality and consistent formatting on `pre-commit`
 *  `jsdoc` is also included along with the `docdash` theme
+
+**Note:** No `redux` or any other state management scaffolding is applied here out of the box.
 
 > Don't like any of the default configuration or want to tweak it at all? I do not hide the build or configuration
 > in the way `react-scripts` does before ejection, so tinker away to your heart's content. ❤️
