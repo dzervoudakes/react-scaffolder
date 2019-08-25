@@ -2,3 +2,4 @@ node_modules
 .editorconfig
 .gitignore
 package-lock.json
+CHANGELOG.md
