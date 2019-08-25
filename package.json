@@ -1,10 +1,10 @@
 {
-  "name": "generator-react-ui-foundation",
+  "name": "generator-react-scaffolder",
   "version": "1.0.0",
   "description": "Generate enterprise scale React templates on the fly.",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dzervoudakes/react-foundation.git"
+    "url": "git+ssh://git@github.com/dzervoudakes/react-scaffolder.git"
   },
   "author": "dzervoudakes",
   "license": "MIT",
