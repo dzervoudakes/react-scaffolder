@@ -1,6 +1,6 @@
 {
   "name": "generator-react-scaffolder",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Generate enterprise scale React templates on the fly.",
   "repository": {
     "type": "git",
@@ -16,8 +16,7 @@
     "yeoman",
     "generator",
     "react",
-    "foundation",
-    "scaffolding"
+    "scaffolder"
   ],
   "dependencies": {
     "yeoman-generator": "^4.0.1"

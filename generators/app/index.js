@@ -56,8 +56,8 @@ module.exports = class extends Generator {
     );
 
     this._writeFile(
-      this.templatePath('common/config.index.js.template'),
-      this.destinationPath(`${applicationName}/config/`, 'index.js'),
+      this.templatePath('common/index.html.template'),
+      this.destinationPath(`${applicationName}/public/`, 'index.html'),
       { applicationName }
     );
   }

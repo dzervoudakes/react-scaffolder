@@ -21,6 +21,5 @@ module.exports = {
     development: setProcessVars('development'),
     production: setProcessVars('production')
   },
-  isDevelopment: process.argv.indexOf('--env=dev') !== -1,
-  title: '<%= applicationName %>'
+  isDevelopment: process.argv.indexOf('--env=dev') !== -1
 };
