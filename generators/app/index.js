@@ -2,6 +2,8 @@ const Generator = require('yeoman-generator');
 
 module.exports = class extends Generator {
   constructor(args, opts) {
+    super(args, opts);
+
     this.option('typescript');
 
     this.isTypeScript = opts.typescript ? true : false;
@@ -29,25 +31,32 @@ module.exports = class extends Generator {
   writing() {
     const { applicationName } = this.data;
 
+    const path = this.isTypeScript ? 'ts' : 'es';
+
     this.fs.copy(
-      this.templatePath(`templates/${this.isTypeScript ? 'ts' : 'ts'}/**/*`),
-      this.destinationPath(`${applicationName}/**/*`)
+      this.templatePath(`${path}/**/*`),
+      this.destinationPath(applicationName)
+    );
+
+    this.fs.copy(
+      this.templatePath(`${path}/.*`),
+      this.destinationPath(applicationName)
     );
 
     this._writeFile(
-      this.templatePath(`templates/${this.isTypeScript ? 'ts' : 'es'}/package.json.template`),
+      this.templatePath(`package.json.${path}.template`),
       this.destinationPath(applicationName, 'package.json'),
       { applicationName }
     );
 
     this._writeFile(
-      this.templatePath('templates/common/README.md.template'),
+      this.templatePath('common/README.md.template'),
       this.destinationPath(applicationName, 'README.md'),
       { applicationName }
     );
 
     this._writeFile(
-      this.templatePath('templates/common/config.index.js.template'),
+      this.templatePath('common/config.index.js.template'),
       this.destinationPath(`${applicationName}/config/`, 'index.js'),
       { applicationName }
     );

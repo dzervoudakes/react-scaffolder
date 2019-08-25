@@ -1,5 +1,5 @@
 {
-  "name": "react-ui-foundation",
+  "name": "generator-react-ui-foundation",
   "version": "1.0.0",
   "description": "Generate enterprise scale React templates on the fly.",
   "repository": {

@@ -1,7 +1,7 @@
 {
-  "name": "<%= applicationName =>",
+  "name": "<%= applicationName %>",
   "version": "0.1.0",
-  "description": "<%= applicationName => application, built with React.",
+  "description": "<%= applicationName %> application, built with React.",
   "main": "index.js",
   "scripts": {
     "build": "node scripts/build.js --env=prod",
