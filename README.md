@@ -6,9 +6,9 @@
 
 ## Wait, what about Create React App? Should I use your generator instead?
 
-Create React App is an objectively _awesome_ tool and I have nothing but nice things to say about it. Over time, I
-decided that I want to learn more about the engine behind the application, and so I started crafting my own
-React+Webpack frameworks. The end result is what you see here in this generator.
+> Create React App is an objectively _awesome_ tool and I have nothing but nice things to say about it. Over time, I
+> decided that I want to learn more about the engine behind the application, and so I started crafting my own
+> React+Webpack frameworks. The end result is what you see here in this generator.
 
 I have since decided to share my work with the open source community. Love it or loathe it, I will not be happy or offended either way. 😄
 
@@ -48,9 +48,9 @@ growing development force in mind. As such, this template is highly opinionated 
 
 *  Build instructions are provided within the `README.md` file generated with each new scaffold
 *  The base Webpack configuration is set up to handle basically any and all file import types you may think of
-*  `jest` and `@testing-library/react` come with the generator by default for testing ... I no longer support `enzyme`, because reasons
+*  `jest` and `@testing-library/react` come with the generator by default for testing ... I no longer support `enzyme`, because #reasons
 *  Templates are wired up to use `.scss` for styling, though `.css` will work as well
-*  Because I am a masochist, I have wired up some stringent `stylelint` rules as well (forewarning, `px` are blacklisted for accessibility purposes, you will need to add `px` to the whitelist if you wish to use this unit)
+*  Because I am a masochist, I have also wired up some stringent `stylelint` rules (forewarning, `px` are blacklisted for accessibility purposes, you will need to add `px` to the whitelist in `.stylelintrc.js` if you wish to use this unit)
 *  `lint-staged` is wired up along with `husky` to further maintain quality and consistent formatting on `pre-commit`
 *  `jsdoc` is also included along with the `docdash` theme
 
