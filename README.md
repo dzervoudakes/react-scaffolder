@@ -39,6 +39,13 @@ this generator has an option for that as well:
 yo react-scaffolder --typescript
 ```
 
+The generator will also attempt to install dependencies for you by default via `npm`. If you or your organization do not
+use `npm`, you should skip this option as the generator has no support for `bower` or `yarn`.
+
+```
+yo react-scaffolder --skip-install
+```
+
 ## What's included?
 
 When looking at the initial build, you'll come to realize that I can be very nitpicky in terms of file/folder structure,

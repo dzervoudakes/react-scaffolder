@@ -1,8 +1,16 @@
 # React Scaffolder | Changelog
 
+## v0.1.1
+
+**Release Date:** 2019-08-25\
+**Contributor(s):** dzervoudakes
+
+*  Include auto install and `--skip-install` option
+*  Add author, repository and license fields to package templates
+
 ## v0.1.0
 
 **Release Date:** 2019-08-25\
 **Contributor(s):** dzervoudakes
 
-* Initial publish for field testing
+*  Initial publish for field testing

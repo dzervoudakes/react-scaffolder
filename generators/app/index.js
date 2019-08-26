@@ -1,12 +1,12 @@
 const Generator = require('yeoman-generator');
+const chalk = require('chalk');
 
 module.exports = class extends Generator {
   constructor(args, opts) {
     super(args, opts);
 
     this.option('typescript');
-
-    this.isTypeScript = opts.typescript ? true : false;
+    this.option('skip-install');
   }
 
   _writeFile(templatePath, destinationPath, params) {
@@ -31,7 +31,7 @@ module.exports = class extends Generator {
   writing() {
     const { applicationName } = this.data;
 
-    const path = this.isTypeScript ? 'ts' : 'es';
+    const path = this.options.typescript ? 'ts' : 'es';
 
     this.fs.copy(
       this.templatePath(`${path}/**/*`),
@@ -60,5 +60,15 @@ module.exports = class extends Generator {
       this.destinationPath(`${applicationName}/public/`, 'index.html'),
       { applicationName }
     );
+  }
+
+  install() {
+    if (!this.options['skip-install']) {
+      const { applicationName } = this.data;
+
+      console.log(chalk.cyan('\nInstalling dependencies in the application root...\n'));
+
+      this.npmInstall(null, {}, { cwd: applicationName })
+    }
   }
 };
