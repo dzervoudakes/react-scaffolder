@@ -1,11 +1,11 @@
 import * as React from 'react';
 import './ContentContainer.scss';
 
-interface PropTypes {
+interface Props {
   children: JSX.Element[];
 }
 
-const ContentContainer: React.FC = ({ children }: PropTypes) => (
+const ContentContainer: React.FC<Props> = ({ children }) => (
   <div className="content-container">{children}</div>
 );
 

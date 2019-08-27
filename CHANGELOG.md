@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v0.1.2
+
+**Release Date:** 2019-08-26\
+**Contributor(s):** dzervoudakes
+
+*  Remove unnecessary `react/prop-types` eslint rule from `ts` builds
+
 ## v0.1.1
 
 **Release Date:** 2019-08-25\
