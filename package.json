@@ -15,8 +15,13 @@
     "yeoman-generator",
     "yeoman",
     "generator",
+    "framework",
     "react",
-    "scaffolder"
+    "scaffold",
+    "scaffolder",
+    "template",
+    "typescript",
+    "frontend"
   ],
   "dependencies": {
     "chalk": "^2.4.2",

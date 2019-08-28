@@ -9,8 +9,8 @@ module.exports = {
     node: true
   },
   extends: [
-    'eslint:recommended',
     'airbnb',
+    'eslint:recommended',
     'plugin:jest/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
