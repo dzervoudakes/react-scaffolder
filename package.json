@@ -21,7 +21,8 @@
     "scaffolder",
     "template",
     "typescript",
-    "frontend"
+    "frontend",
+    "webpack"
   ],
   "dependencies": {
     "chalk": "^2.4.2",
