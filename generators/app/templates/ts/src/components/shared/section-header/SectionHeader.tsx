@@ -1,12 +1,12 @@
 import * as React from 'react';
 import './SectionHeader.scss';
 
-interface Props {
+interface SectionHeaderProps {
   title: string;
   description: string;
 }
 
-const SectionHeader: React.FC<Props> = ({ title, description }) => (
+const SectionHeader: React.FC<SectionHeaderProps> = ({ title, description }) => (
   <div className="section-header">
     <h2>{title}</h2>
     <p className="t-heavy">{description}</p>
