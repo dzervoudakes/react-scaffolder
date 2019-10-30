@@ -5,14 +5,12 @@ import '@testing-library/jest-dom/extend-expect';
 import App from './App';
 
 describe('App', () => {
-  const Component: React.FC = () => (
-    <Router basename="/">
-      <App />
-    </Router>
-  );
-
   it('renders the header page title and footer github link', () => {
-    const { getByText } = render(<Component />);
+    const { getByText } = render(
+      <Router basename="/">
+        <App />
+      </Router>
+    );
 
     expect(getByText('Oh, hello...')).toBeInTheDocument();
     expect(getByText('GitHub')).toBeInTheDocument();

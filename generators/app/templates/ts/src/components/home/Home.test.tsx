@@ -4,16 +4,14 @@ import { render } from '@testing-library/react';
 import Home from './Home';
 
 describe('Home', () => {
-  const Component: React.FC = () => (
-    <Router basename="/">
-      <Switch>
-        <Home />
-      </Switch>
-    </Router>
-  );
-
   it('renders the title and description', () => {
-    const { getByText } = render(<Component />);
+    const { getByText } = render(
+      <Router basename="/">
+        <Switch>
+          <Home />
+        </Switch>
+      </Router>
+    );
 
     expect(getByText('Welcome to your new React App!')).toBeInTheDocument();
     expect(getByText('Made with ❤️.')).toBeInTheDocument();

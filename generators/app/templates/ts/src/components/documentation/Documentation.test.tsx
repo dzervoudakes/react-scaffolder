@@ -9,16 +9,14 @@ jest.mock('../../../README.md', () => {
 });
 
 describe('Documentation', () => {
-  const Component: React.FC = () => (
-    <Router basename="/">
-      <Switch>
-        <Documentation />
-      </Switch>
-    </Router>
-  );
-
   it('renders the Readme', () => {
-    const { getByText } = render(<Component />);
+    const { getByText } = render(
+      <Router basename="/">
+        <Switch>
+          <Documentation />
+        </Switch>
+      </Router>
+    );
 
     expect(getByText('Readme')).toBeInTheDocument();
   });

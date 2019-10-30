@@ -4,16 +4,14 @@ import { render } from '@testing-library/react';
 import Missing from './Missing';
 
 describe('Missing', () => {
-  const Component = () => (
-    <Router basename="/">
-      <Switch>
-        <Missing />
-      </Switch>
-    </Router>
-  );
-
   it('renders the title and description', () => {
-    const { getByText } = render(<Component />);
+    const { getByText } = render(
+      <Router basename="/">
+        <Switch>
+          <Missing />
+        </Switch>
+      </Router>
+    );
 
     expect(getByText("That's a 404")).toBeInTheDocument();
     expect(getByText('You must be lost...')).toBeInTheDocument();
