@@ -20,8 +20,7 @@ module.exports = {
     new HtmlPlugin({
       favicon: `${PUBLIC_DIR}/favicon.ico`,
       filename: 'index.html',
-      template: `${PUBLIC_DIR}/index.html`,
-      title: config.title
+      template: `${PUBLIC_DIR}/index.html`
     }),
     new webpack.HotModuleReplacementPlugin(),
     new WatchMissingNodeModulesPlugin(path.resolve(__dirname, '../node_modules')),

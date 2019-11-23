@@ -35,7 +35,6 @@ module.exports = {
       favicon: `${PUBLIC_DIR}/favicon.ico`,
       filename: 'index.html',
       template: `${PUBLIC_DIR}/index.html`,
-      title: config.title,
       minify: {
         removeComments: true,
         collapseWhitespace: true,

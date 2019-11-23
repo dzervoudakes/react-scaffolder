@@ -22,7 +22,7 @@ module.exports = {
     '^node_modules[/](.+)': '<rootDir>/node_modules/$1'
   },
   setupFiles: ['jest-localstorage-mock', 'jest-prop-type-error'],
-  setupFilesAfterEnv: ['<rootDir>/config/jest/test-setup.js'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testEnvironment: 'jest-environment-jsdom-global',
   testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[jt]s?(x)'],
   testURL: 'http://localhost',

@@ -1,7 +1,7 @@
 /**
- * @fileoverview Declares global modules for use with TypeScript.
+ * @fileoverview Declares global modules and types.
  */
-declare module '*.md';
+import * as React from 'react';
 
 declare module '*.gif' {
   const src: string;
@@ -29,8 +29,6 @@ declare module '*.webp' {
 }
 
 declare module '*.svg' {
-  import * as React from 'react';
-
   export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
 
   const src: string;

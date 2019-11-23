@@ -11,7 +11,6 @@ const spinner = ora('Compiling for development...');
 spinner.start();
 
 const compiler = webpack(webpackConfig);
-compiler.apply(new webpack.ProgressPlugin());
 
 const devMiddleware = webpackDev(compiler, {
   logLevel: 'warn',

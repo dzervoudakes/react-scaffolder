@@ -9,10 +9,12 @@ module.exports = {
     node: true
   },
   extends: [
+    'airbnb',
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    // @todo Enable this after converting all remaining '.js' to '.ts'
+    // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:@typescript-eslint/eslint-recommended',
-    'airbnb',
     'plugin:jest/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react/recommended',
@@ -54,6 +56,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true
     }
+    // project: './tsconfig.json' // @todo Enable this after converting all remaining '.js' to '.ts'
   },
   plugins: ['@typescript-eslint', 'react', 'import', 'react-hooks', 'prettier'],
   rules: {
