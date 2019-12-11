@@ -14,7 +14,6 @@ module.exports = {
 		}],
 		'shorthand-property-no-redundant-values': true,
 		'string-quotes': 'single',
-		'unit-whitelist': ['rem', '%', 'vh', 'vw', 's'],
 		'value-list-comma-space-after': 'always'
 	}
 }
