@@ -55,6 +55,12 @@ module.exports = {
     'curly': ERROR,
     'eol-last': [ERROR, 'always'],
     'import/dynamic-import-chunkname': ERROR,
+    'import/extensions': [ERROR, 'always', {
+      js: 'never',
+      jsx: 'never',
+      ts: 'never',
+      tsx: 'never'
+    }],
     'import/no-extraneous-dependencies': OFF,
     'import/no-dynamic-require': OFF,
     'import/no-unresolved': ERROR,
