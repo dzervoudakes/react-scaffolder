@@ -96,6 +96,7 @@ module.exports = {
     'react/no-unused-prop-types': ERROR,
     'react/no-unused-state': ERROR,
     'react/prefer-stateless-function': ERROR,
+    'react/require-default-props': OFF,
     'react/sort-comp': [ERROR, {
       order: [
         'props',
