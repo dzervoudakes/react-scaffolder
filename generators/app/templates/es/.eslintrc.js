@@ -77,6 +77,7 @@ module.exports = {
     'no-var': ERROR,
     'prefer-const': ERROR,
     'prefer-template': ERROR,
+    'quotes': [ERROR, 'single', { avoidEscape: true }],
     'react/forbid-prop-types': ERROR,
     'react-hooks/rules-of-hooks': ERROR,
     'react-hooks/exhaustive-deps': WARN,
