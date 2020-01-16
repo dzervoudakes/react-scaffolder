@@ -3,6 +3,7 @@
 
 [![npm](https://img.shields.io/npm/v/generator-react-scaffolder.svg)](https://www.npmjs.com/package/generator-react-scaffolder)
 [![Prettier badge](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Wait, what about Create React App? Should I use your generator instead?
 
@@ -65,7 +66,3 @@ expanding development force in mind. As such, this template is highly opinionate
 
 > Don't like any of the default configuration or want to tweak it at all? I do not hide the build or configuration
 > in the way `react-scripts` does before ejection, so tinker away to your heart's content. ❤️
-
-## License
-
-[MIT License](https://opensource.org/licenses/mit-license.php)
