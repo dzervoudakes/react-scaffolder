@@ -5,17 +5,15 @@
 [![Prettier badge](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## Wait, what about Create React App? Should I use your generator instead?
+## The Concept: Similar to Create React App, Not a Replacement
 
-> Create React App is an objectively _awesome_ tool and I have nothing but nice things to say about it. Over time, I
-> decided that I want to learn more about the engine behind the application, and so I started crafting my own
-> React+Webpack frameworks. The end result is what you see here in this generator.
+Create React App is an objectively _awesome_ tool and I have nothing but nice things to say about it. Over time, I've decided that I want to learn more about the engine behind the application, and so I started crafting and evolving my own React + Webpack configuration over time as a learning experience.
 
 I have since decided to share my work with the open source community. Love it or loathe it, I will not be happy or offended either way. 😄
 
-## Ok, I'll give it a try... How do I use it?
+## Using the Generator
 
-Assuming you have `yo`, aka [yeoman](https://yeoman.io/) installed on your machine, simply run the following commands:
+This scaffolding tool is a [yeoman](https://yeoman.io/) generator, and requires `yo` to be installed. After installing `yo`, run the following commands:
 
 ### Install the Generator
 ```
@@ -27,42 +25,29 @@ npm install -g generator-react-scaffolder
 yo react-scaffolder
 ```
 
-You will be prompted to enter the name of your application ... and that's it! The scaffolding for your shiny new
-React+Webpack application will be generated in the resulting directory matching the application name you entered.
-Easy, right?
+You will be prompted to enter the name of your application ... and that's it! The scaffolding for your shiny new React application will be generated in the resulting directory matching the application name you entered.
 
-## But wait, there's more!
+## Build Options
 
-If you or your organization prefer to use TypeScript, because you know, type safety on the front end is kind of a thing now,
-this generator has an option for that as well:
+The generator can create a TypeScript application template as well if that is your preference.
 
 ```
 yo react-scaffolder --typescript
 ```
 
-The generator will also attempt to install dependencies for you by default via `npm`. If you or your organization do not
-use `npm`, you should skip this option as the generator has no support for `bower` or `yarn`.
+By default, the generator will attempt to install dependencies for you via `npm`. If you or your organization do not use `npm`, you should skip this option as the generator has no support for `bower` or `yarn`.
 
 ```
 yo react-scaffolder --skip-install
 ```
 
-## What's included?
+## Notes
 
-When looking at the initial build, you'll come to realize that I can be very nitpicky in terms of file/folder structure,
-unit testing libraries, formatting and linting (including an unholy combination of `eslint:recommended`, `Airbnb`,
-and `Prettier` configurations), etc. I have tailored this configuration to scale with the growing pains of a large and
-expanding development force in mind. As such, this template is highly opinionated out of the box.
-
-*  Build instructions are provided within the `README.md` file generated with each new scaffold
-*  The base Webpack configuration is set up to handle basically any and all file import types you may think of
-*  `jest` and `@testing-library/react` come with the generator by default for testing ... I no longer support `enzyme`, because #reasons
-*  Templates are wired up to use `.scss` for styling, though `.css` will work as well
-*  Because I am a masochist, I have also wired up some stringent `stylelint` rules (forewarning, `px` are blacklisted for accessibility purposes, you will need to add `px` to the whitelist in `.stylelintrc.js` if you wish to use this unit)
-*  `lint-staged` is wired up along with `husky` to further maintain quality and consistent formatting on `pre-commit`
-*  `jsdoc` is also included along with the `docdash` theme
-
-**Note:** No `redux` or any other state management scaffolding is applied here out of the box.
-
-> Don't like any of the default configuration or want to tweak it at all? I do not hide the build or configuration
-> in the way `react-scripts` does before ejection, so tinker away to your heart's content. ❤️
+* Build instructions are provided within the `README.md` file generated for each new scaffold
+* Configuration for `jest` and `@testing-library/react` are installed automatically, with no `enzyme` support out of the box
+* Each generated application supports both `.scss` and `.css` imports
+* As this generator was built with my own personal preferences in mind, the formatting and other tooling are inherently nitpicky and opinionated out of the box, including `Prettier` and `Stylelint`
+* `lint-staged` is wired up along with `husky` to further maintain quality and consistent formatting on pre-commit
+* `jsdoc` is also included along with the `docdash` theme
+* No `redux` or any other state management configuration is included
+* The base `webpack` configuration can handle basically any and all file import types you may think of, though the configuration is exposed so you may tweak it to suit your needs and preferences
