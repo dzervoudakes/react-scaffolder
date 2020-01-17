@@ -1,15 +1,14 @@
 @import '~@src/scss/_constants';
 
 .header {
+  align-items: center;
   background: $color-green;
   color: $color-white;
+  display: flex;
   height: 3.125rem;
 
   .page-title {
-    display: inline-block;
     font-weight: 400;
-    line-height: 3.125rem;
     padding: 0 2rem;
-    vertical-align: top;
   }
 }
