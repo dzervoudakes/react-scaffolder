@@ -45,7 +45,7 @@ module.exports = {
       jsx: true
     }
   },
-  plugins: ['react', 'import', 'react-hooks', 'prettier'],
+  plugins: ['react', 'import', 'jsx-a11y', 'react-hooks', 'prettier'],
   rules: {
     'arrow-parens': [ERROR, 'as-needed'],
     'class-methods-use-this': OFF,

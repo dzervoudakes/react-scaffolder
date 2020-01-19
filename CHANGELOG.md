@@ -7,6 +7,7 @@
 * Update lint rules. _(dzervoudakes)_
 * Add technical requirements to README template. _(dzervoudakes)_
 * Add `babel` support for optional chaining. _(dzervoudakes)_
+* Remove forced `save-dev=true` from `.npmrc`. _(dzeroudakes)_
 
 ## v0.1.2
 

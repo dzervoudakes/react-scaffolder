@@ -55,7 +55,7 @@ module.exports = {
       jsx: true
     }
   },
-  plugins: ['@typescript-eslint', 'react', 'import', 'react-hooks', 'prettier'],
+  plugins: ['@typescript-eslint', 'react', 'import', 'jsx-a11y', 'react-hooks', 'prettier'],
   rules: {
     'arrow-parens': [ERROR, 'as-needed'],
     'class-methods-use-this': OFF,
