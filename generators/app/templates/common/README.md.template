@@ -76,7 +76,7 @@ npm run clean
 ```
 
 ## Technical Requirements
-> The runtime environment for this application requires `Node >= 10.11.0` and `NPM >= 6.4.1`.
+> The runtime environment for this application requires `Node >= 10.13.6` and `NPM >= 6.4.1`.
 
 ## Configuration
 > This application makes use of `ESLint`, `Stylelint` and `EditorConfig`. Each of these features requires
