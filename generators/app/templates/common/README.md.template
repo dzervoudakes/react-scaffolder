@@ -1,7 +1,7 @@
 # <%= applicationName %>
 > Scaffolding for the <%= applicationName %> React app.
 
-[![Prettier badge](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+[![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
 ## Build Scripts
 

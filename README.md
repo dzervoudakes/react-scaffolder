@@ -2,8 +2,8 @@
 > Yeoman Generator for scaffolding new React applications.
 
 [![npm](https://img.shields.io/npm/v/generator-react-scaffolder.svg)](https://www.npmjs.com/package/generator-react-scaffolder)
-[![Prettier badge](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
+[![license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## The Concept: Similar to Create React App, Not a Replacement
 
