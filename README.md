@@ -35,7 +35,7 @@ Generate with TypeScript:
 yo react-scaffolder --typescript
 ```
 
-By default, the generator will attempt to install `npm` dependencies for you. If you or your organization do not use `npm`, you should skip this option as the generator has no support for `bower` or `yarn`:
+By default, the generator will attempt to install `npm` dependencies for you. If you or your organization do not use `npm`, you should skip this operation as the generator has no support for `bower` or `yarn`:
 
 ```
 yo react-scaffolder --skip-install
@@ -44,7 +44,7 @@ yo react-scaffolder --skip-install
 ### What's Included
 
 * **Syntax:** react, js, jsx, ts, tsx
-* **Tooling:** eslint, stylelint, editorconfig, babel
+* **Tooling:** babel, eslint, stylelint, editorconfig
 * **Styling:** scss, css, autoprefixer
 * **Testing:** jest, react testing library
 * **Build instructions:** provided via the `README.md` file generated with each new scaffold
