@@ -1,10 +1,10 @@
 /**
  * @fileoverview Build script that compiles the application for production.
  */
-const webpack = require('webpack');
-const chalk = require('chalk');
-const ora = require('ora');
-const webpackConfig = require('../build/webpack.config');
+import webpack from 'webpack';
+import chalk from 'chalk';
+import ora from 'ora';
+import webpackConfig from '../build/webpack.config';
 
 const spinner = ora('Building for production...');
 spinner.start();

@@ -22,20 +22,20 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['build/**/*.js', 'config/**/*.js', 'scripts/*.js', 'server/**/*.js'],
+      files: ['build/**/*.js', 'config/**/*.js', 'scripts/*.ts', 'server/**/*.ts'],
       rules: {
         '@typescript-eslint/explicit-function-return-type': OFF,
         '@typescript-eslint/no-var-requires': OFF
       }
     },
     {
-      files: ['server/index.js', 'scripts/*.js'],
+      files: ['server/index.ts', 'scripts/*.ts'],
       rules: {
         'no-console': OFF
       }
     },
     {
-      files: ['scripts/test.js'],
+      files: ['scripts/test.ts'],
       rules: {
         'jest/no-jest-import': OFF
       }

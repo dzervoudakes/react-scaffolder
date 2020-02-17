@@ -4,9 +4,9 @@
     "baseUrl": ".",
     "esModuleInterop": true,
     "jsx": "react",
-    "module": "es6",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "./dist/",
+    "outDir": "./dist",
     "paths": {
       "@src/*": ["./src/*"],
       "@shared/*": ["./src/components/shared/*"],
@@ -16,6 +16,6 @@
     "strictNullChecks": true,
     "target": "es5"
   },
-  "include": ["./src/", "./config/jest/jest-dom.d.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "./config/jest/jest-dom.d.ts"],
   "typeRoots": ["node_modules/@types", "./typings.d.ts"]
 }

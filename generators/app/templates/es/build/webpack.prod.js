@@ -66,7 +66,7 @@ module.exports = {
     }
   },
   output: {
-    path: `${BUILD_DIR}/public`,
+    path: BUILD_DIR,
     filename: 'js/[name].[chunkhash].min.js',
     sourceMapFilename: 'js/[name].[chunkhash].min.map',
     chunkFilename: 'js/[name].[chunkhash].min.js'

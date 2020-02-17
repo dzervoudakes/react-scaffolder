@@ -1,9 +1,9 @@
-const webpack = require('webpack');
-const webpackDev = require('webpack-dev-middleware');
-const webpackHot = require('webpack-hot-middleware');
-const ora = require('ora');
-const open = require('open');
-const webpackConfig = require('../../build/webpack.config');
+import webpack from 'webpack';
+import webpackDev from 'webpack-dev-middleware';
+import webpackHot from 'webpack-hot-middleware';
+import ora from 'ora';
+import open from 'open';
+import webpackConfig from '../../build/webpack.config';
 
 const port = process.env.port || 8080;
 
@@ -28,7 +28,4 @@ devMiddleware.waitUntilValid(() => {
   open(url);
 });
 
-module.exports = {
-  devMiddleware,
-  hotMiddleware
-};
+export { devMiddleware, hotMiddleware };

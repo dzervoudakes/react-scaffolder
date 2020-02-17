@@ -4,16 +4,16 @@
   "description": "<%= applicationName %> application, built with React.",
   "main": "index.js",
   "scripts": {
-    "build": "node scripts/build --env=prod",
+    "build": "ts-node scripts/build --env=prod",
     "build:report": "npm run build -- --addon=bundleanalyzer",
     "clean": "rimraf coverage dist docs",
     "docs": "typedoc",
-    "lint": "node scripts/eslint",
+    "lint": "ts-node scripts/eslint",
     "lint:fix": "npm run lint -- --fix",
-    "start": "node server --env=dev",
-    "stylelint": "node scripts/stylelint",
+    "start": "ts-node server --env=dev",
+    "stylelint": "ts-node scripts/stylelint",
     "stylelint:fix": "npm run stylelint -- --fix",
-    "test": "node scripts/test",
+    "test": "ts-node scripts/test",
     "test:coverage": "npm test -- --coverage",
     "test:verbose": "npm test -- --verbose",
     "test:watch": "npm test -- --watchAll"
@@ -105,9 +105,12 @@
     "webpack-merge": "4.2.2"
   },
   "dependencies": {
+    "@types/express": "4.17.2",
+    "@types/node": "13.7.1",
     "connect-history-api-fallback": "1.6.0",
     "express": "4.17.1",
-    "path": "0.12.7"
+    "path": "0.12.7",
+    "ts-node": "8.6.2"
   },
   "husky": {
     "hooks": {
