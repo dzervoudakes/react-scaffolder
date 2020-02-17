@@ -2,12 +2,12 @@
 
 ## v1.0.0
 
-**Release Date:** TBD
+**Release Date:** 2020-02-17
 * Update template dependencies and tweak config. _(dzervoudakes)_
 * Update lint rules. _(dzervoudakes)_
 * Add technical requirements to README template. _(dzervoudakes)_
 * Remove forced `save-dev=true` from `.npmrc`. _(dzeroudakes)_
-* Update TypeScript template scripts, config and server syntax. _(dzervoudakes)_
+* Update scripts, config and server for TypeScript. _(dzervoudakes)_
 
 ## v0.1.2
 
