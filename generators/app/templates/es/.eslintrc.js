@@ -19,7 +19,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['index.js', 'scripts/*.js'],
+      files: ['server/index.js', 'scripts/*.js'],
       rules: {
         'no-console': OFF
       }
