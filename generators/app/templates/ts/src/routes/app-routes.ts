@@ -1,5 +1,6 @@
 /**
- * @fileoverview Defines top-level application routes.
+ * Defines top-level application routes.
+ * @packageDocumentation
  */
 import Home from '@src/components/home';
 import Documentation from '@src/components/documentation';

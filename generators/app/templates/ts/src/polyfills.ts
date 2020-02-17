@@ -1,5 +1,6 @@
 /**
- * @fileoverview Imports polyfills for Webpack config entry point.
+ * Imports polyfills for Webpack config entry point.
+ * @packageDocumentation
  */
 import 'core-js/stable';
 import 'url-search-params-polyfill';

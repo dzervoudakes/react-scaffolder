@@ -1,8 +1,7 @@
 /**
- * @fileoverview Declares global modules and types.
+ * Declares global modules.
+ * @packageDocumentation
  */
-import * as React from 'react';
-
 declare module '*.gif' {
   const src: string;
   export default src;
@@ -29,6 +28,8 @@ declare module '*.webp' {
 }
 
 declare module '*.svg' {
+  import * as React from 'react';
+
   export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
 
   const src: string;

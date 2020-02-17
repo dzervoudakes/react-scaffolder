@@ -1,4 +1,5 @@
 /**
- * @fileoverview Declares type roots.
+ * Declares type roots.
+ * @packageDocumentation
  */
 declare module '*.md';

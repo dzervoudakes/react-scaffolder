@@ -1,4 +1,5 @@
 /**
- * @fileoverview Imports jest-dom matcher extensions.
+ * Imports jest-dom matcher extensions.
+ * @packageDocumentation
  */
 import '@testing-library/jest-dom/extend-expect';

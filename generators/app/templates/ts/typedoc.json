@@ -1,0 +1,5 @@
+{
+  "inputFiles": ["./src"],
+  "exclude": ["./src/**/index.ts", "./src/**/*.test.tsx"],
+  "out": "docs"
+}
