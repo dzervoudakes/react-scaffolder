@@ -20,16 +20,17 @@ This scaffolding tool is a [yeoman](https://yeoman.io/) generator, and requires 
 npm install -g generator-react-scaffolder
 ```
 
-### Scaffold a New React+Webpack Template
+### Scaffold a New React Template
+
+You will be prompted to enter the name of your application at this step.
+
 ```
 yo react-scaffolder
 ```
 
-You will be prompted to enter the name of your application ... and that's it! The scaffolding for your shiny new React application will be generated in the resulting directory matching the application name you entered.
-
 ## Build Options
 
-The generator can create a TypeScript application template as well if that is your preference.
+Generate a new template with TypeScript:
 
 ```
 yo react-scaffolder --typescript
