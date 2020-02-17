@@ -35,7 +35,7 @@ Generate with TypeScript:
 yo react-scaffolder --typescript
 ```
 
-By default, the generator will attempt to install `npm` dependencies for you. If you or your organization do not use `npm`, you should skip this operation as the generator has no support for `bower` or `yarn`:
+The generator will attempt to install `npm` dependencies for you by default, though this operation can be disabled:
 
 ```
 yo react-scaffolder --skip-install
