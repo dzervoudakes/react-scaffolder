@@ -1,6 +1,5 @@
 /**
- * Build script that runs eslint against all application script files.
- * @packageDocumentation
+ * @fileoverview Build script that runs eslint against all application script files.
  */
 const { CLIEngine } = require('eslint');
 const chalk = require('chalk');
@@ -16,7 +15,7 @@ spinner.start();
 const fix = process.argv.indexOf('--fix') !== -1;
 const cli = new CLIEngine({ fix });
 
-const report = cli.executeOnFiles(['**/*.ts', '**/*.tsx', '**/*.js']);
+const report = cli.executeOnFiles(['**/*.js']);
 const formatter = cli.getFormatter();
 
 if (fix) {

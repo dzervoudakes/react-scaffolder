@@ -21,7 +21,7 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'applicationName',
         required: true,
-        message: 'What is the name of the application?',
+        message: 'What is the name of the application?'
       }
     ]).then(data => {
       this.data = data;
@@ -38,10 +38,7 @@ module.exports = class extends Generator {
       this.destinationPath(applicationName)
     );
 
-    this.fs.copy(
-      this.templatePath(`${path}/.*`),
-      this.destinationPath(applicationName)
-    );
+    this.fs.copy(this.templatePath(`${path}/.*`), this.destinationPath(applicationName));
 
     this._writeFile(
       this.templatePath(`package.json.${path}.template`),
@@ -57,7 +54,7 @@ module.exports = class extends Generator {
 
     this._writeFile(
       this.templatePath('common/index.html.template'),
-      this.destinationPath(`${applicationName}/public/`, 'index.html'),
+      this.destinationPath(`${applicationName}/public`, 'index.html'),
       { applicationName }
     );
   }
@@ -66,9 +63,9 @@ module.exports = class extends Generator {
     if (!this.options['skip-install']) {
       const { applicationName } = this.data;
 
-      console.log(chalk.cyan('\nInstalling dependencies in the application root...\n'));
+      console.log(chalk.cyan('\nInstalling npm dependencies...\n'));
 
-      this.npmInstall(null, {}, { cwd: applicationName })
+      this.npmInstall(null, {}, { cwd: applicationName });
     }
   }
 };

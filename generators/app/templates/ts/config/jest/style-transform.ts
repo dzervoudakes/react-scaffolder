@@ -1,5 +1,6 @@
 /**
- * @fileoverview Transforms style imports into empty objects for Jest.
+ * Transforms style imports into empty objects for Jest.
+ * @packageDocumentation
  */
 module.exports = {
   process(): string {

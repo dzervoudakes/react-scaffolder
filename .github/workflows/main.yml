@@ -1,0 +1,44 @@
+name: build
+
+on: [push]
+
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cache node modules
+      uses: actions/cache@v1
+      env:
+        cache-name: react-scaffolder-dependency-cache
+      with:
+        path: node_modules
+        key: ${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Install dependencies
+      run: npm install
+
+  eslint:
+    runs-on: ubuntu-latest
+    needs: dependencies
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Lint all scripts
+      run: npm run lint
+
+  test:
+    runs-on: ubuntu-latest
+    needs: dependencies
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: ${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Run unit tests
+      run: npm run test

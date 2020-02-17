@@ -1,5 +1,6 @@
 /**
- * @fileoverview Appends the BundleAnalyzerPlugin to the list of Webpack plugins at compile time.
+ * Appends the BundleAnalyzerPlugin to the list of Webpack plugins at compile time.
+ * @packageDocumentation
  */
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 

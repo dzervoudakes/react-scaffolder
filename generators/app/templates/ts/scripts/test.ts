@@ -1,3 +1,7 @@
+/**
+ * Build script that runs unit tests with Jest.
+ * @packageDocumentation
+ */
 import * as jest from 'jest';
 
 process.env.BABEL_ENV = 'test';

@@ -1,5 +1,6 @@
 /**
- * @fileoverview Webpack production configuration.
+ * Webpack production configuration.
+ * @packageDocumentation
  */
 import webpack from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';

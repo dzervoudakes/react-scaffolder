@@ -1,5 +1,6 @@
 /**
- * @fileoverview Configuration file for Webpack development and production builds.
+ * Configuration file for Webpack development and production builds.
+ * @packageDocumentation
  */
 import webpack from 'webpack';
 import webpackMerge from 'webpack-merge';

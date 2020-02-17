@@ -1,5 +1,6 @@
 /**
- * @fileoverview Base Webpack configuration, shared between development and production builds.
+ * Base Webpack configuration, shared between development and production builds.
+ * @packageDocumentation
  */
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import config from '../config';

@@ -1,5 +1,6 @@
 /**
- * @fileoverview Webpack development configuration.
+ * Webpack development configuration.
+ * @packageDocumentation
  */
 import path from 'path';
 import webpack from 'webpack';

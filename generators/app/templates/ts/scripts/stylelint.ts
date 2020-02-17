@@ -1,5 +1,6 @@
 /**
- * @fileoverview Build script that runs stylelint against all application style files.
+ * Build script that runs stylelint against all application style files.
+ * @packageDocumentation
  */
 import stylelint from 'stylelint';
 import chalk from 'chalk';

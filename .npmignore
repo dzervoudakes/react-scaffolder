@@ -1,5 +1,11 @@
 node_modules
+scripts
 .editorconfig
+.eslintignore
+.eslintrc.js
 .gitignore
-package-lock.json
+.prettierignore
+.prettierrc.js
 CHANGELOG.md
+jest.config.js
+package-lock.json

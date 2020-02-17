@@ -1,5 +1,6 @@
 /**
- * @fileoverview Defines common configuration for use within Webpack builds.
+ * Defines common configuration for use within Webpack builds.
+ * @packageDocumentation
  */
 import path from 'path';
 
