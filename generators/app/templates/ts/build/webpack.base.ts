@@ -1,14 +1,14 @@
 /**
  * @fileoverview Base Webpack configuration, shared between development and production builds.
  */
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const config = require('../config');
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import config from '../config';
 
 const {
   directories: { app: APP_DIR }
 } = config;
 
-module.exports = {
+export default {
   entry: {
     app: [`${APP_DIR}/polyfills.ts`, `${APP_DIR}/index.tsx`]
   },

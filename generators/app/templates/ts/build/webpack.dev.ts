@@ -1,12 +1,12 @@
 /**
  * @fileoverview Webpack development configuration.
  */
-const path = require('path');
-const webpack = require('webpack');
-const HtmlPlugin = require('html-webpack-plugin');
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
-const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
-const config = require('../config');
+import path from 'path';
+import webpack from 'webpack';
+import HtmlPlugin from 'html-webpack-plugin';
+import FriendlyErrorsPlugin from 'friendly-errors-webpack-plugin';
+import WatchMissingNodeModulesPlugin from 'react-dev-utils/WatchMissingNodeModulesPlugin';
+import config from '../config';
 
 const {
   directories: { public: PUBLIC_DIR }

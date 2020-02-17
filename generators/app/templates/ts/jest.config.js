@@ -30,9 +30,9 @@ module.exports = {
     '^.+\\.jsx?$': 'babel-jest',
     '^.+\\.tsx?$': 'ts-jest',
     '^.+\\.md?$': 'markdown-loader-jest',
-    '^.+\\.s?css$': '<rootDir>/config/jest/style-transform.js',
+    '^.+\\.s?css$': '<rootDir>/config/jest/style-transform.ts',
     '^.+\\.(png|jpg|jpeg|git|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/config/jest/file-transform.js'
+      '<rootDir>/config/jest/file-transform.ts'
   },
   moduleDirectories: ['node_modules']
 };

@@ -1,16 +1,17 @@
 /**
  * @fileoverview Configuration file for Webpack development and production builds.
  */
-const webpackMerge = require('webpack-merge');
-const baseConfig = require('./webpack.base');
+import webpack from 'webpack';
+import webpackMerge from 'webpack-merge';
+import baseConfig from './webpack.base';
 
-const getAddons = addonsArgs => {
+const getAddons = (addonsArgs): webpack.Configuration[] => {
   const addons = Array.isArray(addonsArgs) ? addonsArgs : [addonsArgs];
 
-  return addons.filter(Boolean).map(name => require(`./addons/webpack.${name}.js`));
+  return addons.filter(Boolean).map(name => require(`./addons/webpack.${name}.ts`));
 };
 
-module.exports = (() => {
+const buildConfig = ((): webpack.Configuration => {
   const argv = process.argv.slice(2);
 
   let env = argv.filter(item => item.includes('--env='))[0];
@@ -26,6 +27,8 @@ module.exports = (() => {
     });
   }
 
-  const envConfig = require(`./webpack.${env}.js`);
+  const envConfig = require(`./webpack.${env}.ts`);
   return webpackMerge(baseConfig, envConfig, ...getAddons(addons));
 })();
+
+export default buildConfig;

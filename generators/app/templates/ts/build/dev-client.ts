@@ -1,7 +1,7 @@
 /**
  * @fileoverview Wires up the Webpack hot middleware client for hot module loading/replacement.
  */
-const devClient = require('webpack-hot-middleware/client');
+import devClient from 'webpack-hot-middleware/client';
 
 devClient.setOptionsAndConnect({
   path: '/__webpack_hmr',

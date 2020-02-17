@@ -1,14 +1,14 @@
 /**
  * @fileoverview Webpack production configuration.
  */
-const webpack = require('webpack');
-const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const HtmlPlugin = require('html-webpack-plugin');
-const config = require('../config');
+import webpack from 'webpack';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
+import TerserPlugin from 'terser-webpack-plugin';
+import CopyPlugin from 'copy-webpack-plugin';
+import HtmlPlugin from 'html-webpack-plugin';
+import config from '../config';
 
 const {
   directories: { build: BUILD_DIR, public: PUBLIC_DIR, root: ROOT_DIR }
@@ -22,7 +22,7 @@ module.exports = {
   },
   plugins: [
     new webpack.EnvironmentPlugin(config.env.production),
-    new CleanPlugin(),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[chunkhash].min.css'
     }),

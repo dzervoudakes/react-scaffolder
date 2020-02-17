@@ -1,16 +1,21 @@
 /**
  * @fileoverview Defines common configuration for use within Webpack builds.
  */
-const path = require('path');
+import path from 'path';
 
-const resolve = dir => path.resolve(__dirname, '..', dir);
+interface ProcessVars {
+  BABEL_ENV: string;
+  NODE_ENV: string;
+}
 
-const setProcessVars = env => ({
+const resolve = (dir): string => path.resolve(__dirname, '..', dir);
+
+const setProcessVars = (env): ProcessVars => ({
   BABEL_ENV: env,
   NODE_ENV: env
 });
 
-module.exports = {
+export default {
   directories: {
     app: resolve('src'),
     build: resolve('dist'),

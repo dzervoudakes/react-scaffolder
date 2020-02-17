@@ -22,9 +22,8 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['build/**/*.js', 'config/**/*.js', 'scripts/*.ts', 'server/**/*.ts'],
+      files: ['build/**/*.ts', 'config/**/*.ts', 'scripts/*.ts', 'server/**/*.ts'],
       rules: {
-        '@typescript-eslint/explicit-function-return-type': OFF,
         '@typescript-eslint/no-var-requires': OFF
       }
     },
@@ -41,7 +40,7 @@ module.exports = {
       }
     },
     {
-      files: ['build/webpack.config.js'],
+      files: ['build/webpack.config.ts'],
       rules: {
         'global-require': OFF
       }
@@ -157,7 +156,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: 'build/webpack.base.js'
+        config: 'build/webpack.base.ts'
       }
     },
     react: {
