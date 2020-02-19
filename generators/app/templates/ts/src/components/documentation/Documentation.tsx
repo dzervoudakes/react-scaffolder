@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import ContentContainer from '@shared/content-container';
+import Layout from '@src/components/shared/layout';
 import Readme from '../../../README.md';
 import './Documentation.scss';
 
 const Documentation: React.FC = () => (
-  <ContentContainer>
+  <Layout>
     <p>
       <Link to="/">
         <span>&lt;</span> Go Back
@@ -14,7 +14,7 @@ const Documentation: React.FC = () => (
     <div className="readme-container">
       <Readme />
     </div>
-  </ContentContainer>
+  </Layout>
 );
 
 export default Documentation;

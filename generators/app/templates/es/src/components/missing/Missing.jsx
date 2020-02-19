@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ContentContainer from '@shared/content-container';
+import Layout from '@shared/layout';
 import SectionHeader from '@shared/section-header';
 
 const Missing = () => (
-  <ContentContainer>
+  <Layout>
     <SectionHeader title="That's a 404" description="You must be lost..." />
     <p>
       <Link to="/">Click here</Link> to return to the main application.
     </p>
-  </ContentContainer>
+  </Layout>
 );
 
 export default Missing;

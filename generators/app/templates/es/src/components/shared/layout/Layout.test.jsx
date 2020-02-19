@@ -1,13 +1,13 @@
-import * as React from 'react';
+import React from 'react';
 import { render } from '@testing-library/react';
-import ContentContainer from './ContentContainer';
+import Layout from './Layout';
 
-describe('ContentContainer', () => {
+describe('Layout', () => {
   it('renders the child component', () => {
     const { getByText } = render(
-      <ContentContainer>
+      <Layout>
         <div>Child component</div>
-      </ContentContainer>
+      </Layout>
     );
 
     expect(getByText('Child component')).toBeInTheDocument();

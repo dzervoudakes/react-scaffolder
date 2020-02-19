@@ -10,6 +10,6 @@
   </head>
   <body>
     <noscript>You must enable JavaScript to use this application.</noscript>
-    <main id="root"></main>
+    <div id="root"></div>
   </body>
 </html>
