@@ -26,7 +26,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: node_modules
-        key: ${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        key: react-scaffolder-dependency-cache-${{ hashFiles('**/package-lock.json') }}
     - name: Lint all scripts
       run: npm run lint
 
@@ -39,6 +39,6 @@ jobs:
       uses: actions/cache@v1
       with:
         path: node_modules
-        key: ${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        key: react-scaffolder-dependency-cache-${{ hashFiles('**/package-lock.json') }}
     - name: Run unit tests
       run: npm run test
