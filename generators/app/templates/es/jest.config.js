@@ -1,7 +1,7 @@
 module.exports = {
   collectCoverageFrom: [
-    '<rootDir>/src/**/*.{js,jsx}',
-    '!**/index.js',
+    '<rootDir>/src/**/*.{js,jsx,mjs}',
+    '!**/index.[jm]s',
     '!<rootDir>/src/index.jsx',
     '!<rootDir>/src/polyfills.js',
     '!<rootDir>/src/routes/**'
@@ -26,7 +26,7 @@ module.exports = {
   testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[jt]s?(x)'],
   testURL: 'http://localhost',
   transform: {
-    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.(js|jsx|mjs)$': 'babel-jest',
     '^.+\\.md?$': 'markdown-loader-jest',
     '^.+\\.s?css$': '<rootDir>/config/jest/style-transform.js',
     '^.+\\.(png|jpg|jpeg|git|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':

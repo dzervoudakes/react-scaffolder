@@ -44,7 +44,7 @@ yo react-scaffolder --skip-install
 
 ### What's Included
 
-* **Syntax:** react, js, jsx, ts, tsx
+* **Syntax:** react, js, jsx, ts, tsx, mjs
 * **Tooling:** babel, eslint, stylelint, editorconfig
 * **Styling:** scss, css, autoprefixer
 * **Testing:** jest, react testing library

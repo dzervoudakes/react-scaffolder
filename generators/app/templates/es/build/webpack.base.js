@@ -15,7 +15,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx|mjs)$/,
         include: APP_DIR,
         loader: 'babel-loader',
         options: {
@@ -63,7 +63,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.scss', '.css', '.md'],
+    extensions: ['.js', '.jsx', '.mjs', '.json', '.scss', '.css', '.md'],
     alias: {
       '@src': APP_DIR,
       '@shared': `${APP_DIR}/components/shared`,

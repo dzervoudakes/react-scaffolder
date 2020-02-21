@@ -16,7 +16,7 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(t|j)sx?$/,
+        test: /\.(ts|tsx|js|jsx|mjs)$/,
         include: APP_DIR,
         loader: 'awesome-typescript-loader',
         options: {
@@ -69,7 +69,7 @@ export default {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.json', '.scss', '.css', '.md'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json', '.scss', '.css', '.md'],
     alias: {
       '@src': APP_DIR,
       '@shared': `${APP_DIR}/components/shared`,

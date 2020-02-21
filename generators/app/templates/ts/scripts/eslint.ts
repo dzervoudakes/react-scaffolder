@@ -2,9 +2,9 @@
  * Build script that runs eslint against all application script files.
  * @packageDocumentation
  */
-const { CLIEngine } = require('eslint');
-const chalk = require('chalk');
-const ora = require('ora');
+import { CLIEngine } from 'eslint';
+import chalk from 'chalk';
+import ora from 'ora';
 
 process.on('unhandledRejection', err => {
   throw err;

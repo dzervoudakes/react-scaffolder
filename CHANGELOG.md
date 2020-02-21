@@ -6,6 +6,12 @@
 
 * Include `hard-source-webpack-plugin` for caching in development. _(dzervoudakes)_
 
+## v1.0.1
+
+**Release Date:** 2020-02-20
+
+* Support `.mjs` extension
+
 ## v1.0.0
 
 **Release Date:** 2020-02-17
