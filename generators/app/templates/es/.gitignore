@@ -1,6 +1,6 @@
 .vscode
 .DS_Store
+node_modules
 coverage
 dist
 docs
-node_modules
