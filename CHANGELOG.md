@@ -2,9 +2,9 @@
 
 ## v1.0.3
 
-**Release Date:** TBD
+**Release Date:** 2020-02-27
 
-* Add missing `babel-jest` dependency. _(dzervoudakes)_
+* Add missing `babel-jest` dependency for TypeScript template. _(dzervoudakes)_
 
 ## v1.0.2
 
