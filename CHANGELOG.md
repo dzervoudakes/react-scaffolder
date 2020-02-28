@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.0.3
+
+**Release Date:** TBD
+
+* Add missing `babel-jest` dependency. _(dzervoudakes)_
+
 ## v1.0.2
 
 **Release Date:** 2020-02-20

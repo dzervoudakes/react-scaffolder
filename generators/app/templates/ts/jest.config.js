@@ -24,7 +24,7 @@ module.exports = {
   setupFiles: ['jest-localstorage-mock', 'jest-prop-type-error'],
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testEnvironment: 'jest-environment-jsdom-global',
-  testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[jt]s?(x)'],
+  testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[jtm]s?(x)'],
   testURL: 'http://localhost',
   transform: {
     '^.+\\.(js|jsx|mjs)$': 'babel-jest',
