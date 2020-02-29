@@ -2,7 +2,7 @@ import * as React from 'react';
 import './Layout.scss';
 
 interface LayoutProps {
-  children: JSX.Element[] | JSX.Element;
+  children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => (
