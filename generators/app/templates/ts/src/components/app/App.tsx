@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Missing from '@src/components/missing';
 import routes from '@src/routes/app-routes';

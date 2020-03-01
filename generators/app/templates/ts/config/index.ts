@@ -9,9 +9,9 @@ interface ProcessVars {
   NODE_ENV: string;
 }
 
-const resolve = (dir): string => path.resolve(__dirname, '..', dir);
+const resolve = (dir: string): string => path.resolve(__dirname, '..', dir);
 
-const setProcessVars = (env): ProcessVars => ({
+const setProcessVars = (env: string): ProcessVars => ({
   BABEL_ENV: env,
   NODE_ENV: env
 });

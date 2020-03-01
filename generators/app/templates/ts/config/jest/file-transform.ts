@@ -4,8 +4,8 @@
  */
 import path from 'path';
 
-module.exports = {
-  process(_, filename): string {
+export default {
+  process(_: undefined, filename: string): string {
     return `module.exports = ${JSON.stringify(path.basename(filename))};`;
   }
 };

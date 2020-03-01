@@ -2,6 +2,7 @@
  * Base Webpack configuration, shared between development and production builds.
  * @packageDocumentation
  */
+import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import config from '../config';
 
@@ -9,7 +10,7 @@ const {
   directories: { app: APP_DIR }
 } = config;
 
-export default {
+const baseConfig: webpack.Configuration = {
   entry: {
     app: [`${APP_DIR}/polyfills.ts`, `${APP_DIR}/index.tsx`]
   },
@@ -20,7 +21,7 @@ export default {
         include: APP_DIR,
         loader: 'awesome-typescript-loader',
         options: {
-          cacheDirectory: true
+          silent: true
         }
       },
       {
@@ -77,3 +78,5 @@ export default {
     }
   }
 };
+
+export default baseConfig;

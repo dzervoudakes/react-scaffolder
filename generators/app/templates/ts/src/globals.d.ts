@@ -2,6 +2,13 @@
  * Declares global modules.
  * @packageDocumentation
  */
+declare module '*.md';
+
+declare module '*.bmp' {
+  const src: string;
+  export default src;
+}
+
 declare module '*.gif' {
   const src: string;
   export default src;
@@ -28,7 +35,7 @@ declare module '*.webp' {
 }
 
 declare module '*.svg' {
-  import * as React from 'react';
+  import React from 'react';
 
   export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
 
@@ -69,4 +76,14 @@ declare module '*.flac' {
 declare module '*.aac' {
   const src: string;
   export default src;
+}
+
+declare module '*.css' {
+  const classes: { readonly [key: string]: string };
+  export default classes;
+}
+
+declare module '*.scss' {
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }

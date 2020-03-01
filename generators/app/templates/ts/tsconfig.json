@@ -1,21 +1,30 @@
 {
   "compilerOptions": {
     "allowJs": false,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
+    "checkJs": false,
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": false,
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
+    "noEmit": true,
     "outDir": "./dist",
     "paths": {
       "@src/*": ["./src/*"],
       "@shared/*": ["./src/components/shared/*"],
       "react-dom": ["@hot-loader/react-dom"]
     },
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
     "sourceMap": true,
-    "strictNullChecks": true,
+    "strict": true,
+    "suppressImplicitAnyIndexErrors": true,
     "target": "es5"
   },
-  "include": ["**/*.ts", "**/*.tsx", "./config/jest/jest-dom.d.ts"],
-  "typeRoots": ["node_modules/@types", "./typings.d.ts"]
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"],
+  "typeRoots": ["node_modules/@types"]
 }

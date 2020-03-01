@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from '@src/components/shared/layout';
 import SectionHeader from '@shared/section-header';

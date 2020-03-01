@@ -14,11 +14,10 @@ const spinner = ora('Linting all styles...');
 spinner.start();
 
 const fix = process.argv.indexOf('--fix') !== -1;
-const opts = { files: '**/*.scss', fix, formatter: 'string' };
 
 stylelint
-  .lint(opts)
-  .then(result => {
+  .lint({ files: '**/*.scss', fix, formatter: 'string' })
+  .then((result: { output: string; errored: boolean }) => {
     spinner.stop();
     console.log(result.output);
 
@@ -28,6 +27,6 @@ stylelint
       throw new Error('Stylelint errors found.\n');
     }
   })
-  .catch(error => {
+  .catch((error: { stack: string }) => {
     console.error(error.stack);
   });

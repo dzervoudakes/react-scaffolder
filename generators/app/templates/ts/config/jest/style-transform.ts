@@ -2,7 +2,7 @@
  * Transforms style imports into empty objects for Jest.
  * @packageDocumentation
  */
-module.exports = {
+export default {
   process(): string {
     return 'module.exports = {}';
   },
