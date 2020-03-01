@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.1.0
+
+**Release Date:** TBD
+
+* Enable strict features in TypeScript template. _(dzervoudakes)_
+* Update all template dependencies. _(dzervoudakes)_
+
 ## v1.0.3
 
 **Release Date:** 2020-02-27

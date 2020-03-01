@@ -29,11 +29,13 @@ describe('react scaffolder', () => {
   ];
 
   it('generates an es6 project', () => {
+    const esOutput = [`${appLocation}/src/polyfills.js`, `${appLocation}/src/index.jsx`];
+
     return helpers
       .run(generator)
       .withPrompts({ applicationName: appLocation })
       .then(() => {
-        assert.file(commonOutput);
+        assert.file(commonOutput.concat(esOutput));
       });
   });
 
@@ -41,7 +43,11 @@ describe('react scaffolder', () => {
     const tsOutput = [
       `${appLocation}/tsconfig.json`,
       `${appLocation}/typedoc.json`,
-      `${appLocation}/src/globals.d.ts`
+      `${appLocation}/src/dev-client.d.ts`,
+      `${appLocation}/src/globals.d.ts`,
+      `${appLocation}/src/jest-dom.d.ts`,
+      `${appLocation}/src/polyfills.ts`,
+      `${appLocation}/src/index.tsx`
     ];
 
     return helpers
