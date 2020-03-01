@@ -2,7 +2,7 @@
 
 ## v1.1.0
 
-**Release Date:** 2020-03-01
+**Release Date:** TBD
 
 * Enable strict features in TypeScript template. _(dzervoudakes)_
 * Update all template dependencies. _(dzervoudakes)_
