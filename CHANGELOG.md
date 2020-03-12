@@ -6,6 +6,8 @@
 
 * Enable strict features in TypeScript template. _(dzervoudakes)_
 * Update all template dependencies. _(dzervoudakes)_
+* Implement `postcss-preset-env` and uninstall `autoprefixer` plugin. _(dzervoudakes)_
+* Remove custom `react/sort-comp` lint rule. _(dzervoudakes)_
 
 ## v1.0.3
 

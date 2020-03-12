@@ -107,47 +107,7 @@ module.exports = {
     'react/prefer-stateless-function': ERROR,
     'react/prop-types': OFF,
     'react/require-default-props': OFF,
-    'react/sort-comp': [ERROR, {
-      order: [
-        'props',
-        'static-methods',
-        'lifecycle',
-        'everything-else',
-        'handlers',
-        'rendering',
-      ],
-      groups: {
-        props: [
-          'propTypes',
-          'defaultProps',
-        ],
-        lifecycle: [
-          'statics',
-          'constructor',
-          'getDerivedStateFromProps',
-          'componentWillMount',
-          'UNSAFE_componentWillMount',
-          'componentDidMount',
-          'componentWillReceiveProps',
-          'UNSAFE_componentWillReceiveProps',
-          'shouldComponentUpdate',
-          'componentWillUpdate',
-          'UNSAFE_componentWillUpdate',
-          'getSnapshotBeforeUpdate',
-          'componentDidUpdate',
-          'componentDidCatch',
-          'componentWillUnmount',
-        ],
-        handlers: [
-          '/^on.+$/',
-          '/^handle.+$/',
-        ],
-        rendering: [
-          '/^render.+$/',
-          'render',
-        ],
-      }
-    }],
+    'react/sort-comp': ERROR,
     'react/static-property-placement': OFF,
     'require-await': ERROR,
     '@typescript-eslint/explicit-function-return-type': ERROR,
