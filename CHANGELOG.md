@@ -8,6 +8,7 @@
 * Update all template dependencies. _(dzervoudakes)_
 * Implement `postcss-preset-env` and uninstall `autoprefixer` plugin. _(dzervoudakes)_
 * Remove custom `react/sort-comp` lint rule. _(dzervoudakes)_
+* Remove `no-undef` lint rule. _(dzervoudakes)_
 
 ## v1.0.3
 
