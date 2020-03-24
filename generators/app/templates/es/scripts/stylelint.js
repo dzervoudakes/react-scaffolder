@@ -5,7 +5,7 @@ const stylelint = require('stylelint');
 const chalk = require('chalk');
 const ora = require('ora');
 
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   throw err;
 });
 
@@ -17,7 +17,7 @@ const opts = { files: '**/*.scss', fix, formatter: 'string' };
 
 stylelint
   .lint(opts)
-  .then(result => {
+  .then((result) => {
     spinner.stop();
     console.log(result.output);
 
@@ -27,6 +27,6 @@ stylelint
       throw new Error('Stylelint errors found.\n');
     }
   })
-  .catch(error => {
+  .catch((error) => {
     console.error(error.stack);
   });

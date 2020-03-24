@@ -27,5 +27,5 @@ export default {
     development: setProcessVars('development'),
     production: setProcessVars('production')
   },
-  isDevelopment: process.argv.indexOf('--env=dev') !== -1
+  isDevelopment: process.env.NODE_ENV === 'development'
 };

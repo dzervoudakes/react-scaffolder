@@ -40,8 +40,7 @@ module.exports = {
         removeComments: true,
         collapseWhitespace: true,
         removeAttributeQuotes: true
-      },
-      chunksSortMode: 'dependency'
+      }
     })
   ],
   optimization: {

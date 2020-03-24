@@ -9,7 +9,7 @@ const App = () => (
   <>
     <Header />
     <Switch>
-      {routes.map(route => (
+      {routes.map((route) => (
         <Route exact key={route.path} {...route} />
       ))}
       <Route component={Missing} />

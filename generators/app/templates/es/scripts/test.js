@@ -6,7 +6,7 @@ const jest = require('jest');
 process.env.BABEL_ENV = 'test';
 process.env.NODE_ENV = 'test';
 
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   throw err;
 });
 

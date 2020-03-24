@@ -3,9 +3,9 @@
  */
 const path = require('path');
 
-const resolve = dir => path.resolve(__dirname, '..', dir);
+const resolve = (dir) => path.resolve(__dirname, '..', dir);
 
-const setProcessVars = env => ({
+const setProcessVars = (env) => ({
   BABEL_ENV: env,
   NODE_ENV: env
 });
@@ -21,5 +21,5 @@ module.exports = {
     development: setProcessVars('development'),
     production: setProcessVars('production')
   },
-  isDevelopment: process.argv.indexOf('--env=dev') !== -1
+  isDevelopment: process.env.NODE_ENV === 'development'
 };

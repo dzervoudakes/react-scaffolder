@@ -6,7 +6,7 @@ import { CLIEngine } from 'eslint';
 import chalk from 'chalk';
 import ora from 'ora';
 
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   throw err;
 });
 

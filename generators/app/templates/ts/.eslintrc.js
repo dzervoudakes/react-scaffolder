@@ -56,7 +56,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'react', 'import', 'jsx-a11y', 'react-hooks', 'prettier'],
   rules: {
-    'arrow-parens': [ERROR, 'as-needed'],
     'class-methods-use-this': OFF,
     'comma-dangle': [ERROR, 'never'],
     'comma-spacing': [ERROR, { 'before': false, 'after': true }],
