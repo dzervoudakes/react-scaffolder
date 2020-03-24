@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production node scripts/build",
-    "build:report": "npm run build -- --addon=bundleanalyzer",
+    "build:report": "npm run build -- --report",
     "clean": "rimraf coverage dist docs",
     "docs": "jsdoc -c ./config/jsdoc/jsdoc.config.js -r",
     "lint": "node scripts/eslint",

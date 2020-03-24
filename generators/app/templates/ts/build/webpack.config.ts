@@ -6,25 +6,13 @@ import webpack from 'webpack';
 import webpackMerge from 'webpack-merge';
 import baseConfig from './webpack.base';
 
-const getAddons = (addonsArgs: string[]): webpack.Configuration[] => {
-  const addons = Array.isArray(addonsArgs) ? addonsArgs : [addonsArgs];
-
-  return addons.filter(Boolean).map((name) => require(`./addons/webpack.${name}.ts`));
-};
-
-const buildConfig = ((): webpack.Configuration => {
-  const argv = process.argv.slice(2);
-
+export default ((): webpack.Configuration => {
   const envs = {
     development: 'dev',
     production: 'prod'
   };
 
   const env = envs[process.env.NODE_ENV || 'development'];
-
-  const addons = argv
-    .filter((item) => item.includes('--addon='))
-    .map((item) => item.substring(item.indexOf('=') + 1, item.length));
 
   if (env === 'dev' && baseConfig?.entry) {
     Object.keys(baseConfig.entry).forEach((name) => {
@@ -37,7 +25,5 @@ const buildConfig = ((): webpack.Configuration => {
   }
 
   const envConfig = require(`./webpack.${env}.ts`);
-  return webpackMerge(baseConfig, envConfig, ...getAddons(addons));
+  return webpackMerge(baseConfig, envConfig);
 })();
-
-export default buildConfig;

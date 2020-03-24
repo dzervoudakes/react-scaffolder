@@ -9,11 +9,39 @@ import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
 import CopyPlugin from 'copy-webpack-plugin';
 import HtmlPlugin from 'html-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import config from '../config';
 
 const {
   directories: { build: BUILD_DIR, public: PUBLIC_DIR, root: ROOT_DIR }
 } = config;
+
+const plugins = [
+  new webpack.EnvironmentPlugin(config.env.production),
+  new CleanWebpackPlugin(),
+  new MiniCssExtractPlugin({
+    filename: 'css/[name].[chunkhash].min.css'
+  }),
+  new OptimizeCssAssetsPlugin(),
+  new webpack.optimize.AggressiveMergingPlugin(),
+  new CopyPlugin([
+    { from: `${ROOT_DIR}/public`, to: `${BUILD_DIR}/public`, ignore: ['.*'] }
+  ]),
+  new HtmlPlugin({
+    favicon: `${PUBLIC_DIR}/favicon.ico`,
+    filename: 'index.html',
+    template: `${PUBLIC_DIR}/index.html`,
+    minify: {
+      removeComments: true,
+      collapseWhitespace: true,
+      removeAttributeQuotes: true
+    }
+  })
+];
+
+if (process.argv.indexOf('--report') !== -1) {
+  plugins.push(new BundleAnalyzerPlugin());
+}
 
 module.exports = {
   mode: 'production',
@@ -21,28 +49,7 @@ module.exports = {
   performance: {
     hints: false
   },
-  plugins: [
-    new webpack.EnvironmentPlugin(config.env.production),
-    new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].[chunkhash].min.css'
-    }),
-    new OptimizeCssAssetsPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin(),
-    new CopyPlugin([
-      { from: `${ROOT_DIR}/public`, to: `${BUILD_DIR}/public`, ignore: ['.*'] }
-    ]),
-    new HtmlPlugin({
-      favicon: `${PUBLIC_DIR}/favicon.ico`,
-      filename: 'index.html',
-      template: `${PUBLIC_DIR}/index.html`,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-      }
-    })
-  ],
+  plugins,
   optimization: {
     minimizer: [
       new TerserPlugin({

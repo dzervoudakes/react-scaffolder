@@ -11,6 +11,7 @@
 * Remove `react/sort-comp` lint rule. _(dzervoudakes)_
 * Remove `no-undef` lint rule. _(dzervoudakes)_
 * Remove `arrow-parens` lint rule. _(dzervoudakes)_
+* Simplify Webpack config. _(dzervoudakes)_
 
 ## v1.0.3
 
