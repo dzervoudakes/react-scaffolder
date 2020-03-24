@@ -12,7 +12,6 @@ describe('react scaffolder', () => {
     `${appLocation}/scripts`,
     `${appLocation}/server`,
     `${appLocation}/src`,
-    `${appLocation}/.babelrc`,
     `${appLocation}/.editorconfig`,
     `${appLocation}/.eslintignore`,
     `${appLocation}/.eslintrc.js`,
@@ -29,7 +28,11 @@ describe('react scaffolder', () => {
   ];
 
   it('generates an es6 project', () => {
-    const esOutput = [`${appLocation}/src/polyfills.js`, `${appLocation}/src/index.jsx`];
+    const esOutput = [
+      `${appLocation}/.babelrc`,
+      `${appLocation}/src/polyfills.js`,
+      `${appLocation}/src/index.jsx`
+    ];
 
     return helpers
       .run(generator)

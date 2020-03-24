@@ -5,7 +5,7 @@ const { CLIEngine } = require('eslint');
 const chalk = require('chalk');
 const ora = require('ora');
 
-process.on('unhandledRejection', err => {
+process.on('unhandledRejection', (err) => {
   throw err;
 });
 

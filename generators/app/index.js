@@ -23,7 +23,7 @@ module.exports = class extends Generator {
         required: true,
         message: 'What is the name of the application?'
       }
-    ]).then(data => {
+    ]).then((data) => {
       this.data = data;
     });
   }
