@@ -10,8 +10,6 @@ import webpackConfig from '../build/webpack.config';
 const spinner = ora('Building for production...');
 spinner.start();
 
-process.env.BABEL_ENV = 'production';
-
 webpack(webpackConfig, (err, stats) => {
   spinner.stop();
   if (err) {

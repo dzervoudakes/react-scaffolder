@@ -12,6 +12,8 @@
 * Remove `no-undef` lint rule. _(dzervoudakes)_
 * Remove `arrow-parens` lint rule. _(dzervoudakes)_
 * Simplify Webpack config. _(dzervoudakes)_
+* Replace `awesome-typescript-loader` with `ts-loader`. _(dzervoudakes)_
+* Remove `react-markdown-loader`. _(dzervoudakes)_
 
 ## v1.0.3
 

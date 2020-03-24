@@ -5,14 +5,12 @@
 import path from 'path';
 
 interface ProcessVars {
-  BABEL_ENV: string;
   NODE_ENV: string;
 }
 
 const resolve = (dir: string): string => path.resolve(__dirname, '..', dir);
 
 const setProcessVars = (env: string): ProcessVars => ({
-  BABEL_ENV: env,
   NODE_ENV: env
 });
 

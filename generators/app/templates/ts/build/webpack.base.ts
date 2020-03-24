@@ -19,10 +19,7 @@ const baseConfig: webpack.Configuration = {
       {
         test: /\.(ts|tsx|js|jsx|mjs)$/,
         include: APP_DIR,
-        loader: 'awesome-typescript-loader',
-        options: {
-          silent: true
-        }
+        loader: 'ts-loader'
       },
       {
         test: /\.js$/,
@@ -38,10 +35,6 @@ const baseConfig: webpack.Configuration = {
           'postcss-loader',
           'sass-loader'
         ]
-      },
-      {
-        test: /\.md$/,
-        loader: 'babel-loader!react-markdown-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -70,7 +63,7 @@ const baseConfig: webpack.Configuration = {
     ]
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json', '.scss', '.css', '.md'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json', '.scss', '.css'],
     alias: {
       '@src': APP_DIR,
       '@shared': `${APP_DIR}/components/shared`,

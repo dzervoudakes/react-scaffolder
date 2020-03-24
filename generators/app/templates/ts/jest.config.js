@@ -27,9 +27,7 @@ module.exports = {
   testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[jtm]s?(x)'],
   testURL: 'http://localhost',
   transform: {
-    '^.+\\.(js|jsx|mjs)$': 'babel-jest',
-    '^.+\\.tsx?$': 'ts-jest',
-    '^.+\\.md?$': 'markdown-loader-jest',
+    '^.+\\.(ts|tsx|js|jsx|mjs)$': 'ts-jest',
     '^.+\\.s?css$': '<rootDir>/config/jest/style-transform.ts',
     '^.+\\.(png|jpg|jpeg|git|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/config/jest/file-transform.ts'

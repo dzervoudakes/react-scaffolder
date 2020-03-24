@@ -10,7 +10,6 @@
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
-    "noEmit": true,
     "outDir": "./dist",
     "paths": {
       "@src/*": ["./src/*"],

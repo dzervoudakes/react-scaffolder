@@ -2,8 +2,6 @@
  * Declares global modules.
  * @packageDocumentation
  */
-declare module '*.md';
-
 declare module '*.bmp' {
   const src: string;
   export default src;

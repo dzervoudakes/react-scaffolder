@@ -33,10 +33,6 @@ module.exports = {
         ]
       },
       {
-        test: /\.md$/,
-        loader: 'babel-loader!react-markdown-loader'
-      },
-      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {
@@ -63,7 +59,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.mjs', '.json', '.scss', '.css', '.md'],
+    extensions: ['.js', '.jsx', '.mjs', '.json', '.scss', '.css'],
     alias: {
       '@src': APP_DIR,
       '@shared': `${APP_DIR}/components/shared`,
