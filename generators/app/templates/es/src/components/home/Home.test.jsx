@@ -14,6 +14,6 @@ describe('Home', () => {
     );
 
     expect(getByText('Welcome to your new React App!')).toBeInTheDocument();
-    expect(getByText('Made with ❤️.')).toBeInTheDocument();
+    expect(getByText('Made with ❤️')).toBeInTheDocument();
   });
 });
