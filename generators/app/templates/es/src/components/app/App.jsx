@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import { hot } from 'react-hot-loader/root';
 import Missing from '@src/components/missing';
 import routes from '@src/routes/app-routes';
 import Header from './header';
@@ -18,4 +19,4 @@ const App = () => (
   </>
 );
 
-export default App;
+export default hot(App);

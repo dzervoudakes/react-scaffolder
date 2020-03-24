@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.1.1
+
+**Release Date:** 2020-03-24
+
+* Add missing `hot` export to `App.jsx` and `App.tsx`.
+
 ## v1.1.0
 
 **Release Date:** 2020-03-24
