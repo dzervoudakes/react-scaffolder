@@ -5,6 +5,7 @@ scripts
 .eslintignore
 .eslintrc.js
 .gitignore
+.lintstagedrc.js
 .prettierignore
 .prettierrc.js
 CHANGELOG.md
