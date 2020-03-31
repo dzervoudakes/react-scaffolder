@@ -24,8 +24,7 @@ const hotMiddleware = webpackHot(compiler, {
 
 devMiddleware.waitUntilValid(() => {
   spinner.stop();
-  const url = `http://localhost:${port}`;
-  open(url);
+  open(`http://localhost:${port}`);
 });
 
 export { devMiddleware, hotMiddleware };

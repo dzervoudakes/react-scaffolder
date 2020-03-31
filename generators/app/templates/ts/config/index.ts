@@ -24,6 +24,5 @@ export default {
   env: {
     development: setProcessVars('development'),
     production: setProcessVars('production')
-  },
-  isDevelopment: process.env.NODE_ENV === 'development'
+  }
 };

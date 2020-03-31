@@ -2,10 +2,11 @@
  * @fileoverview Base Webpack configuration, shared between development and production builds.
  */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlPlugin = require('html-webpack-plugin');
 const config = require('../config');
 
 const {
-  directories: { app: APP_DIR }
+  directories: { app: APP_DIR, public: PUBLIC_DIR }
 } = config;
 
 module.exports = {
@@ -26,7 +27,9 @@ module.exports = {
         test: /\.s?css$/,
         include: APP_DIR,
         use: [
-          config.isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+          process.env.NODE_ENV === 'development'
+            ? 'style-loader'
+            : MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader'
@@ -58,12 +61,23 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlPlugin({
+      favicon: `${PUBLIC_DIR}/favicon.ico`,
+      filename: 'index.html',
+      template: `${PUBLIC_DIR}/index.html`,
+      minify: process.env.NODE_ENV === 'production' && {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+      }
+    })
+  ],
   resolve: {
     extensions: ['.js', '.jsx', '.mjs', '.json', '.scss', '.css'],
     alias: {
       '@src': APP_DIR,
-      '@shared': `${APP_DIR}/components/shared`,
-      'react-dom': '@hot-loader/react-dom'
+      '@shared': `${APP_DIR}/components/shared`
     }
   }
 };

@@ -1,5 +1,13 @@
 # React Scaffolder | Changelog
 
+## v1.1.2
+
+**Release Date:** 2020-03-30
+
+* Tweak Webpack config. _(dzervoudakes)_
+* Remove `copy-webpack-plugin`. _(dzervoudakes)_
+* Lower global coverage threshold to `80`. _(dzervoudakes)_
+
 ## v1.1.1
 
 **Release Date:** 2020-03-24

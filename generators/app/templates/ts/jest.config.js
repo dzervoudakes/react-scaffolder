@@ -1,18 +1,18 @@
 module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx,js,jsx,mjs}',
-    '!**/index.[jtm]s',
+    '!**/*.ts',
+    '!<rootDir>/src/**/*.d.ts',
     '!<rootDir>/src/index.tsx',
-    '!<rootDir>/src/globals.d.ts',
     '!<rootDir>/src/polyfills.ts',
     '!<rootDir>/src/routes/**'
   ],
   coverageThreshold: {
     global: {
-      branches: 90,
-      functions: 90,
-      lines: 90,
-      statements: 90
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
     }
   },
   moduleNameMapper: {

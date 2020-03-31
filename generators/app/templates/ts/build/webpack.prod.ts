@@ -7,13 +7,11 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import OptimizeCssAssetsPlugin from 'optimize-css-assets-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
-import CopyPlugin from 'copy-webpack-plugin';
-import HtmlPlugin from 'html-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import config from '../config';
 
 const {
-  directories: { build: BUILD_DIR, public: PUBLIC_DIR, root: ROOT_DIR }
+  directories: { build: BUILD_DIR }
 } = config;
 
 const plugins = [
@@ -23,20 +21,7 @@ const plugins = [
     filename: 'css/[name].[chunkhash].min.css'
   }),
   new OptimizeCssAssetsPlugin(),
-  new webpack.optimize.AggressiveMergingPlugin(),
-  new CopyPlugin([
-    { from: `${ROOT_DIR}/public`, to: `${BUILD_DIR}/public`, ignore: ['.*'] }
-  ]),
-  new HtmlPlugin({
-    favicon: `${PUBLIC_DIR}/favicon.ico`,
-    filename: 'index.html',
-    template: `${PUBLIC_DIR}/index.html`,
-    minify: {
-      removeComments: true,
-      collapseWhitespace: true,
-      removeAttributeQuotes: true
-    }
-  })
+  new webpack.optimize.AggressiveMergingPlugin()
 ];
 
 if (process.argv.indexOf('--report') !== -1) {

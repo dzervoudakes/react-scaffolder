@@ -4,10 +4,11 @@
  */
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import HtmlPlugin from 'html-webpack-plugin';
 import config from '../config';
 
 const {
-  directories: { app: APP_DIR }
+  directories: { app: APP_DIR, public: PUBLIC_DIR }
 } = config;
 
 const baseConfig: webpack.Configuration = {
@@ -30,7 +31,9 @@ const baseConfig: webpack.Configuration = {
         test: /\.s?css$/,
         include: APP_DIR,
         use: [
-          config.isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+          process.env.NODE_ENV === 'development'
+            ? 'style-loader'
+            : MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader'
@@ -62,12 +65,23 @@ const baseConfig: webpack.Configuration = {
       }
     ]
   },
+  plugins: [
+    new HtmlPlugin({
+      favicon: `${PUBLIC_DIR}/favicon.ico`,
+      filename: 'index.html',
+      template: `${PUBLIC_DIR}/index.html`,
+      minify: process.env.NODE_ENV === 'production' && {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+      }
+    })
+  ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json', '.scss', '.css'],
     alias: {
       '@src': APP_DIR,
-      '@shared': `${APP_DIR}/components/shared`,
-      'react-dom': '@hot-loader/react-dom'
+      '@shared': `${APP_DIR}/components/shared`
     }
   }
 };

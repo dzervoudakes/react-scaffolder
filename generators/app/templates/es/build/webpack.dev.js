@@ -3,7 +3,6 @@
  */
 const path = require('path');
 const webpack = require('webpack');
-const HtmlPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const HardSourcePlugin = require('hard-source-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
@@ -19,15 +18,15 @@ module.exports = {
   plugins: [
     new webpack.EnvironmentPlugin(config.env.development),
     new webpack.HotModuleReplacementPlugin(),
-    new HtmlPlugin({
-      favicon: `${PUBLIC_DIR}/favicon.ico`,
-      filename: 'index.html',
-      template: `${PUBLIC_DIR}/index.html`
-    }),
     new FriendlyErrorsPlugin(),
     new HardSourcePlugin(),
     new WatchMissingNodeModulesPlugin(path.resolve(__dirname, '../node_modules'))
   ],
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
+  },
   optimization: {
     noEmitOnErrors: true,
     namedModules: true,
