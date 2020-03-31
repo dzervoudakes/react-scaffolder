@@ -41,10 +41,17 @@
     "eslint-plugin-import": "2.20.1",
     "eslint-plugin-jest": "23.8.2",
     "eslint-plugin-prettier": "3.1.2",
+    "husky": "4.2.3",
     "jest": "25.1.0",
+    "lint-staged": "10.1.0",
     "ora": "4.0.3",
     "prettier": "2.0.2",
     "yeoman-assert": "3.1.1",
     "yeoman-test": "2.3.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
