@@ -4,6 +4,7 @@
  */
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
 import HtmlPlugin from 'html-webpack-plugin';
 import config from '../config';
 
@@ -66,6 +67,7 @@ const baseConfig: webpack.Configuration = {
     ]
   },
   plugins: [
+    new CaseSensitivePathsPlugin(),
     new HtmlPlugin({
       favicon: `${PUBLIC_DIR}/favicon.ico`,
       filename: 'index.html',

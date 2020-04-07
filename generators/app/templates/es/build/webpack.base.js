@@ -2,6 +2,7 @@
  * @fileoverview Base Webpack configuration, shared between development and production builds.
  */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const config = require('../config');
 
@@ -22,6 +23,12 @@ module.exports = {
         options: {
           cacheDirectory: true
         }
+      },
+      {
+        test: /\.(js|jsx|mjs)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        enforce: 'pre'
       },
       {
         test: /\.s?css$/,
@@ -62,6 +69,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CaseSensitivePathsPlugin(),
     new HtmlPlugin({
       favicon: `${PUBLIC_DIR}/favicon.ico`,
       filename: 'index.html',

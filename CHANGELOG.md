@@ -1,12 +1,20 @@
 # React Scaffolder | Changelog
 
+## v1.1.3
+
+**Release Date:** 2020-04-06
+
+* Update all template dependencies.
+* Implement `case-sensitive-paths-webpack-plugin`.
+* Implement `eslint-loader` and enforce formatting on pre compile. (`babel` template only)
+
 ## v1.1.2
 
 **Release Date:** 2020-03-30
 
-* Tweak Webpack config. _(dzervoudakes)_
-* Remove `copy-webpack-plugin`. _(dzervoudakes)_
-* Lower global coverage threshold to `80`. _(dzervoudakes)_
+* Tweak `webpack` config.
+* Remove `copy-webpack-plugin`.
+* Lower global coverage threshold to `80`.
 
 ## v1.1.1
 
@@ -18,60 +26,60 @@
 
 **Release Date:** 2020-03-24
 
-* Enable strict features in TypeScript template. _(dzervoudakes)_
-* Update all template dependencies. _(dzervoudakes)_
-* Reformat all scripts after an update to `Prettier`. _(dzervoudakes)_
-* Implement `postcss-preset-env` and uninstall `autoprefixer` plugin. _(dzervoudakes)_
-* Remove `react/sort-comp` lint rule. _(dzervoudakes)_
-* Remove `no-undef` lint rule. _(dzervoudakes)_
-* Remove `arrow-parens` lint rule. _(dzervoudakes)_
-* Simplify Webpack config. _(dzervoudakes)_
-* Replace `awesome-typescript-loader` with `ts-loader`. _(dzervoudakes)_
-* Remove `react-markdown-loader`. _(dzervoudakes)_
+* Enable strict features in TypeScript template.
+* Update all template dependencies.
+* Reformat all scripts after an update to `Prettier`.
+* Implement `postcss-preset-env` and uninstall `autoprefixer` plugin.
+* Remove `react/sort-comp` lint rule.
+* Remove `no-undef` lint rule.
+* Remove `arrow-parens` lint rule.
+* Simplify `webpack` config.
+* Replace `awesome-typescript-loader` with `ts-loader`.
+* Remove `react-markdown-loader`.
 
 ## v1.0.3
 
 **Release Date:** 2020-02-27
 
-* Add missing `babel-jest` dependency for TypeScript template. _(dzervoudakes)_
+* Add missing `babel-jest` dependency for TypeScript template.
 
 ## v1.0.2
 
 **Release Date:** 2020-02-20
 
-* Support `.mjs` extension. _(dzervoudakes)_
+* Support `.mjs` extension.
 
 ## v1.0.1
 
 **Release Date:** 2020-02-18
 
-* Include `hard-source-webpack-plugin` for caching in development. _(dzervoudakes)_
+* Include `hard-source-webpack-plugin` for caching in development.
 
 ## v1.0.0
 
 **Release Date:** 2020-02-17
 
-* Update template dependencies and tweak config. _(dzervoudakes)_
-* Update lint rules. _(dzervoudakes)_
-* Add technical requirements to README template. _(dzervoudakes)_
+* Update template dependencies and tweak config.
+* Update lint rules.
+* Add technical requirements to README template.
 * Remove forced `save-dev=true` from `.npmrc`. _(dzeroudakes)_
-* Update scripts, config and server for TypeScript. _(dzervoudakes)_
+* Update scripts, config and server for TypeScript.
 
 ## v0.1.2
 
 **Release Date:** 2019-08-26
 
-* Remove unnecessary `react/prop-types` eslint rule from `ts` builds. _(dzervoudakes)_
+* Remove unnecessary `react/prop-types` eslint rule from `ts` builds.
 
 ## v0.1.1
 
 **Release Date:** 2019-08-25
 
-* Include auto install and `--skip-install` option. _(dzervoudakes)_
-* Add author, repository and license fields to package templates. _(dzervoudakes)_
+* Include auto install and `--skip-install` option.
+* Add author, repository and license fields to package templates.
 
 ## v0.1.0
 
 **Release Date:** 2019-08-25
 
-* Initial publish for field testing. _(dzervoudakes)_
+* Initial publish for field testing.
