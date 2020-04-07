@@ -1,5 +1,5 @@
 {
-  "inputFiles": ["./src"],
+  "inputFiles": ["./README.md", "**/*.ts", "**/*.tsx"],
   "exclude": ["./src/**/index.ts", "./src/**/*.test.tsx"],
   "out": "docs"
 }

@@ -8,6 +8,7 @@ describe('react scaffolder', () => {
   const commonOutput = [
     `${appLocation}/build`,
     `${appLocation}/config`,
+    `${appLocation}/jest`,
     `${appLocation}/public`,
     `${appLocation}/scripts`,
     `${appLocation}/server`,
@@ -30,6 +31,7 @@ describe('react scaffolder', () => {
   it('generates an es6 project', () => {
     const esOutput = [
       `${appLocation}/.babelrc`,
+      `${appLocation}/jsdoc.config.js`,
       `${appLocation}/src/polyfills.js`,
       `${appLocation}/src/index.jsx`
     ];
@@ -46,9 +48,7 @@ describe('react scaffolder', () => {
     const tsOutput = [
       `${appLocation}/tsconfig.json`,
       `${appLocation}/typedoc.json`,
-      `${appLocation}/src/dev-client.d.ts`,
       `${appLocation}/src/globals.d.ts`,
-      `${appLocation}/src/jest-dom.d.ts`,
       `${appLocation}/src/polyfills.ts`,
       `${appLocation}/src/index.tsx`
     ];

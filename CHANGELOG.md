@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.1.4
+
+**Release Date:** TBD
+
+* Reorganize configuration files.
+
 ## v1.1.3
 
 **Release Date:** 2020-04-06

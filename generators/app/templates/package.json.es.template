@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production node scripts/build",
     "build:report": "npm run build -- --report",
     "clean": "rimraf coverage dist docs",
-    "docs": "jsdoc -c ./config/jsdoc/jsdoc.config.js -r",
+    "docs": "jsdoc -c ./jsdoc.config.js -r",
     "lint": "node scripts/eslint",
     "lint:fix": "npm run lint -- --fix",
     "start": "cross-env NODE_ENV=development node server",
