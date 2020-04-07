@@ -13,8 +13,7 @@
 
 * Update all template dependencies.
 * Implement `case-sensitive-paths-webpack-plugin`.
-* Implement `eslint-loader` and enforce formatting on pre compile. (`babel` template only)
-* Implement `cleanup` after each test runs.
+* Implement `eslint-loader` and enforce formatting on pre compile (`babel` template only).
 
 ## v1.1.2
 
@@ -70,7 +69,7 @@
 * Update template dependencies and tweak config.
 * Update lint rules.
 * Add technical requirements to README template.
-* Remove forced `save-dev=true` from `.npmrc`. _(dzeroudakes)_
+* Remove forced `save-dev=true` from `.npmrc`.
 * Update scripts, config and server for TypeScript.
 
 ## v0.1.2
