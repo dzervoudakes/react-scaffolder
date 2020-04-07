@@ -7,6 +7,7 @@
 * Update all template dependencies.
 * Implement `case-sensitive-paths-webpack-plugin`.
 * Implement `eslint-loader` and enforce formatting on pre compile. (`babel` template only)
+* Implement `cleanup` after each test runs.
 
 ## v1.1.2
 
