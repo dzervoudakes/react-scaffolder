@@ -64,9 +64,19 @@ module.exports = class extends Generator {
     if (!this.options['skip-install']) {
       const { applicationName } = this.data;
 
-      console.log(chalk.cyan('\nInstalling npm dependencies...\n'));
-
+      this.log(chalk.cyan('\nInstalling npm dependencies...\n'));
       this.npmInstall(null, {}, { cwd: applicationName });
     }
+  }
+
+  end() {
+    const { applicationName } = this.data;
+
+    this.log(chalk.cyan('\nSetup complete. Happy coding!\n'));
+    this.log(
+      chalk.yellow(
+        `Tip: Build instructions can be found in the ${applicationName}/README.md file.\n`
+      )
+    );
   }
 };
