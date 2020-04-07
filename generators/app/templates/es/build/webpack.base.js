@@ -10,6 +10,13 @@ const {
   directories: { app: APP_DIR, public: PUBLIC_DIR }
 } = config;
 
+const defineStyleRule = (options = {}) => [
+  process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+  { loader: 'css-loader', options },
+  'postcss-loader',
+  'sass-loader'
+];
+
 module.exports = {
   entry: {
     app: [`${APP_DIR}/polyfills.js`, `${APP_DIR}/index.jsx`]
@@ -31,16 +38,20 @@ module.exports = {
         enforce: 'pre'
       },
       {
-        test: /\.s?css$/,
-        include: APP_DIR,
-        use: [
-          process.env.NODE_ENV === 'development'
-            ? 'style-loader'
-            : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
+        test: /\.(css|scss)$/,
+        exclude: /\.module\.(css|scss)$/,
+        use: defineStyleRule()
+      },
+      {
+        test: /\.module\.(css|scss)$/,
+        use: defineStyleRule({
+          url: false,
+          localsConvention: 'camelCase',
+          importLoaders: 2,
+          modules: {
+            localIdentName: '[name]__[local]--[hash:base64:5]'
+          }
+        })
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

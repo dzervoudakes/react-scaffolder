@@ -1,10 +1,11 @@
 # React Scaffolder | Changelog
 
-## v1.1.4
+## v1.2.0
 
-**Release Date:** TBD
+**Release Date:** 2020-04-07
 
 * Reorganize configuration files.
+* Add support for `css modules`.
 
 ## v1.1.3
 

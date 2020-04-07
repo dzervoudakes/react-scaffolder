@@ -50,6 +50,6 @@ yo react-scaffolder --skip-install
 
 * **Syntax:** react, js, jsx, ts, tsx, mjs
 * **Tooling:** eslint, stylelint, editorconfig, babel (non-TypeScript template only)
-* **Styling:** scss, css, postcss
+* **Styling:** scss, css, postcss, css module syntax (`*.module.scss` and `*.module.css` nomenclature supported)
 * **Testing:** jest, react testing library
 * **Build instructions:** provided via the `README.md` file generated with each new scaffold
