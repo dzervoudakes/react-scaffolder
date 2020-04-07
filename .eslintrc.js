@@ -15,7 +15,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['scripts/*.js', 'generators/app/index.js'],
+      files: ['scripts/*.js'],
       rules: {
         'no-console': OFF
       }
