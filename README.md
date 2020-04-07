@@ -34,6 +34,9 @@ Generate with TypeScript:
 
 ```
 yo react-scaffolder --typescript
+
+// alternatively
+yo react-scaffolder --ts
 ```
 
 The generator will attempt to install `npm` dependencies for you by default, though this operation can be disabled:

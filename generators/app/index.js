@@ -30,8 +30,9 @@ module.exports = class extends Generator {
 
   writing() {
     const { applicationName } = this.data;
+    const { typescript, ts } = this.options;
 
-    const path = this.options.typescript ? 'ts' : 'es';
+    const path = typescript || ts ? 'ts' : 'es';
 
     this.fs.copy(
       this.templatePath(`${path}/**/*`),
