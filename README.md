@@ -49,7 +49,7 @@ yo react-scaffolder --skip-install
 ### What's Included
 
 * **Syntax:** react, js, jsx, ts, tsx, mjs
-* **Tooling:** babel, eslint, stylelint, editorconfig
-* **Styling:** scss, css, autoprefixer
+* **Tooling:** eslint, stylelint, editorconfig, babel (non-TypeScript template only)
+* **Styling:** scss, css, postcss
 * **Testing:** jest, react testing library
 * **Build instructions:** provided via the `README.md` file generated with each new scaffold
