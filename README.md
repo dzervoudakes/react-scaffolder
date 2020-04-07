@@ -35,7 +35,8 @@ Generate with TypeScript:
 ```
 yo react-scaffolder --typescript
 
-// alternatively
+// or
+
 yo react-scaffolder --ts
 ```
 
