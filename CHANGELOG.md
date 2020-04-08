@@ -6,6 +6,7 @@
 
 * Reorganize configuration files.
 * Add support for `css modules`.
+* Add support for `*.scss` imports from `node_modules`.
 
 ## v1.1.3
 

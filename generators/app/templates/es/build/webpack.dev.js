@@ -20,7 +20,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new FriendlyErrorsPlugin(),
     new HardSourcePlugin(),
-    new WatchMissingNodeModulesPlugin(path.resolve(__dirname, '../node_modules'))
+    new WatchMissingNodeModulesPlugin(path.resolve(__dirname, '..', 'node_modules'))
   ],
   resolve: {
     alias: {
@@ -34,6 +34,6 @@ module.exports = {
   },
   output: {
     path: PUBLIC_DIR,
-    filename: 'js/[name].js'
+    filename: path.join('js', '[name].js')
   }
 };

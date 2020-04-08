@@ -1,6 +1,7 @@
 /**
  * @fileoverview Base Webpack configuration, shared between development and production builds.
  */
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
@@ -14,12 +15,19 @@ const defineStyleRule = (options = {}) => [
   process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
   { loader: 'css-loader', options },
   'postcss-loader',
-  'sass-loader'
+  {
+    loader: 'sass-loader',
+    options: {
+      sassOptions: {
+        includePaths: [path.resolve(__dirname, '..', 'node_modules')]
+      }
+    }
+  }
 ];
 
 module.exports = {
   entry: {
-    app: [`${APP_DIR}/polyfills.js`, `${APP_DIR}/index.jsx`]
+    app: [path.resolve(APP_DIR, 'polyfills.js'), path.resolve(APP_DIR, 'index.jsx')]
   },
   module: {
     rules: [
@@ -58,7 +66,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'images/[name].[hash:7].[ext]'
+          name: path.join('images', '[name].[hash:7].[ext]')
         }
       },
       {
@@ -66,7 +74,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'media/[name].[hash:7].[ext]'
+          name: path.join('media', '[name].[hash:7].[ext]')
         }
       },
       {
@@ -74,7 +82,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'fonts/[name].[hash:7].[ext]'
+          name: path.join('fonts', '[name].[hash:7].[ext]')
         }
       }
     ]
@@ -82,9 +90,9 @@ module.exports = {
   plugins: [
     new CaseSensitivePathsPlugin(),
     new HtmlPlugin({
-      favicon: `${PUBLIC_DIR}/favicon.ico`,
+      favicon: path.resolve(PUBLIC_DIR, 'favicon.ico'),
       filename: 'index.html',
-      template: `${PUBLIC_DIR}/index.html`,
+      template: path.resolve(PUBLIC_DIR, 'index.html'),
       minify: process.env.NODE_ENV === 'production' && {
         removeComments: true,
         collapseWhitespace: true,
@@ -96,7 +104,7 @@ module.exports = {
     extensions: ['.js', '.jsx', '.mjs', '.json', '.scss', '.css'],
     alias: {
       '@src': APP_DIR,
-      '@shared': `${APP_DIR}/components/shared`
+      '@shared': path.resolve(APP_DIR, 'components', 'shared')
     }
   }
 };

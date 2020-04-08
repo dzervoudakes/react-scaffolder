@@ -2,6 +2,7 @@
  * Webpack production configuration.
  * @packageDocumentation
  */
+import path from 'path';
 import webpack from 'webpack';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
@@ -18,7 +19,7 @@ const plugins = [
   new webpack.EnvironmentPlugin(config.env.production),
   new CleanWebpackPlugin(),
   new MiniCssExtractPlugin({
-    filename: 'css/[name].[chunkhash].min.css'
+    filename: path.join('css', '[name].[chunkhash].min.css')
   }),
   new OptimizeCssAssetsPlugin(),
   new webpack.optimize.AggressiveMergingPlugin()
@@ -59,8 +60,9 @@ module.exports = {
   },
   output: {
     path: BUILD_DIR,
-    filename: 'js/[name].[chunkhash].min.js',
-    sourceMapFilename: 'js/[name].[chunkhash].min.map',
-    chunkFilename: 'js/[name].[chunkhash].min.js'
+    publicPath: '/',
+    filename: path.join('js', '[name].[chunkhash].min.js'),
+    sourceMapFilename: path.join('js', '[name].[chunkhash].min.map'),
+    chunkFilename: path.join('js', '[name].[chunkhash].min.js')
   }
 };

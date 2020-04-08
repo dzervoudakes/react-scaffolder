@@ -2,6 +2,7 @@
  * Base Webpack configuration, shared between development and production builds.
  * @packageDocumentation
  */
+import path from 'path';
 import webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CaseSensitivePathsPlugin from 'case-sensitive-paths-webpack-plugin';
@@ -16,12 +17,19 @@ const defineStyleRule = (options = {}): (string | { loader: string; options: {} 
   process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
   { loader: 'css-loader', options },
   'postcss-loader',
-  'sass-loader'
+  {
+    loader: 'sass-loader',
+    options: {
+      sassOptions: {
+        includePaths: [path.resolve(__dirname, '..', 'node_modules')]
+      }
+    }
+  }
 ];
 
 const baseConfig: webpack.Configuration = {
   entry: {
-    app: [`${APP_DIR}/polyfills.ts`, `${APP_DIR}/index.tsx`]
+    app: [path.resolve(APP_DIR, 'polyfills.ts'), path.resolve(APP_DIR, 'index.tsx')]
   },
   module: {
     rules: [
@@ -56,7 +64,7 @@ const baseConfig: webpack.Configuration = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'images/[name].[hash:7].[ext]'
+          name: path.join('images', '[name].[hash:7].[ext]')
         }
       },
       {
@@ -64,7 +72,7 @@ const baseConfig: webpack.Configuration = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'media/[name].[hash:7].[ext]'
+          name: path.join('media', '[name].[hash:7].[ext]')
         }
       },
       {
@@ -72,7 +80,7 @@ const baseConfig: webpack.Configuration = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'fonts/[name].[hash:7].[ext]'
+          name: path.join('fonts', '[name].[hash:7].[ext]')
         }
       }
     ]
@@ -80,9 +88,9 @@ const baseConfig: webpack.Configuration = {
   plugins: [
     new CaseSensitivePathsPlugin(),
     new HtmlPlugin({
-      favicon: `${PUBLIC_DIR}/favicon.ico`,
+      favicon: path.resolve(PUBLIC_DIR, 'favicon.ico'),
       filename: 'index.html',
-      template: `${PUBLIC_DIR}/index.html`,
+      template: path.resolve(PUBLIC_DIR, 'index.html'),
       minify: process.env.NODE_ENV === 'production' && {
         removeComments: true,
         collapseWhitespace: true,
@@ -94,7 +102,7 @@ const baseConfig: webpack.Configuration = {
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json', '.scss', '.css'],
     alias: {
       '@src': APP_DIR,
-      '@shared': `${APP_DIR}/components/shared`
+      '@shared': path.resolve(APP_DIR, 'components', 'shared')
     }
   }
 };
