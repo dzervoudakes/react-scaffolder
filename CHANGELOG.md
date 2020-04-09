@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.2.1
+
+**Release Date:** 2020-04-08
+
+* Remove unnecessary polyfills.
+* Reorganize dependencies.
+
 ## v1.2.0
 
 **Release Date:** 2020-04-07

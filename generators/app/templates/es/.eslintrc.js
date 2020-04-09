@@ -58,7 +58,9 @@ module.exports = {
       js: 'never',
       jsx: 'never'
     }],
-    'import/no-extraneous-dependencies': OFF,
+    'import/no-extraneous-dependencies': [ERROR, {
+      devDependencies: ['build/**', 'config/**', 'jest/**', 'scripts/**', '**/*.test.*', '**/*.spec.*']
+    }],
     'import/no-dynamic-require': OFF,
     'import/no-unresolved': ERROR,
     'import/order': [ERROR, {
