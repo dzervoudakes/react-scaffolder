@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.2.2
+
+**Release Date:** TBD
+
+* Add `regenerator-runtime/runtime` polyfill.
+* Update testing and build process.
+
 ## v1.2.1
 
 **Release Date:** 2020-04-08
