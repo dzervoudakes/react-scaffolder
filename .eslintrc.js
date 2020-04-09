@@ -36,7 +36,6 @@ module.exports = {
     'curly': ERROR,
     'eol-last': [ERROR, 'always'],
     'import/extensions': [ERROR, 'always', { js: 'never' }],
-    'import/no-extraneous-dependencies': OFF,
     'import/no-dynamic-require': OFF,
     'import/no-unresolved': ERROR,
     'import/order': [ERROR, {
