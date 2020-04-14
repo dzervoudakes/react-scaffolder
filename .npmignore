@@ -1,6 +1,7 @@
+.vscode
+.DS_Store
+.git
 .github
-node_modules
-scripts
 .editorconfig
 .eslintignore
 .eslintrc.js
@@ -11,3 +12,5 @@ scripts
 CHANGELOG.md
 jest.config.js
 package-lock.json
+node_modules
+scripts
