@@ -6,6 +6,7 @@
 
 * Add `regenerator-runtime/runtime` polyfill.
 * Update testing and build process.
+* Set `allowJs` in `tsconfig.json` to `true`.
 
 ## v1.2.1
 
