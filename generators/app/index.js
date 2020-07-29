@@ -33,7 +33,7 @@ module.exports = class extends Generator {
         type: 'input',
         name: 'yarn',
         required: true,
-        message: 'Install dependencies with Yarn? (Y/n)'
+        message: 'Yarn? (Y/n)'
       });
     }
 
@@ -88,10 +88,14 @@ module.exports = class extends Generator {
 
   install() {
     if (!this.options['skip-install']) {
-      this.log(chalk.cyan('\nInstalling npm dependencies...\n'));
-
       const { applicationName, yarn } = this.data;
-      const method = yarn === 'Y' ? 'yarnInstall' : 'npmInstall';
+
+      const isYarn = yarn === 'Y';
+      const method = isYarn ? 'yarnInstall' : 'npmInstall';
+
+      this.log(
+        chalk.cyan(`\nInstalling dependencies with ${isYarn ? 'yarn' : 'npm'}...\n`)
+      );
 
       this[method](null, {}, { cwd: applicationName });
     }

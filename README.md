@@ -6,7 +6,7 @@
 [![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![license](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-## The Concept: Similar to Create React App, Not a Replacement
+## The Concept: A Homegrown Alternative to Create React App
 
 Create React App is an objectively _awesome_ tool and I have nothing but nice things to say about it. Over time, I've decided that I want to learn more about the engine behind the application, and so I started crafting and evolving my own React + Webpack configuration over time as a learning experience.
 
@@ -24,23 +24,28 @@ npm install -g generator-react-scaffolder
 
 ### Scaffold a New React Template
 
-You will be prompted to enter the name of your application at this step:
+To begin the scaffolding process:
 
 ```
 yo react-scaffolder
 ```
+
+At this stage, you will be prompted to provide the following:
+- Application name, any text of your choosing
+- Yarn, yes or no (excluded if the `skip-install` option is provided)
+
+### With Options
 
 Generate with TypeScript:
 
 ```
 yo react-scaffolder --typescript
 
-// or
-
+// alternatively
 yo react-scaffolder --ts
 ```
 
-The generator will attempt to install `npm` dependencies for you by default, though this operation can be disabled:
+The generator will attempt to install dependencies for you by default, though this operation can be disabled:
 
 ```
 yo react-scaffolder --skip-install
