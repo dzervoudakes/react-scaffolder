@@ -54,7 +54,7 @@ jobs:
         path: node_modules
         key: react-scaffolder-dependency-cache-${{ hashFiles('**/package-lock.json') }}
     - name: Run all checks for ES6 template
-      run: npm run test:es6
+      run: npm install && npm run test:es6
 
   test_typescript:
     runs-on: ubuntu-latest
@@ -67,4 +67,4 @@ jobs:
         path: node_modules
         key: react-scaffolder-dependency-cache-${{ hashFiles('**/package-lock.json') }}
     - name: Run all checks for TypeScript template
-      run: npm run test:typescript
+      run: npm install && npm run test:typescript
