@@ -64,12 +64,29 @@ module.exports = {
     'prettier'
   ],
   rules: {
+    // TypeScript rules
+    '@typescript-eslint/explicit-function-return-type': ERROR,
+    '@typescript-eslint/no-unused-vars': ERROR,
+
+    // standard rules
     'class-methods-use-this': OFF,
     'comma-dangle': [ERROR, 'never'],
     'comma-spacing': [ERROR, { before: false, after: true }],
     'consistent-return': OFF,
     curly: ERROR,
     'eol-last': [ERROR, 'always'],
+    'linebreak-style': OFF,
+    'no-console': WARN,
+    'no-param-reassign': ERROR,
+    'no-plusplus': [ERROR, { allowForLoopAfterthoughts: true }],
+    'no-unused-vars': ERROR,
+    'no-var': ERROR,
+    'prefer-const': ERROR,
+    'prefer-template': ERROR,
+    quotes: [ERROR, 'single', { avoidEscape: true }],
+    'require-await': ERROR,
+
+    // import rules
     'import/dynamic-import-chunkname': ERROR,
     'import/extensions': [
       ERROR,
@@ -103,15 +120,8 @@ module.exports = {
         'newlines-between': 'never'
       }
     ],
-    'linebreak-style': OFF,
-    'no-console': WARN,
-    'no-param-reassign': ERROR,
-    'no-plusplus': [ERROR, { allowForLoopAfterthoughts: true }],
-    'no-unused-vars': ERROR,
-    'no-var': ERROR,
-    'prefer-const': ERROR,
-    'prefer-template': ERROR,
-    quotes: [ERROR, 'single', { avoidEscape: true }],
+
+    // React rules
     'react/forbid-prop-types': ERROR,
     'react-hooks/rules-of-hooks': ERROR,
     'react-hooks/exhaustive-deps': WARN,
@@ -127,10 +137,7 @@ module.exports = {
     'react/prop-types': OFF,
     'react/require-default-props': OFF,
     'react/sort-comp': ERROR,
-    'react/static-property-placement': OFF,
-    'require-await': ERROR,
-    '@typescript-eslint/explicit-function-return-type': ERROR,
-    '@typescript-eslint/no-unused-vars': ERROR
+    'react/static-property-placement': OFF
   },
   settings: {
     'import/resolver': {
