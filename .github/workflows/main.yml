@@ -48,11 +48,6 @@ jobs:
     needs: dependencies
     steps:
     - uses: actions/checkout@v2
-    - name: Restore npm cache
-      uses: actions/cache@v1
-      with:
-        path: node_modules
-        key: react-scaffolder-dependency-cache-${{ hashFiles('**/package-lock.json') }}
     - name: Run all checks for ES6 template
       run: npm run test:es6
 
@@ -61,10 +56,5 @@ jobs:
     needs: dependencies
     steps:
     - uses: actions/checkout@v2
-    - name: Restore npm cache
-      uses: actions/cache@v1
-      with:
-        path: node_modules
-        key: react-scaffolder-dependency-cache-${{ hashFiles('**/package-lock.json') }}
     - name: Run all checks for TypeScript template
       run: npm run test:typescript
