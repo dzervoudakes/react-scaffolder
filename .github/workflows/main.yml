@@ -43,7 +43,7 @@ jobs:
     - name: Run unit tests
       run: npm test
 
-  test:es6:
+  test_es6:
     runs-on: ubuntu-latest
     needs: dependencies
     steps:
@@ -56,7 +56,7 @@ jobs:
     - name: Run all checks for ES6 template
       run: npm run test:es6
 
-  test:typescript:
+  test_typescript:
     runs-on: ubuntu-latest
     needs: dependencies
     steps:
