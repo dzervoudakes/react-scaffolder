@@ -17,14 +17,27 @@ module.exports = class extends Generator {
   }
 
   prompting() {
-    return this.prompt([
+    const skipInstall = this.options['skip-install'];
+
+    const prompts = [
       {
         type: 'input',
         name: 'applicationName',
         required: true,
         message: 'What is the name of the application?'
       }
-    ]).then((data) => {
+    ];
+
+    if (!skipInstall) {
+      prompts.push({
+        type: 'input',
+        name: 'yarn',
+        required: true,
+        message: 'Install dependencies with Yarn? (Y/n)'
+      });
+    }
+
+    return this.prompt(prompts).then((data) => {
       this.data = data;
     });
   }
@@ -75,10 +88,12 @@ module.exports = class extends Generator {
 
   install() {
     if (!this.options['skip-install']) {
-      const { applicationName } = this.data;
-
       this.log(chalk.cyan('\nInstalling npm dependencies...\n'));
-      this.npmInstall(null, {}, { cwd: applicationName });
+
+      const { applicationName, yarn } = this.data;
+      const method = yarn === 'Y' ? 'yarnInstall' : 'npmInstall';
+
+      this[method](null, {}, { cwd: applicationName });
     }
   }
 

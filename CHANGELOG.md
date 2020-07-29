@@ -2,11 +2,12 @@
 
 ## v1.3.0
 
-**Release Date:** TBD
+**Release Date:** 2020-07-29
 
 * Add `regenerator-runtime/runtime` polyfill.
-* Update testing and build process.
 * Set `allowJs` in `tsconfig.json` to `true`.
+* Add `yarn` support.
+* Revamp testing and build process.
 
 ## v1.2.1
 

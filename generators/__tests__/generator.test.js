@@ -37,7 +37,7 @@ describe('react scaffolder', () => {
 
     return helpers
       .run(generator)
-      .withPrompts({ applicationName: appLocation })
+      .withPrompts({ applicationName: appLocation, yarn: 'Y' })
       .then(() => {
         assert.file(commonOutput.concat(esOutput));
       });
@@ -55,7 +55,7 @@ describe('react scaffolder', () => {
     return helpers
       .run(generator)
       .withOptions({ typescript: true })
-      .withPrompts({ applicationName: appLocation })
+      .withPrompts({ applicationName: appLocation, yarn: 'Y' })
       .then(() => {
         assert.file(commonOutput.concat(tsOutput));
       });
