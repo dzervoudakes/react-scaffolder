@@ -43,7 +43,7 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    const { applicationName } = this.data;
+    const { applicationName, yarn } = this.data;
     const { typescript, ts } = this.options;
 
     const templateName = typescript || ts ? 'TypeScript' : 'ES6';
@@ -76,7 +76,7 @@ module.exports = class extends Generator {
     this._writeFile(
       this.templatePath('common/README.md.template'),
       this.destinationPath(applicationName, 'README.md'),
-      { templateName }
+      { templateName, yarn: yarn === 'Y' }
     );
 
     this._writeFile(
