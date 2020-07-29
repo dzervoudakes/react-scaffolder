@@ -38,10 +38,21 @@ module.exports = class extends Generator {
 
     this.fs.copy(
       this.templatePath(`${path}/**/*`),
-      this.destinationPath(applicationName)
+      this.destinationPath(applicationName),
+      {
+        globOptions: {
+          dot: true,
+          ignore: [
+            '**/node_modules',
+            '**/package.json',
+            '**/package-lock.json',
+            '**/yarn.lock',
+            '**/index.html',
+            '**/README.md'
+          ]
+        }
+      }
     );
-
-    this.fs.copy(this.templatePath(`${path}/.*`), this.destinationPath(applicationName));
 
     this._writeFile(
       this.templatePath(`common/package.json.${path}.template`),
