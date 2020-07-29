@@ -61,7 +61,8 @@ module.exports = class extends Generator {
             '**/package-lock.json',
             '**/yarn.lock',
             '**/index.html',
-            '**/README.md'
+            '**/README.md',
+            '**/.DS_Store'
           ]
         }
       }

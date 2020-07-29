@@ -1,5 +1,4 @@
 .vscode
-.DS_Store
 .git
 .github
 .editorconfig
@@ -20,3 +19,4 @@ generators/**/yarn.lock
 generators/**/coverage
 generators/**/dist
 generators/**/docs
+**/.DS_Store
