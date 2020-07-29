@@ -1,1 +1,4 @@
 node_modules
+generators/**/node_modules
+generators/**/package-lock.json
+generators/**/yarn.lock

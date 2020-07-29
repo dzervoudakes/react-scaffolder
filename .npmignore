@@ -14,3 +14,6 @@ jest.config.js
 package-lock.json
 node_modules
 scripts
+generators/**/node_modules
+generators/**/package-lock.json
+generators/**/yarn.lock
