@@ -3,6 +3,7 @@ const WARN = 1;
 const ERROR = 2;
 
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es6: true,

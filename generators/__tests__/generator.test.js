@@ -7,7 +7,6 @@ describe('react scaffolder', () => {
   const appLocation = 'my-app';
   const commonOutput = [
     `${appLocation}/build`,
-    `${appLocation}/config`,
     `${appLocation}/jest`,
     `${appLocation}/public`,
     `${appLocation}/scripts`,

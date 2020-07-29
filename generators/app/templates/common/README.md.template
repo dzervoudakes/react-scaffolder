@@ -1,5 +1,5 @@
-# <%= applicationName %>
-> Scaffold for the <%= applicationName %> React app.
+# <%= templateName %> React Template
+> Welcome to your new React app.
 
 [![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 
@@ -76,7 +76,7 @@ npm run clean
 ```
 
 ## Technical Requirements
-> The runtime environment for this application requires `Node >= 13.6.0` and `NPM >= 6.4.1`.
+> The runtime environment for this application requires `Node >= 14.6.0` and `NPM >= 6.14.7`.
 
 ## Configuration
 > This application makes use of `ESLint`, `Stylelint` and `EditorConfig`. Each of these features requires

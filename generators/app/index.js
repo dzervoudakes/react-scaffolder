@@ -6,6 +6,7 @@ module.exports = class extends Generator {
     super(args, opts);
 
     this.option('typescript');
+    this.option('ts');
     this.option('skip-install');
   }
 
@@ -32,7 +33,8 @@ module.exports = class extends Generator {
     const { applicationName } = this.data;
     const { typescript, ts } = this.options;
 
-    const path = typescript || ts ? 'ts' : 'es';
+    const templateName = typescript || ts ? 'TypeScript' : 'ES6';
+    const path = templateName.toLowerCase();
 
     this.fs.copy(
       this.templatePath(`${path}/**/*`),
@@ -42,7 +44,7 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath(`${path}/.*`), this.destinationPath(applicationName));
 
     this._writeFile(
-      this.templatePath(`package.json.${path}.template`),
+      this.templatePath(`common/package.json.${path}.template`),
       this.destinationPath(applicationName, 'package.json'),
       { applicationName }
     );
@@ -50,7 +52,7 @@ module.exports = class extends Generator {
     this._writeFile(
       this.templatePath('common/README.md.template'),
       this.destinationPath(applicationName, 'README.md'),
-      { applicationName }
+      { templateName }
     );
 
     this._writeFile(

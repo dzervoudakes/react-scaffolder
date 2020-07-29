@@ -1,6 +1,6 @@
 # React Scaffolder | Changelog
 
-## v1.2.2
+## v1.3.0
 
 **Release Date:** TBD
 
