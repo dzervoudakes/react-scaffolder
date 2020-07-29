@@ -1,8 +1,7 @@
-node_modules
-generators/**/node_modules
-generators/**/package-lock.json
-generators/**/yarn.lock
-generators/**/coverage
-generators/**/dist
-generators/**/docs
+**/node_modules
+**/package-lock.json
+**/yarn.lock
+**/coverage
+**/dist
+**/docs
 **/.DS_Store
