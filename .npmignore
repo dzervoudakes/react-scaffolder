@@ -17,3 +17,6 @@ scripts
 generators/**/node_modules
 generators/**/package-lock.json
 generators/**/yarn.lock
+generators/**/coverage
+generators/**/dist
+generators/**/docs

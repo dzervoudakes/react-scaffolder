@@ -1,7 +1,7 @@
 {
-  "name": "todo-name",
+  "name": "es6-template",
   "version": "0.1.0",
-  "description": "TODO application, built with React.",
+  "description": "ES6 application, built with React.",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production node scripts/build",

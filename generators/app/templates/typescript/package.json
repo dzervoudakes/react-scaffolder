@@ -1,7 +1,7 @@
 {
-  "name": "todo-name",
+  "name": "typescript-template",
   "version": "0.1.0",
-  "description": "TODO application, built with React.",
+  "description": "TypeScript application, built with React.",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production ts-node scripts/build",

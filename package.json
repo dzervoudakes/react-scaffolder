@@ -27,8 +27,10 @@
   "scripts": {
     "lint": "node scripts/eslint",
     "lint:fix": "npm run lint -- --fix",
-    "prepublishOnly": "npm run lint && npm test",
-    "test": "node scripts/test"
+    "prepublishOnly": "npm run lint && npm test && npm run test:es6 && npm run test:typescript",
+    "test": "node scripts/test",
+    "test:es6": "./scripts/testall.sh es6",
+    "test:typescript": "./scripts/testall.sh typescript"
   },
   "dependencies": {
     "chalk": "4.1.0",
