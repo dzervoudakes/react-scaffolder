@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production node scripts/build",
-    "build:report": "npm run build -- --report",
+    "build:report": "<%= cmd %> build -- --report",
     "clean": "rimraf coverage dist docs",
     "docs": "jsdoc -c ./jsdoc.config.js -r",
     "lint": "node scripts/eslint",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "<%= cmd %> lint -- --fix",
     "start": "cross-env NODE_ENV=development node server",
     "stylelint": "node scripts/stylelint",
-    "stylelint:fix": "npm run stylelint -- --fix",
+    "stylelint:fix": "<%= cmd %> stylelint -- --fix",
     "test": "node scripts/test",
-    "test:coverage": "npm test -- --coverage",
-    "test:verbose": "npm test -- --verbose",
-    "test:watch": "npm test -- --watchAll"
+    "test:coverage": "<%= packageManager %> test -- --coverage",
+    "test:verbose": "<%= packageManager %> test -- --verbose",
+    "test:watch": "<%= packageManager %> test -- --watchAll"
   },
   "repository": {},
   "author": "",
@@ -107,8 +107,8 @@
     }
   },
   "engines": {
-    "node": ">= 14.6.0",
-    "npm": ">= 6.14.7"
+    "node": ">= <%= nodeVersion %>",
+    "<%= packageManager %>": ">= <%= packageManagerVersion %>"
   },
   "browserslist": [
     "> 1%",

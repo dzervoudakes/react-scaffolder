@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.3.2
+
+**Release Date:** 2020-07-29
+
+* Template variables for package manager, engine and current versions.
+* Variablize build commands in package scripts.
+
 ## v1.3.1
 
 **Release Date:** 2020-07-29

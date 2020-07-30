@@ -41,6 +41,12 @@ module.exports = class extends Generator {
 
     const templateName = typescript || ts ? 'TypeScript' : 'ES6';
     const path = templateName.toLowerCase();
+    const isYarn = yarn === 'Y';
+
+    const packageManager = isYarn ? 'yarn' : 'npm';
+    const packageManagerVersion = isYarn ? '1.22.4' : '6.14.7';
+    const nodeVersion = '14.6.0';
+    const cmd = isYarn ? 'yarn' : 'npm run';
 
     this.fs.copy(
       this.templatePath(`${path}/**/*`),
@@ -64,13 +70,25 @@ module.exports = class extends Generator {
     this._writeFile(
       this.templatePath(`common/package.json.${path}.template`),
       this.destinationPath(applicationName, 'package.json'),
-      { applicationName }
+      {
+        applicationName,
+        cmd,
+        nodeVersion,
+        packageManager,
+        packageManagerVersion
+      }
     );
 
     this._writeFile(
       this.templatePath('common/README.md.template'),
       this.destinationPath(applicationName, 'README.md'),
-      { templateName, cmd: yarn === 'Y' ? 'yarn' : 'npm run' }
+      {
+        cmd,
+        nodeVersion,
+        packageManager,
+        packageManagerVersion,
+        templateName
+      }
     );
 
     this._writeFile(
