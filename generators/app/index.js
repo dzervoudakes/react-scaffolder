@@ -77,7 +77,7 @@ module.exports = class extends Generator {
     this._writeFile(
       this.templatePath('common/README.md.template'),
       this.destinationPath(applicationName, 'README.md'),
-      { templateName, yarn: yarn === 'Y' }
+      { templateName, cmd: yarn === 'Y' ? 'yarn' : 'npm run' }
     );
 
     this._writeFile(

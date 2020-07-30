@@ -7,72 +7,72 @@
 
 ### Install Dependencies
 ```
-<% if (yarn) { %>yarn<% } else { %>npm install<% } %>
+<% if (cmd === 'npm run') { %>npm install<% } else { %>yarn<% } %>
 ```
 
 ### Start Local Server on Port 8080
 ```
-<% if (yarn) { %>yarn<% } else { %>npm<% } %> start
+<% if (cmd === 'npm run') { %>npm<% } else { %>yarn<% } %> start
 ```
 
 ### Run Linting
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> lint
+<%= cmd %> lint
 ```
 
 ### Run Linting with Fix
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> lint:fix
+<%= cmd %> lint:fix
 ```
 
 ### Run Style Linting
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> stylelint
+<%= cmd %> stylelint
 ```
 
 ### Run Style Linting with Fix
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> stylelint:fix
+<%= cmd %> stylelint:fix
 ```
 
 ### Run Unit Tests
 ```
-<% if (yarn) { %>yarn<% } else { %>npm<% } %> test
+<% if (cmd === 'npm run') { %>npm<% } else { %>yarn<% } %> test
 ```
 
 ### Run Unit Tests with Coverage Report
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> test:coverage
+<%= cmd %> test:coverage
 ```
 
 ### Run Unit Tests with Verbose Results
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> test:verbose
+<%= cmd %> test:verbose
 ```
 
 ### Run Unit Tests and Watch for Changes
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> test:watch
+<%= cmd %> test:watch
 ```
 
 ### Build for Production
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> build
+<%= cmd %> build
 ```
 
 ### Build for Production with Bundle Analyzer Report
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> build:report
+<%= cmd %> build:report
 ```
 
 ### Generate Documentation
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> docs
+<%= cmd %> docs
 ```
 
 ### Remove All Build Directories
 ```
-<% if (yarn) { %>yarn<% } else { %>npm run<% } %> clean
+<%= cmd %> clean
 ```
 
 ## Technical Requirements
