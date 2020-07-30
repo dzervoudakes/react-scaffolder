@@ -43,10 +43,14 @@ module.exports = class extends Generator {
     const path = templateName.toLowerCase();
     const isYarn = yarn === 'Y';
 
-    const packageManager = isYarn ? 'yarn' : 'npm';
-    const packageManagerVersion = isYarn ? '1.22.4' : '6.14.7';
-    const nodeVersion = '14.6.0';
-    const cmd = isYarn ? 'yarn' : 'npm run';
+    const variables = {
+      applicationName,
+      cmd: isYarn ? 'yarn' : 'npm run',
+      packageManager: isYarn ? 'yarn' : 'npm',
+      packageManagerVersion: isYarn ? '1.22.4' : '6.14.7',
+      nodeVersion: '14.6.0',
+      templateName
+    };
 
     this.fs.copy(
       this.templatePath(`${path}/**/*`),
@@ -70,31 +74,19 @@ module.exports = class extends Generator {
     this._writeFile(
       this.templatePath(`common/package.json.${path}.template`),
       this.destinationPath(applicationName, 'package.json'),
-      {
-        applicationName,
-        cmd,
-        nodeVersion,
-        packageManager,
-        packageManagerVersion
-      }
+      variables
     );
 
     this._writeFile(
       this.templatePath('common/README.md.template'),
       this.destinationPath(applicationName, 'README.md'),
-      {
-        cmd,
-        nodeVersion,
-        packageManager,
-        packageManagerVersion,
-        templateName
-      }
+      variables
     );
 
     this._writeFile(
       this.templatePath('common/index.html.template'),
       this.destinationPath(`${applicationName}/public`, 'index.html'),
-      { applicationName }
+      variables
     );
   }
 
