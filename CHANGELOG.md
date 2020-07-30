@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.3.3
+
+**Release Date:** 2020-07-30
+
+* Update lint configs and add `eslint-config-airbnb-base` to the root generator config.
+
 ## v1.3.2
 
 **Release Date:** 2020-07-29
