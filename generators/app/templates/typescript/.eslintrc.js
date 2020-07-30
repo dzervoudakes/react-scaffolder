@@ -23,7 +23,7 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['build/**/*.ts', 'config/**/*.ts', 'scripts/*.ts', 'server/**/*.ts'],
+      files: ['build/**/*.ts', 'scripts/*.ts', 'server/**/*.ts'],
       rules: {
         '@typescript-eslint/no-var-requires': OFF
       }
@@ -103,7 +103,6 @@ module.exports = {
       {
         devDependencies: [
           'build/**',
-          'config/**',
           'jest/**',
           'scripts/**',
           '**/*.test.*',

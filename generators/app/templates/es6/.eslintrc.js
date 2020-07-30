@@ -82,7 +82,6 @@ module.exports = {
       {
         devDependencies: [
           'build/**',
-          'config/**',
           'jest/**',
           'scripts/**',
           '**/*.test.*',

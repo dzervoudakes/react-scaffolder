@@ -10,11 +10,18 @@ module.exports = {
     node: true
   },
   extends: [
+    'airbnb-base',
     'eslint:recommended',
     'plugin:jest/recommended',
     'plugin:prettier/recommended'
   ],
   overrides: [
+    {
+      files: ['generators/app/index.js'],
+      rules: {
+        'no-underscore-dangle': OFF
+      }
+    },
     {
       files: ['scripts/*.js'],
       rules: {
@@ -38,6 +45,12 @@ module.exports = {
     'eol-last': [ERROR, 'always'],
     'import/extensions': [ERROR, 'always', { js: 'never' }],
     'import/no-dynamic-require': OFF,
+    'import/no-extraneous-dependencies': [
+      ERROR,
+      {
+        devDependencies: ['scripts/**', '**/*.test.*', '**/*.spec.*']
+      }
+    ],
     'import/no-unresolved': ERROR,
     'import/order': [
       ERROR,
