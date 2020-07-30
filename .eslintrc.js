@@ -37,12 +37,26 @@ module.exports = {
   ],
   plugins: ['import', 'prettier'],
   rules: {
+    // standard rules
     'class-methods-use-this': OFF,
     'comma-dangle': [ERROR, 'never'],
     'comma-spacing': [ERROR, { before: false, after: true }],
     'consistent-return': OFF,
     curly: ERROR,
     'eol-last': [ERROR, 'always'],
+    'linebreak-style': OFF,
+    'no-console': WARN,
+    'no-param-reassign': ERROR,
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'no-undef': ERROR,
+    'no-unused-vars': ERROR,
+    'no-var': ERROR,
+    'prefer-const': ERROR,
+    'prefer-template': ERROR,
+    quotes: [ERROR, 'single', { avoidEscape: true }],
+    'require-await': ERROR,
+
+    // import rules
     'import/extensions': [ERROR, 'always', { js: 'never' }],
     'import/no-dynamic-require': OFF,
     'import/no-extraneous-dependencies': [
@@ -59,17 +73,8 @@ module.exports = {
         'newlines-between': 'never'
       }
     ],
-    'jest/expect-expect': OFF, // assertions via 'yeoman-assert'
-    'linebreak-style': OFF,
-    'no-console': WARN,
-    'no-param-reassign': ERROR,
-    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
-    'no-undef': ERROR,
-    'no-unused-vars': ERROR,
-    'no-var': ERROR,
-    'prefer-const': ERROR,
-    'prefer-template': ERROR,
-    quotes: [ERROR, 'single', { avoidEscape: true }],
-    'require-await': ERROR
+
+    // test assertions made with via 'yeoman-assert' instead of 'expect'
+    'jest/expect-expect': OFF
   }
 };
