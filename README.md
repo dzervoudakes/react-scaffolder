@@ -32,7 +32,7 @@ yo react-scaffolder
 
 At this stage, you will be prompted to provide the following:
 - Application name, any text of your choosing
-- Yarn, yes or no (excluded if the `skip-install` option is provided)
+- Yarn, yes or no
 
 ### With Options
 

@@ -17,27 +17,20 @@ module.exports = class extends Generator {
   }
 
   prompting() {
-    const skipInstall = this.options['skip-install'];
-
-    const prompts = [
+    return this.prompt([
       {
         type: 'input',
         name: 'applicationName',
         required: true,
         message: 'What is the name of the application?'
-      }
-    ];
-
-    if (!skipInstall) {
-      prompts.push({
+      },
+      {
         type: 'input',
         name: 'yarn',
         required: true,
         message: 'Yarn? (Y/n)'
-      });
-    }
-
-    return this.prompt(prompts).then((data) => {
+      }
+    ]).then((data) => {
       this.data = data;
     });
   }

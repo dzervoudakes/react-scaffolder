@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.3.1
+
+**Release Date:** 2020-07-29
+
+* Enable `yarn` parameter when skipping install.
+
 ## v1.3.0
 
 **Release Date:** 2020-07-29
