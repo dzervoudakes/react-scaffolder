@@ -102,8 +102,6 @@ module.exports = {
 
     // React rules
     'react/forbid-prop-types': ERROR,
-    'react-hooks/rules-of-hooks': ERROR,
-    'react-hooks/exhaustive-deps': WARN,
     'react/jsx-closing-bracket-location': [ERROR, 'line-aligned'],
     'react/jsx-curly-brace-presence': [ERROR, 'never'],
     'react/jsx-curly-spacing': [ERROR, { when: 'never', children: true }],
@@ -115,7 +113,9 @@ module.exports = {
     'react/prefer-stateless-function': ERROR,
     'react/require-default-props': OFF,
     'react/sort-comp': ERROR,
-    'react/static-property-placement': OFF
+    'react/static-property-placement': OFF,
+    'react-hooks/rules-of-hooks': ERROR,
+    'react-hooks/exhaustive-deps': WARN
   },
   settings: {
     'import/resolver': {

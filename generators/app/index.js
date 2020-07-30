@@ -46,9 +46,9 @@ module.exports = class extends Generator {
     const variables = {
       applicationName,
       cmd: isYarn ? 'yarn' : 'npm run',
+      nodeVersion: '14.6.0',
       packageManager: isYarn ? 'yarn' : 'npm',
       packageManagerVersion: isYarn ? '1.22.4' : '6.14.7',
-      nodeVersion: '14.6.0',
       templateName
     };
 
