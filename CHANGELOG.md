@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## unreleased
+
+**Release Date:** unreleased
+
+* Tweak `webpack` base config.
+
 ## v1.3.3
 
 **Release Date:** 2020-07-30

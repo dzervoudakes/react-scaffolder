@@ -9,19 +9,17 @@ const HtmlPlugin = require('html-webpack-plugin');
 const APP_DIR = path.resolve(__dirname, '..', 'src');
 const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 
-const defineStyleRule = (options = {}) => [
-  process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-  { loader: 'css-loader', options },
-  'postcss-loader',
-  {
-    loader: 'sass-loader',
-    options: {
-      sassOptions: {
-        includePaths: [path.resolve(__dirname, '..', 'node_modules')]
-      }
+const styleLoader =
+  process.env.NODE_ENV === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader;
+
+const sassLoader = {
+  loader: 'sass-loader',
+  options: {
+    sassOptions: {
+      includePaths: [path.resolve(__dirname, '..', 'node_modules')]
     }
   }
-];
+};
 
 module.exports = {
   entry: {
@@ -46,18 +44,26 @@ module.exports = {
       {
         test: /\.(css|scss)$/,
         exclude: /\.module\.(css|scss)$/,
-        use: defineStyleRule()
+        use: [styleLoader, 'css-loader', 'postcss-loader', sassLoader]
       },
       {
         test: /\.module\.(css|scss)$/,
-        use: defineStyleRule({
-          url: false,
-          localsConvention: 'camelCase',
-          importLoaders: 2,
-          modules: {
-            localIdentName: '[name]__[local]--[hash:base64:5]'
-          }
-        })
+        use: [
+          styleLoader,
+          {
+            loader: 'css-loader',
+            options: {
+              url: false,
+              localsConvention: 'camelCase',
+              importLoaders: 2,
+              modules: {
+                localIdentName: '[name]__[local]--[hash:base64:5]'
+              }
+            }
+          },
+          'postcss-loader',
+          sassLoader
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
