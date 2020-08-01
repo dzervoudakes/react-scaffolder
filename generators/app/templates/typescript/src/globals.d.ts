@@ -1,5 +1,5 @@
 /**
- * Declares global modules.
+ * Declare global modules.
  * @packageDocumentation
  */
 declare module '*.bmp' {

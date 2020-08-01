@@ -1,5 +1,5 @@
 /**
- * Transforms file imports into filenames for Jest.
+ * Transform file imports into filenames for Jest.
  * @packageDocumentation
  */
 import path from 'path';

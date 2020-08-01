@@ -1,5 +1,5 @@
 /**
- * Imports polyfills for Webpack config entry point.
+ * Import polyfills for Webpack config entry point.
  * @packageDocumentation
  */
 import 'core-js/stable';

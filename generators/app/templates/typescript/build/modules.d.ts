@@ -1,5 +1,5 @@
 /**
- * Declares global module for webpack-hot-middleware dev-client.
+ * Declare global modules for webpack as needed.
  * @packageDocumentation
  */
 declare module 'webpack-hot-middleware/client';

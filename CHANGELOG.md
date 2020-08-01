@@ -5,6 +5,7 @@
 **Release Date:** unreleased
 
 * Tweak `webpack` base config.
+* Remove unnecessary `app-routes` directory from templates.
 
 ## v1.3.3
 

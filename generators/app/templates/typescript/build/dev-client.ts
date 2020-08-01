@@ -1,5 +1,5 @@
 /**
- * Wires up the Webpack hot middleware client for hot module loading/replacement.
+ * Wire up the Webpack hot middleware client for hot module loading/replacement.
  * @packageDocumentation
  */
 import devClient from 'webpack-hot-middleware/client';

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Transforms file imports into filenames for Jest.
+ * @fileoverview Transform file imports into filenames for Jest.
  */
 const path = require('path');
 

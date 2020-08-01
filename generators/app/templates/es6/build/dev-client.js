@@ -1,5 +1,5 @@
 /**
- * @fileoverview Wires up the Webpack hot middleware client for hot module loading/replacement.
+ * @fileoverview Wire up the Webpack hot middleware client for hot module loading/replacement.
  */
 const devClient = require('webpack-hot-middleware/client');
 

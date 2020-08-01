@@ -1,5 +1,5 @@
 /**
- * Transforms style imports into empty objects for Jest.
+ * Transform style imports into empty objects for Jest.
  * @packageDocumentation
  */
 export default {

@@ -1,5 +1,5 @@
 /**
- * @fileoverview Defines configuration for documentation output.
+ * @fileoverview Define configuration for documentation output.
  */
 module.exports = {
   opts: {
