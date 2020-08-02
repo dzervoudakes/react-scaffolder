@@ -6,6 +6,7 @@
 
 * Tweak `webpack` base config.
 * Remove unnecessary `app-routes` directory from templates.
+* Split `eslint`, `stylelint` and `prettier` configs into a new package.
 
 ## v1.3.3
 
