@@ -1,5 +1,7 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
+const jspkg = require('./templates/javascript/package.json');
+const tspkg = require('./templates/typescript/package.json');
 
 module.exports = class extends Generator {
   constructor(args, opts) {
@@ -40,12 +42,15 @@ module.exports = class extends Generator {
     const { typescript, ts } = this.options;
 
     const templateName = typescript || ts ? 'TypeScript' : 'JavaScript';
+    const pkg = typescript || ts ? tspkg : jspkg;
     const path = templateName.toLowerCase();
     const isYarn = yarn === 'Y';
 
     const variables = {
       applicationName,
       cmd: isYarn ? 'yarn' : 'npm run',
+      dependencies: pkg.dependencies,
+      devDependencies: pkg.devDependencies,
       nodeVersion: '14.6.0',
       packageManager: isYarn ? 'yarn' : 'npm',
       packageManagerVersion: isYarn ? '1.22.4' : '6.14.7',
@@ -72,7 +77,7 @@ module.exports = class extends Generator {
     );
 
     this._writeFile(
-      this.templatePath(`common/package.json.${path}.template`),
+      this.templatePath('common/package.json.template'),
       this.destinationPath(applicationName, 'package.json'),
       variables
     );

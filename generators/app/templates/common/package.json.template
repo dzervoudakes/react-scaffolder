@@ -1,0 +1,43 @@
+{
+  "name": "<%= applicationName %>",
+  "version": "0.1.0",
+  "description": "<%= applicationName %> application, built with React.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production <% if (templateName === 'TypeScript') { %>ts-<% } %>node scripts/build",
+    "build:report": "<%= cmd %> build <% if (packageManager === 'npm') { %>-- <% } %>--report",
+    "clean": "rimraf coverage dist docs",
+    "docs": "<% if (templateName === 'TypeScript') { %>typedoc<% } else { %>jsdoc -c ./jsdoc.config.js -r<% } %>",
+    "lint": "node<% if (templateName === 'TypeScript') { %> -r ts-node/register<% } %> scripts/eslint",
+    "lint:fix": "<%= cmd %> lint <% if (packageManager === 'npm') { %>-- <% } %>--fix",
+    "start": "cross-env NODE_ENV=development <% if (templateName === 'TypeScript') { %>ts-<% } %>node server",
+    "stylelint": "<% if (templateName === 'TypeScript') { %>ts-<% } %>node scripts/stylelint",
+    "stylelint:fix": "<%= cmd %> stylelint <% if (packageManager === 'npm') { %>-- <% } %>--fix",
+    "test": "<% if (templateName === 'TypeScript') { %>ts-<% } %>node scripts/test",
+    "test:coverage": "<%= packageManager %> test <% if (packageManager === 'npm') { %>-- <% } %>--coverage",
+    "test:verbose": "<%= packageManager %> test <% if (packageManager === 'npm') { %>-- <% } %>--verbose",
+    "test:watch": "<%= packageManager %> test <% if (packageManager === 'npm') { %>-- <% } %>--watchAll"
+  },
+  "repository": {},
+  "author": "",
+  "license": "",
+  "dependencies": {<% Object.keys(dependencies).forEach((key, index) => { %>
+    "<%= key %>": "<%= dependencies[key] %>"<% if (index !== Object.keys(dependencies).length - 1) { %>,<% } %><% }); %>
+  },
+  "devDependencies": {<% Object.keys(devDependencies).forEach((key, index) => { %>
+    "<%= key %>": "<%= devDependencies[key] %>"<% if (index !== Object.keys(devDependencies).length - 1) { %>,<% } %><% }); %>
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "engines": {
+    "node": ">= <%= nodeVersion %>",
+    "<%= packageManager %>": ">= <%= packageManagerVersion %>"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}

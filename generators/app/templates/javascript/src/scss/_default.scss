@@ -50,6 +50,10 @@ a {
   color: $color-cyan;
   transition: opacity 0.2s;
 
+  &.link-purple {
+    color: $color-purple;
+  }
+
   &:hover {
     opacity: 0.6;
   }

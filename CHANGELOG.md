@@ -7,6 +7,7 @@
 * Tweak `webpack` base config.
 * Remove `app-routes` directory from templates.
 * Split `eslint`, `stylelint`, `prettier`, and `webpack` configs into separate packages.
+* Merge `package.json.template` into one file and update dependencies.
 
 ## v1.3.3
 
