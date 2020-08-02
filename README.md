@@ -27,7 +27,7 @@ npm install -g generator-react-scaffolder
 **Yarn**
 
 ```
-yarn add global generator-react-scaffolder
+yarn global add generator-react-scaffolder
 ```
 
 ### Scaffold a New React Template
