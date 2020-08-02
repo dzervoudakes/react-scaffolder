@@ -18,8 +18,16 @@ This scaffolding tool is a [yeoman](https://yeoman.io/) generator, and requires 
 
 ### Install the Generator
 
+**NPM**
+
 ```
 npm install -g generator-react-scaffolder
+```
+
+**Yarn**
+
+```
+yarn add global generator-react-scaffolder
 ```
 
 ### Scaffold a New React Template
