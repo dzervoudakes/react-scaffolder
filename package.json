@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "@dztools/eslint-config-base": "1.0.1",
+    "@dztools/prettier-config": "1.0.1",
     "eslint": "7.5.0",
     "eslint-config-airbnb-base": "14.2.0",
     "eslint-config-prettier": "6.11.0",
