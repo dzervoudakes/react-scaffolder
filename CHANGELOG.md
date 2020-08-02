@@ -1,8 +1,8 @@
 # React Scaffolder | Changelog
 
-## unreleased
+## v1.4.0
 
-**Release Date:** unreleased
+**Release Date:** 2020-08-02
 
 * Tweak `webpack` base config.
 * Remove `app-routes` directory from templates.
