@@ -1,3 +1,3 @@
-# ES6 Template
+# JavaScript Template
 
 Standard React scaffolding template.

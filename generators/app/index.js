@@ -39,7 +39,7 @@ module.exports = class extends Generator {
     const { applicationName, yarn } = this.data;
     const { typescript, ts } = this.options;
 
-    const templateName = typescript || ts ? 'TypeScript' : 'ES6';
+    const templateName = typescript || ts ? 'TypeScript' : 'JavaScript';
     const path = templateName.toLowerCase();
     const isYarn = yarn === 'Y';
 

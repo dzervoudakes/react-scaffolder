@@ -27,7 +27,7 @@ describe('react scaffolder', () => {
     `${appLocation}/README.md`
   ];
 
-  it('generates an es6 project', () => {
+  it('generates a javascript project', () => {
     const esOutput = [
       `${appLocation}/.babelrc`,
       `${appLocation}/jsdoc.config.js`,

@@ -1,2 +1,2 @@
 # Run all checks before publish
-npm run lint && npm test && npm run test:es6 && npm run test:typescript
+npm run lint && npm test && npm run test:javascript && npm run test:typescript

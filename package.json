@@ -29,7 +29,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublishOnly": "./scripts/prepublish.sh",
     "test": "node scripts/test",
-    "test:es6": "./scripts/testall.sh es6",
+    "test:javascript": "./scripts/testall.sh javascript",
     "test:typescript": "./scripts/testall.sh typescript"
   },
   "dependencies": {

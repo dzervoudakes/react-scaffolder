@@ -1,22 +1,22 @@
 {
-  "name": "<%= applicationName %>",
+  "name": "javascript-template",
   "version": "0.1.0",
-  "description": "<%= applicationName %> application, built with React.",
+  "description": "JavaScript application, built with React.",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production node scripts/build",
-    "build:report": "<%= cmd %> build -- --report",
+    "build:report": "npm run build -- --report",
     "clean": "rimraf coverage dist docs",
     "docs": "jsdoc -c ./jsdoc.config.js -r",
     "lint": "node scripts/eslint",
-    "lint:fix": "<%= cmd %> lint -- --fix",
+    "lint:fix": "npm run lint -- --fix",
     "start": "cross-env NODE_ENV=development node server",
     "stylelint": "node scripts/stylelint",
-    "stylelint:fix": "<%= cmd %> stylelint -- --fix",
+    "stylelint:fix": "npm run stylelint -- --fix",
     "test": "node scripts/test",
-    "test:coverage": "<%= packageManager %> test -- --coverage",
-    "test:verbose": "<%= packageManager %> test -- --verbose",
-    "test:watch": "<%= packageManager %> test -- --watchAll"
+    "test:coverage": "npm test -- --coverage",
+    "test:verbose": "npm test -- --verbose",
+    "test:watch": "npm test -- --watchAll"
   },
   "repository": {},
   "author": "",
@@ -101,8 +101,8 @@
     }
   },
   "engines": {
-    "node": ">= <%= nodeVersion %>",
-    "<%= packageManager %>": ">= <%= packageManagerVersion %>"
+    "node": ">= 14.6.0",
+    "npm": ">= 6.14.7"
   },
   "browserslist": [
     "> 1%",
