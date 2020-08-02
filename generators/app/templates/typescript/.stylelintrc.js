@@ -1,3 +1,3 @@
 module.exports = {
-	extends: ['@dztools/stylelint-config']
+  extends: ['@dztools/stylelint-config']
 };
