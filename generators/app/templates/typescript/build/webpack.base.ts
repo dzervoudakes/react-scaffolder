@@ -6,4 +6,4 @@
  */
 const { webpackBaseConfig } = require('@dztools/webpack-config-react-typescript');
 
-export default webpackBaseConfig(__dirname);
+export default webpackBaseConfig;

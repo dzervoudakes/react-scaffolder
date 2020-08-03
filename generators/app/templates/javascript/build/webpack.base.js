@@ -5,4 +5,4 @@
  */
 const { webpackBaseConfig } = require('@dztools/webpack-config-react');
 
-module.exports = webpackBaseConfig(__dirname);
+module.exports = webpackBaseConfig;

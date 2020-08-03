@@ -6,4 +6,4 @@
  */
 const { webpackDevConfig } = require('@dztools/webpack-config-react-typescript');
 
-module.exports = webpackDevConfig(__dirname);
+module.exports = webpackDevConfig;

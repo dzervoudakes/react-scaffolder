@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.4.1
+
+**Release Date:** 2020-08-03
+
+* Update `@dztools/webpack-config-react` and `@dztools/webpack-config-react-typescript` in template dependencies.
+
 ## v1.4.0
 
 **Release Date:** 2020-08-02
