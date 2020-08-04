@@ -48,7 +48,7 @@
     "webpack-hot-middleware": "2.25.0"
   },
   "devDependencies": {
-    "@dztools/eslint-config-react-typescript": "1.0.1",
+    "@dztools/eslint-config-react-typescript": "1.0.2",
     "@dztools/prettier-config": "1.0.2",
     "@dztools/stylelint-config": "1.1.1",
     "@dztools/webpack-config-react-typescript": "1.2.1",

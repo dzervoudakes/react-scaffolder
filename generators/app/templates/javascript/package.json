@@ -46,7 +46,7 @@
     "@babel/plugin-transform-runtime": "7.11.0",
     "@babel/preset-env": "7.11.0",
     "@babel/preset-react": "7.10.4",
-    "@dztools/eslint-config-react": "1.0.1",
+    "@dztools/eslint-config-react": "1.0.2",
     "@dztools/prettier-config": "1.0.2",
     "@dztools/stylelint-config": "1.1.1",
     "@dztools/webpack-config-react": "1.2.1",
