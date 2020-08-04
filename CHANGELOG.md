@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.4.3
+
+**Release Date:** unreleased
+
+* Update `@dztools/stylelint-config` in template dependencies.
+* Remove several dependencies corresponding to the change above.
+
 ## v1.4.2
 
 **Release Date:** 2020-08-03
