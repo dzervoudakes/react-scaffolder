@@ -47,9 +47,9 @@
     "@babel/preset-env": "7.11.0",
     "@babel/preset-react": "7.10.4",
     "@dztools/eslint-config-react": "1.0.1",
-    "@dztools/prettier-config": "1.0.1",
-    "@dztools/stylelint-config": "1.1.0",
-    "@dztools/webpack-config-react": "1.2.0",
+    "@dztools/prettier-config": "1.0.2",
+    "@dztools/stylelint-config": "1.1.1",
+    "@dztools/webpack-config-react": "1.2.1",
     "@testing-library/jest-dom": "5.11.2",
     "@testing-library/react": "10.4.7",
     "babel-eslint": "10.1.0",
@@ -79,7 +79,7 @@
     "react-dev-utils": "10.2.1",
     "rimraf": "3.0.2",
     "stylelint": "13.6.1",
-    "webpack-merge": "5.0.9"
+    "webpack-merge": "5.1.1"
   },
   "husky": {
     "hooks": {
