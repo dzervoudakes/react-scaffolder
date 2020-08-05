@@ -1,10 +1,8 @@
 module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{js,jsx,mjs}',
-    '!**/index.js',
     '!<rootDir>/src/index.jsx',
-    '!<rootDir>/src/polyfills.js',
-    '!<rootDir>/src/routes/**'
+    '!<rootDir>/src/polyfills.js'
   ],
   coverageThreshold: {
     global: {
@@ -23,7 +21,10 @@ module.exports = {
   setupFiles: ['jest-localstorage-mock', 'jest-prop-type-error'],
   setupFilesAfterEnv: ['<rootDir>/jest/test-setup.js'],
   testEnvironment: 'jest-environment-jsdom-global',
-  testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[jt]s?(x)'],
+  testMatch: [
+    '<rootDir>/src/**/__tests__/**/*.{js,jsx}',
+    '<rootDir>/src/**/*(*.)@(spec|test).{js,jsx}'
+  ],
   testURL: 'http://localhost',
   transform: {
     '^.+\\.(js|jsx|mjs)$': 'babel-jest',

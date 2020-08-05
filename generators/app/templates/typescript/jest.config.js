@@ -1,12 +1,10 @@
 module.exports = {
   collectCoverageFrom: [
     '<rootDir>/src/**/*.{ts,tsx,js,jsx,mjs}',
-    '!**/*.ts',
     '!<rootDir>/src/**/*.d.ts',
-    '!<rootDir>/src/index.tsx',
-    '!<rootDir>/src/polyfills.ts',
-    '!<rootDir>/src/routes/**'
+    '!<rootDir>/src/components/**/index.ts'
   ],
+  coveragePathIgnorePatterns: ['<rootDir>/src/index.tsx', '<rootDir>/src/polyfills.ts'],
   coverageThreshold: {
     global: {
       branches: 80,
@@ -24,7 +22,10 @@ module.exports = {
   setupFiles: ['jest-localstorage-mock'],
   setupFilesAfterEnv: ['<rootDir>/jest/test-setup.ts'],
   testEnvironment: 'jest-environment-jsdom-global',
-  testMatch: ['<rootDir>/src/**/*(*.)@(spec|test).[jtm]s?(x)'],
+  testMatch: [
+    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/src/**/*(*.)@(spec|test).{js,jsx,ts,tsx}'
+  ],
   testURL: 'http://localhost',
   transform: {
     '^.+\\.(ts|tsx|js|jsx|mjs)$': 'ts-jest',
