@@ -7,19 +7,8 @@ module.exports = {
     {
       files: ['server/index.js', 'scripts/*.js'],
       rules: {
-        'no-console': OFF
-      }
-    },
-    {
-      files: ['scripts/test.js'],
-      rules: {
+        'no-console': OFF,
         'jest/no-jest-import': OFF
-      }
-    },
-    {
-      files: ['build/webpack.config.js'],
-      rules: {
-        'global-require': OFF
       }
     }
   ],

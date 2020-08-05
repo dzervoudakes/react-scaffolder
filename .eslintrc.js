@@ -13,12 +13,7 @@ module.exports = {
     {
       files: ['scripts/*.js'],
       rules: {
-        'no-console': OFF
-      }
-    },
-    {
-      files: ['scripts/test.js'],
-      rules: {
+        'no-console': OFF,
         'jest/no-jest-import': OFF
       }
     }
@@ -27,7 +22,7 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       ERROR,
       {
-        devDependencies: ['scripts/**', '**/*.test.*', '**/*.spec.*']
+        devDependencies: ['scripts/**', '**/*.test.*']
       }
     ],
 

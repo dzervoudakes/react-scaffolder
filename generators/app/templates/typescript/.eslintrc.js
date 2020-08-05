@@ -7,25 +7,9 @@ module.exports = {
     {
       files: ['build/**/*.ts', 'scripts/*.ts', 'server/**/*.ts'],
       rules: {
-        '@typescript-eslint/no-var-requires': OFF
-      }
-    },
-    {
-      files: ['server/index.ts', 'scripts/*.ts'],
-      rules: {
-        'no-console': OFF
-      }
-    },
-    {
-      files: ['scripts/test.ts'],
-      rules: {
+        '@typescript-eslint/no-var-requires': OFF,
+        'no-console': OFF,
         'jest/no-jest-import': OFF
-      }
-    },
-    {
-      files: ['build/webpack.config.ts'],
-      rules: {
-        'global-require': OFF
       }
     }
   ],
