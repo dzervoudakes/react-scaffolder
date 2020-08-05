@@ -1,3 +1,4 @@
+// Default config: https://github.com/dzervoudakes/dztools/blob/master/packages/formatting/eslint-config-react/index.js
 const OFF = 0;
 const ERROR = 2;
 
