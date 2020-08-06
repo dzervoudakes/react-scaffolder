@@ -8,6 +8,6 @@ module.exports = {
     template: './node_modules/docdash'
   },
   source: {
-    include: ['./README.md', './build', './jest', './scripts', './src']
+    include: ['./README.md', './build', './scripts', './src']
   }
 };

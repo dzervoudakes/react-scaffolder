@@ -2,9 +2,9 @@
 
 ## v1.4.3
 
-**Release Date:** unreleased
+**Release Date:** 2020-08-05
 
-* Update all config dependencies for `stylelint`, `prettier`, `eslint` and `webpack` in template dependencies.
+* Update all config packages for `eslint`, `jest`, `prettier`, `stylelint` and `webpack` in template dependencies.
 * Remove several dependencies corresponding to the change above.
 
 ## v1.4.2

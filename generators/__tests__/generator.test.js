@@ -7,7 +7,6 @@ describe('react scaffolder', () => {
   const appLocation = 'my-app';
   const commonOutput = [
     `${appLocation}/build`,
-    `${appLocation}/jest`,
     `${appLocation}/public`,
     `${appLocation}/scripts`,
     `${appLocation}/server`,
@@ -48,6 +47,7 @@ describe('react scaffolder', () => {
       `${appLocation}/tsconfig.json`,
       `${appLocation}/typedoc.json`,
       `${appLocation}/src/globals.d.ts`,
+      `${appLocation}/src/jest-dom.d.ts`,
       `${appLocation}/src/polyfills.ts`,
       `${appLocation}/src/index.tsx`
     ];
