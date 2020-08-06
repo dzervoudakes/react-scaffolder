@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/generator-react-scaffolder.svg)](https://www.npmjs.com/package/generator-react-scaffolder)
 [![build](https://github.com/dzervoudakes/react-scaffolder/workflows/build/badge.svg)](https://github.com/dzervoudakes/react-scaffolder/actions)
 [![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
-[![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![license](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/dzervoudakes/react-scaffolder/blob/master/LICENSE)
 
 ## A Homegrown React Template Generator
 
