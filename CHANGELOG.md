@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.4.4
+
+**Release Date:** 2020-08-06
+
+* Fix issue where `.gitignore` is being replaced with `.npmignore` during publish.
+
 ## v1.4.3
 
 **Release Date:** 2020-08-05

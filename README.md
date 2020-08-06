@@ -6,9 +6,9 @@
 [![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-## The Concept: A Homegrown Alternative to Create React App
+## A Homegrown React Template Generator
 
-Create React App is an objectively _awesome_ tool and I have nothing but nice things to say about it. Over time, I've decided that I want to learn more about the engine behind the application, and so I started crafting and evolving my own React + Webpack configuration over time as a learning experience.
+While tools like Create React App are objectively awesome, over time I've decided that I want to learn more about the engine behind the application. As such, I started crafting and evolving my own React + Webpack configuration over time as a learning experience.
 
 I have since decided to share my work with the open source community. Love it or loathe it, I will not be happy or offended either way. 😄
 
@@ -18,13 +18,13 @@ This scaffolding tool is a [yeoman](https://yeoman.io/) generator, and requires 
 
 ### Install the Generator
 
-**NPM**
+NPM
 
 ```
 npm install -g generator-react-scaffolder
 ```
 
-**Yarn**
+Yarn
 
 ```
 yarn global add generator-react-scaffolder
@@ -61,8 +61,8 @@ yo react-scaffolder --skip-install
 
 ### What's Included
 
-* **Syntax:** react, js, jsx, ts, tsx, mjs
-* **Tooling:** eslint, stylelint, editorconfig, babel (non-TypeScript template only)
-* **Styling:** scss, css, postcss, css module syntax (`*.module.scss` and `*.module.css` nomenclature supported)
-* **Testing:** jest, react testing library
-* **Build instructions:** provided via the `README.md` file generated with each new scaffold
+- **Syntax:** react, js, jsx, ts, tsx, mjs
+- **Tooling:** eslint, stylelint, editorconfig, babel (non-TypeScript template only)
+- **Styling:** scss, css, postcss, css module syntax (`*.module.scss` and `*.module.css` nomenclature supported)
+- **Testing:** jest, react testing library
+- **Build instructions:** provided via the `README.md` file generated with each new scaffold

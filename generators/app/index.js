@@ -41,10 +41,12 @@ module.exports = class extends Generator {
     const { applicationName, yarn } = this.data;
     const { typescript, ts } = this.options;
 
-    const templateName = typescript || ts ? 'TypeScript' : 'JavaScript';
-    const pkg = typescript || ts ? tspkg : jspkg;
-    const path = templateName.toLowerCase();
+    const isTypeScript = typescript || ts;
     const isYarn = yarn === 'Y';
+
+    const templateName = isTypeScript ? 'TypeScript' : 'JavaScript';
+    const pkg = isTypeScript ? tspkg : jspkg;
+    const path = templateName.toLowerCase();
 
     const variables = {
       applicationName,
@@ -70,10 +72,16 @@ module.exports = class extends Generator {
             '**/yarn.lock',
             '**/index.html',
             '**/README.md',
-            '**/.DS_Store'
+            '**/.DS_Store',
+            '**/.gitignore.sample'
           ]
         }
       }
+    );
+
+    this.fs.copy(
+      this.templatePath(`${path}/.gitignore.sample`),
+      this.destinationPath(applicationName, '.gitignore')
     );
 
     this._writeFile(
