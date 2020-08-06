@@ -16,6 +16,7 @@ describe('react scaffolder', () => {
     `${appLocation}/.eslintrc.js`,
     `${appLocation}/.gitignore`,
     `${appLocation}/.lintstagedrc.js`,
+    `${appLocation}/.npmignore`,
     `${appLocation}/.npmrc`,
     `${appLocation}/.postcssrc.js`,
     `${appLocation}/.prettierrc.js`,

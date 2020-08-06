@@ -4,7 +4,8 @@
 
 **Release Date:** 2020-08-06
 
-* Fix issue where `.gitignore` is being replaced with `.npmignore` during publish.
+* Fix issue where `.gitignore` files are replaced with `.npmignore` during publish.
+* Add dedicated `.npmignore` files for each template.
 
 ## v1.4.3
 
