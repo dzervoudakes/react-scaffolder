@@ -1,6 +1,6 @@
 {
   "name": "generator-react-scaffolder",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Scaffolding for new enterprise scale React applications on the fly.",
   "repository": {
     "type": "git",
@@ -37,8 +37,9 @@
     "yeoman-generator": "4.11.0"
   },
   "devDependencies": {
-    "@dztools/eslint-config-base": "1.0.1",
-    "@dztools/prettier-config": "1.0.1",
+    "@dztools/eslint-config-base": "1.0.2",
+    "@dztools/prettier-config": "1.0.2",
+    "babel-eslint": "10.1.0",
     "eslint": "7.6.0",
     "eslint-config-airbnb-base": "14.2.0",
     "eslint-config-prettier": "6.11.0",
@@ -49,10 +50,10 @@
     "husky": "4.2.5",
     "jest": "26.2.2",
     "lint-staged": "10.2.11",
-    "ora": "4.0.5",
+    "ora": "4.1.0",
     "prettier": "2.0.5",
     "yeoman-assert": "3.1.1",
-    "yeoman-test": "2.7.0"
+    "yeoman-test": "3.0.0"
   },
   "husky": {
     "hooks": {

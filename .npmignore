@@ -1,5 +1,4 @@
 .vscode
-.git
 .github
 .editorconfig
 .eslintignore
@@ -8,14 +7,7 @@
 .lintstagedrc.js
 .prettierignore
 .prettierrc.js
-CHANGELOG.md
 jest.config.js
 scripts
-generators/__tests__/**
-**/node_modules
-**/package-lock.json
-**/yarn.lock
-**/coverage
-**/dist
-**/docs
-**/.DS_Store
+test
+package-lock.json

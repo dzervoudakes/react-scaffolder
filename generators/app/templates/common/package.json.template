@@ -20,7 +20,7 @@
   },
   "repository": {},
   "author": "",
-  "license": "",
+  "license": "UNLICENSED",
   "dependencies": {<% Object.keys(dependencies).forEach((key, index) => { %>
     "<%= key %>": "<%= dependencies[key] %>"<% if (index !== Object.keys(dependencies).length - 1) { %>,<% } %><% }); %>
   },

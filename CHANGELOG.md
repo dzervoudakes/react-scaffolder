@@ -1,5 +1,13 @@
 # React Scaffolder | Changelog
 
+## v1.4.5
+
+**Release Date:** 2020-08-07
+
+* Update dependencies.
+* Update default `license` field in template packages.
+* Increase testing and move test directory to project root.
+
 ## v1.4.4
 
 **Release Date:** 2020-08-06

@@ -72,8 +72,8 @@ module.exports = class extends Generator {
             '**/yarn.lock',
             '**/index.html',
             '**/README.md',
-            '**/.DS_Store',
-            '**/.gitignore.sample'
+            '**/.gitignore.sample',
+            '**/.npmignore'
           ]
         }
       }
