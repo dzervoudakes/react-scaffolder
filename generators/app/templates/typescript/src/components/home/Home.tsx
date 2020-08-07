@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '@src/components/shared/layout';
+import Layout from '@shared/layout';
 import SectionHeader from '@shared/section-header';
 
 const Home: React.FC = () => (
