@@ -6,7 +6,7 @@ module.exports = {
   extends: ['@dztools/eslint-config-react'],
   overrides: [
     {
-      files: ['server/index.js', 'scripts/*.js'],
+      files: ['scripts/*.js'],
       rules: {
         'no-console': OFF,
         'jest/no-jest-import': OFF
@@ -18,6 +18,7 @@ module.exports = {
       ERROR,
       {
         devDependencies: [
+          'webpack.config.js',
           'build/**',
           'jest/**',
           'scripts/**',

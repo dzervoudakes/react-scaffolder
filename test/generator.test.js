@@ -9,7 +9,6 @@ describe('react scaffolder', () => {
     `${applicationName}/build`,
     `${applicationName}/public`,
     `${applicationName}/scripts`,
-    `${applicationName}/server`,
     `${applicationName}/src`,
     `${applicationName}/.editorconfig`,
     `${applicationName}/.eslintignore`,
@@ -23,7 +22,8 @@ describe('react scaffolder', () => {
     `${applicationName}/.stylelintrc.js`,
     `${applicationName}/jest.config.js`,
     `${applicationName}/package.json`,
-    `${applicationName}/README.md`
+    `${applicationName}/README.md`,
+    `${applicationName}/webpack.config.js`
   ];
 
   const node = '>= 14.6.0';

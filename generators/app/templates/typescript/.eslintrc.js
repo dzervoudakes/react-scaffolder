@@ -6,7 +6,7 @@ module.exports = {
   extends: ['@dztools/eslint-config-react-typescript'],
   overrides: [
     {
-      files: ['build/**/*.ts', 'scripts/*.ts', 'server/**/*.ts'],
+      files: ['webpack.config.js', 'build/**/*.js', 'scripts/*.ts'],
       rules: {
         '@typescript-eslint/no-var-requires': OFF,
         'no-console': OFF,
@@ -19,6 +19,7 @@ module.exports = {
       ERROR,
       {
         devDependencies: [
+          'webpack.config.js',
           'build/**',
           'jest/**',
           'scripts/**',
@@ -32,7 +33,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       webpack: {
-        config: 'build/webpack.base.ts'
+        config: 'build/webpack.base.js'
       }
     }
   }

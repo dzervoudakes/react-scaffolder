@@ -5,7 +5,7 @@
 import webpack from 'webpack';
 import chalk from 'chalk';
 import ora from 'ora';
-import webpackConfig from '../build/webpack.config';
+import webpackConfig from '../webpack.config';
 
 const spinner = ora('Building for production...');
 spinner.start();

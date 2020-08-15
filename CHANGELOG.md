@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.5.0
+
+**Release Date:** 2020-08-15
+
+* Migrate templates to use `webpack-dev-server` and remove local server files.
+
 ## v1.4.5
 
 **Release Date:** 2020-08-07
