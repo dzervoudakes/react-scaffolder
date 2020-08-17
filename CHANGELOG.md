@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.5.1
+
+**Release Date:** 2020-08-17
+
+* Inherit latest `webpack` updates for TypeScript template.
+* Remove `react-hot-loader` dependency from each template in favor of native HMR methods.
+
 ## v1.5.0
 
 **Release Date:** 2020-08-15

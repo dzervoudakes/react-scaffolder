@@ -11,10 +11,10 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noUnusedLocals": true,
-    "outDir": "./dist",
+    "outDir": "dist",
     "paths": {
-      "@src/*": ["./src/*"],
-      "@shared/*": ["./src/components/shared/*"],
+      "@src/*": ["src/*"],
+      "@shared/*": ["src/components/shared/*"],
       "react-dom": ["@hot-loader/react-dom"]
     },
     "resolveJsonModule": true,

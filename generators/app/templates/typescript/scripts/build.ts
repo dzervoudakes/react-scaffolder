@@ -31,5 +31,9 @@ webpack(webpackConfig, (err, stats) => {
     process.exit(1);
   }
 
-  console.log(chalk.cyan('Built files from dist are ready to be deployed.\n'));
+  console.log(
+    chalk.cyan(
+      'The application has been bundled successfully and is ready for distribution.\n'
+    )
+  );
 });
