@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.5.2
+
+**Release Date:** 2020-08-18
+
+* Rollback `typedoc` version to fix empty generated documentation.
+* Update `typedoc` exclude list.
+
 ## v1.5.1
 
 **Release Date:** 2020-08-17
