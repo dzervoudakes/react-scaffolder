@@ -1,6 +1,6 @@
 import React from 'react';
-import Layout from '@shared/layout';
-import SectionHeader from '@shared/section-header';
+import Layout from '@shared/Layout';
+import SectionHeader from '@shared/SectionHeader';
 
 const Home: React.FC = () => (
   <Layout>

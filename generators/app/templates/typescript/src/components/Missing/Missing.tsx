@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Layout from '@shared/layout';
-import SectionHeader from '@shared/section-header';
+import Layout from '@shared/Layout';
+import SectionHeader from '@shared/SectionHeader';
 
-const Missing = () => (
+const Missing: React.FC = () => (
   <Layout>
     <SectionHeader title="That's a 404" description="You must be lost..." />
     <p>

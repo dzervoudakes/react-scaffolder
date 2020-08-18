@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from '@src/components/home';
-import Missing from '@src/components/missing';
-import Header from './header';
-import Footer from './footer';
+import Home from '@src/components/Home';
+import Missing from '@src/components/Missing';
+import Header from './Header';
+import Footer from './Footer';
 
 const App = () => (
   <>

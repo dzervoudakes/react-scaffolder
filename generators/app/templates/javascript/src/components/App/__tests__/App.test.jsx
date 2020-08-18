@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import App from './App';
+import App from '..';
 
 describe('App', () => {
   it('renders the header page title and footer github link', () => {

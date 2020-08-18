@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import SectionHeader from './SectionHeader';
+import SectionHeader from '..';
 
 describe('SectionHeader', () => {
   const props = {

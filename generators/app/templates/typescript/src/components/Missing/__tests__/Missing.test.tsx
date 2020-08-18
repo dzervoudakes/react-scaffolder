@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import { render } from '@testing-library/react';
-import Home from './Home';
+import Missing from '..';
 
-describe('Home', () => {
+describe('Missing', () => {
   it('renders the title and description', () => {
     const { getByText } = render(
       <Router basename="/">
         <Switch>
-          <Home />
+          <Missing />
         </Switch>
       </Router>
     );
 
-    expect(getByText('Welcome to your new React App!')).toBeInTheDocument();
-    expect(getByText('Made with ❤️')).toBeInTheDocument();
+    expect(getByText("That's a 404")).toBeInTheDocument();
+    expect(getByText('You must be lost...')).toBeInTheDocument();
   });
 });

@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.5.3
+
+**Release Date:** unreleased
+
+* Move `*.test.(j|t)sx` files into `__tests__` directories for each template, per common convention.
+* Change component directories to PascalCase for each template, per common convention.
+
 ## v1.5.2
 
 **Release Date:** 2020-08-18
