@@ -2,7 +2,7 @@
 
 ## v1.5.3
 
-**Release Date:** unreleased
+**Release Date:** 2020-08-19
 
 * Move `*.test.(j|t)sx` files into `__tests__` directories for each template, per common convention.
 * Change component directories to PascalCase for each template, per common convention.
