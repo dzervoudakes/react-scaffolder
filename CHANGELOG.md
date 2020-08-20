@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.5.4
+
+**Release Date:** 2020-08-20
+
+* Transfer some production dependencies to development dependencies in each template.
+* Remove unused `path` dependency from each template.
+
 ## v1.5.3
 
 **Release Date:** 2020-08-19
