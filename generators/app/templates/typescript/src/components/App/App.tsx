@@ -1,17 +1,12 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Home from '@src/components/Home';
-import Missing from '@src/components/Missing';
-import Header from './Header';
-import Footer from './Footer';
+import Routes from '@src/components/Routes';
+import Header from '@src/components/Header';
+import Footer from '@src/components/Footer';
 
 const App: React.FC = () => (
   <>
     <Header />
-    <Switch>
-      <Route exact path="/" component={Home} />
-      <Route component={Missing} />
-    </Switch>
+    <Routes />
     <Footer />
   </>
 );

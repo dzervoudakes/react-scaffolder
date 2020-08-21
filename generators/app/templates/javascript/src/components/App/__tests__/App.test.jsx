@@ -12,6 +12,7 @@ describe('App', () => {
     );
 
     expect(getByText('Oh, hello...')).toBeInTheDocument();
+    expect(getByText('Welcome to your new React App!')).toBeInTheDocument();
     expect(getByText('GitHub')).toBeInTheDocument();
   });
 });

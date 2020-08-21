@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.5.5
+
+**Release Date:** 2020-08-21
+
+* Update default component directory structure.
+
 ## v1.5.4
 
 **Release Date:** 2020-08-20
