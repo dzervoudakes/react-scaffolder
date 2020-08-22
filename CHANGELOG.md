@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.5.6
+
+**Release Date: 2020-08-22
+
+* Update template dependencies.
+
 ## v1.5.5
 
 **Release Date:** 2020-08-21
