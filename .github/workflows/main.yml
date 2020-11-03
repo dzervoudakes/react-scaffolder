@@ -1,10 +1,11 @@
-name: build
+name: Build and Test
 
 on: [push]
 
 jobs:
   dependencies:
     runs-on: ubuntu-latest
+    name: Install Dependencies
     steps:
     - uses: actions/checkout@v2
     - name: Cache node modules
@@ -19,6 +20,7 @@ jobs:
 
   eslint:
     runs-on: ubuntu-latest
+    name: Lint Scripts
     needs: dependencies
     steps:
     - uses: actions/checkout@v2
@@ -32,6 +34,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    name: Run Unit Tests
     needs: dependencies
     steps:
     - uses: actions/checkout@v2
@@ -45,6 +48,7 @@ jobs:
 
   test_javascript_template:
     runs-on: ubuntu-latest
+    name: Run All JavaScript Template Checks
     needs: dependencies
     steps:
     - uses: actions/checkout@v2
@@ -53,6 +57,7 @@ jobs:
 
   test_typescript_template:
     runs-on: ubuntu-latest
+    name: Run All TypeScript Template Checks
     needs: dependencies
     steps:
     - uses: actions/checkout@v2
