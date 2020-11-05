@@ -50,11 +50,16 @@ a {
   color: $color-cyan;
   transition: opacity 0.2s;
 
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
   &.link-purple {
     color: $color-purple;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 }
