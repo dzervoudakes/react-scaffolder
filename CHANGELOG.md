@@ -4,7 +4,9 @@
 
 **Release Date:** unreleased
 
-* Update package and template dependencies.
+* Update package and template dependencies, including migrating to `webpack >= 5.x.x`.
+* Update default folder/file structure to follow top level 'pages' pattern.
+* Update `typedoc` config.
 
 ## v1.5.6
 
