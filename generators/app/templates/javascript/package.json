@@ -22,7 +22,7 @@
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
-    "core-js": "3.6.5",
+    "core-js": "3.7.0",
     "prop-types": "15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -48,7 +48,7 @@
     "cross-env": "7.0.2",
     "docdash": "1.2.0",
     "eslint": "7.12.1",
-    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "6.15.0",
     "eslint-import-resolver-webpack": "0.13.0",
     "eslint-plugin-import": "2.22.1",
