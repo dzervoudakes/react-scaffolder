@@ -6,7 +6,7 @@
 
 * Update package and template dependencies, including migrating to `webpack >= 5.x.x`.
 * Update default folder/file structure to follow top level 'pages' pattern.
-* Update `typedoc` config.
+* Update `typedoc` config in TypeScript template.
 
 ## v1.5.6
 
