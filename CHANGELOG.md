@@ -2,7 +2,7 @@
 
 ## v1.6.0
 
-**Release Date:** unreleased
+**Release Date:** 2020-11-07
 
 * Update package and template dependencies.
 * Update default folder/file structure to follow top level 'pages' pattern.
