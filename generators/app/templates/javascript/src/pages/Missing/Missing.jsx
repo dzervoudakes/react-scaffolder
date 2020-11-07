@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Layout from '@shared/Layout';
-import SectionHeader from '@shared/SectionHeader';
+import Layout from '@src/components/Layout';
+import SectionHeader from '@src/components/SectionHeader';
 
 const Missing = () => (
   <Layout>
