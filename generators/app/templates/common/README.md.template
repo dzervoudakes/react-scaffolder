@@ -75,6 +75,13 @@
 <%= cmd %> clean
 ```
 
+## Default Content Structure
+- Shared components live under `./src/components`
+- Top-level page view components live under `./src/pages`
+- Application routes live under `./src/routes`
+- Default styles live under `./src/scss`
+- The inherited Webpack config aliases `@src/*` as an absolute import path to `./src/*`
+
 ## Technical Requirements
 > The runtime environment for this application requires `node >= <%= nodeVersion %>` and `<%= packageManager %> >= <%= packageManagerVersion %>`.
 
