@@ -8,7 +8,7 @@
 
 ## A Homegrown React Template Generator
 
-While tools like Create React App are objectively awesome, over time I've decided that I want to learn more about the engine behind the application. As such, I started crafting and evolving my own React + Webpack configuration over time as a learning experience.
+While tools like Create React App and Next are objectively awesome, over time I've decided that I want to learn more about the engine behind the application. As such, I started crafting and evolving my own React + Webpack configuration over time as a learning experience.
 
 I have since decided to share my work with the open source community. Love it or loathe it, I will not be happy or offended either way. 😄
 
@@ -61,6 +61,7 @@ yo react-scaffolder --skip-install
 
 ### What's Included
 
+- **Rendering:** client-side only
 - **Syntax:** react, js, jsx, ts, tsx, mjs
 - **Tooling:** eslint, stylelint, editorconfig, babel (non-TypeScript template only)
 - **Styling:** scss, css, postcss, css module syntax (`*.module.scss` and `*.module.css` nomenclature supported)
