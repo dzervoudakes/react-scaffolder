@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build and Test Generator
 
 on: [push]
 
@@ -20,8 +20,8 @@ jobs:
 
   eslint:
     runs-on: ubuntu-latest
-    name: Lint Scripts
-    needs: dependencies
+    name: Lint Generator Scripts
+    needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
     - name: Restore npm cache
@@ -36,8 +36,8 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    name: Run Unit Tests
-    needs: dependencies
+    name: Unit Test Generator
+    needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
     - name: Restore npm cache
@@ -48,22 +48,9 @@ jobs:
         path: node_modules
         key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
     - name: Run unit tests
-      run: npm test
-
-  test_javascript_template:
-    runs-on: ubuntu-latest
-    name: Run All JavaScript Template Checks
-    needs: dependencies
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run all checks for JavaScript template
-      run: npm run test:javascript
-
-  test_typescript_template:
-    runs-on: ubuntu-latest
-    name: Run All TypeScript Template Checks
-    needs: dependencies
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run all checks for TypeScript template
-      run: npm run test:typescript
+      run: npm run test:coverage
+    - name: Upload test coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage/lcov.info

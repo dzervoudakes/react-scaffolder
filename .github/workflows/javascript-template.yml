@@ -1,0 +1,116 @@
+name: Build and Test JavaScript Template
+
+on: [push]
+
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    name: Install Dependencies
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cache node modules
+      uses: actions/cache@v2
+      env:
+        cache-name: javascript-template-dependency-cache
+      with:
+        path: ${{ secrets.JS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Install dependencies
+      run: |
+        cd ${{ secrets.JS_ROOT }}
+        npm install
+
+  eslint:
+    runs-on: ubuntu-latest
+    name: Lint JS Template Scripts
+    needs: [dependencies]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: javascript-template-dependency-cache
+      with:
+        path: ${{ secrets.JS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Lint all scripts
+      run: |
+        cd ${{ secrets.JS_ROOT }}
+        npm run lint
+
+  stylelint:
+    runs-on: ubuntu-latest
+    name: Lint JS Template Styles
+    needs: [dependencies]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: javascript-template-dependency-cache
+      with:
+        path: ${{ secrets.JS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Lint all styles
+      run: |
+        cd ${{ secrets.JS_ROOT }}
+        npm run stylelint
+
+  test:
+    runs-on: ubuntu-latest
+    name: Unit Test JS Template
+    needs: [dependencies]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: javascript-template-dependency-cache
+      with:
+        path: ${{ secrets.JS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Run unit tests
+      run: |
+        cd ${{ secrets.JS_ROOT }}
+        npm run test:coverage
+    - name: Upload test coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ${{ secrets.JS_ROOT }}/coverage/lcov.info
+
+  build:
+    runs-on: ubuntu-latest
+    name: Bundle JS App
+    needs: [eslint, stylelint, test]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: javascript-template-dependency-cache
+      with:
+        path: ${{ secrets.JS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Bundle app
+      run: |
+        cd ${{ secrets.JS_ROOT }}
+        npm run build
+
+  documentation:
+    runs-on: ubuntu-latest
+    name: Generate JS Documentation
+    needs: [eslint, stylelint, test]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: javascript-template-dependency-cache
+      with:
+        path: ${{ secrets.JS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Generate documentation
+      run: |
+        cd ${{ secrets.JS_ROOT }}
+        npm run docs

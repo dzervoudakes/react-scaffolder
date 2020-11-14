@@ -29,6 +29,7 @@
     "lint:fix": "npm run lint -- --fix",
     "prepublishOnly": "./scripts/prepublish.sh",
     "test": "node scripts/test",
+    "test:coverage": "npm test -- --coverage",
     "test:javascript": "./scripts/testall.sh javascript",
     "test:typescript": "./scripts/testall.sh typescript"
   },

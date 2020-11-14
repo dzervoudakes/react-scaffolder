@@ -1,0 +1,116 @@
+name: Build and Test TypeScript Template
+
+on: [push]
+
+jobs:
+  dependencies:
+    runs-on: ubuntu-latest
+    name: Install Dependencies
+    steps:
+    - uses: actions/checkout@v2
+    - name: Cache node modules
+      uses: actions/cache@v2
+      env:
+        cache-name: typescript-template-dependency-cache
+      with:
+        path: ${{ secrets.TS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Install dependencies
+      run: |
+        cd ${{ secrets.TS_ROOT }}
+        npm install
+
+  eslint:
+    runs-on: ubuntu-latest
+    name: Lint TS Template Scripts
+    needs: [dependencies]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: typescript-template-dependency-cache
+      with:
+        path: ${{ secrets.TS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Lint all scripts
+      run: |
+        cd ${{ secrets.TS_ROOT }}
+        npm run lint
+
+  stylelint:
+    runs-on: ubuntu-latest
+    name: Lint TS Template Styles
+    needs: [dependencies]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: typescript-template-dependency-cache
+      with:
+        path: ${{ secrets.TS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Lint all styles
+      run: |
+        cd ${{ secrets.TS_ROOT }}
+        npm run stylelint
+
+  test:
+    runs-on: ubuntu-latest
+    name: Unit Test TS Template
+    needs: [dependencies]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: typescript-template-dependency-cache
+      with:
+        path: ${{ secrets.TS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Run unit tests
+      run: |
+        cd ${{ secrets.TS_ROOT }}
+        npm run test:coverage
+    - name: Upload test coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ${{ secrets.TS_ROOT }}/coverage/lcov.info
+
+  build:
+    runs-on: ubuntu-latest
+    name: Bundle TS App
+    needs: [eslint, stylelint, test]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: typescript-template-dependency-cache
+      with:
+        path: ${{ secrets.TS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Bundle app
+      run: |
+        cd ${{ secrets.TS_ROOT }}
+        npm run build
+
+  documentation:
+    runs-on: ubuntu-latest
+    name: Generate TS Documentation
+    needs: [eslint, stylelint, test]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: typescript-template-dependency-cache
+      with:
+        path: ${{ secrets.TS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Generate documentation
+      run: |
+        cd ${{ secrets.TS_ROOT }}
+        npm run docs
