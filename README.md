@@ -4,6 +4,7 @@
 [![npm](https://img.shields.io/npm/v/generator-react-scaffolder.svg)](https://www.npmjs.com/package/generator-react-scaffolder)
 [![build](https://github.com/dzervoudakes/react-scaffolder/workflows/Build%20and%20Test%20Generator/badge.svg)](https://github.com/dzervoudakes/react-scaffolder/actions)
 [![codecov](https://codecov.io/gh/dzervoudakes/react-scaffolder/branch/main/graph/badge.svg)](https://codecov.io/gh/dzervoudakes/react-scaffolder)
+[![quality](https://api.codacy.com/project/badge/Grade/fb10dc613e7f45e9970de8c61e33aee0)](https://app.codacy.com/gh/dzervoudakes/react-scaffolder?utm_source=github.com&utm_medium=referral&utm_content=dzervoudakes/react-scaffolder&utm_campaign=Badge_Grade)
 [![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
 [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/dzervoudakes/react-scaffolder/blob/main/LICENSE)
 
