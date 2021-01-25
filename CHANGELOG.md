@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.7.0
+
+**Release Date:** 2021-01-25
+
+* Update package and template dependencies.
+* Update `typedoc` config in TypeScript template.
+
 ## v1.6.0
 
 **Release Date:** 2020-11-07
