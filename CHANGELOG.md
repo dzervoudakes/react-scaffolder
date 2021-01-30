@@ -2,7 +2,7 @@
 
 ## v1.7.1
 
-**Release Date:** unreleased
+**Release Date:** 2021-01-30
 
 * Update build scripts.
 

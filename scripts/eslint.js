@@ -17,7 +17,7 @@ process.on('unhandledRejection', (err) => {
   const linter = new ESLint({ fix });
 
   const formatter = await linter.loadFormatter();
-  const results = await linter.lintFiles(['**/*.js', '**/*.jsx']);
+  const results = await linter.lintFiles(['**/*.js']);
 
   if (fix) {
     ESLint.outputFixes(results);
