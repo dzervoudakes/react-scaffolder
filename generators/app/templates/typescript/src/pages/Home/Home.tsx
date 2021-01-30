@@ -2,8 +2,6 @@ import React from 'react';
 import Layout from '@src/components/Layout';
 import SectionHeader from '@src/components/SectionHeader';
 
-const unused;
-
 const Home: React.FC = () => (
   <Layout>
     <SectionHeader title="Welcome to your new React App!" description="Made with ❤️" />
