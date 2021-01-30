@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.7.1
+
+**Release Date:** 2021-01-30
+
+* Update build scripts.
+
 ## v1.7.0
 
 **Release Date:** 2021-01-25
