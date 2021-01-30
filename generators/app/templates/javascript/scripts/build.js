@@ -6,6 +6,10 @@ const chalk = require('chalk');
 const ora = require('ora');
 const webpackConfig = require('../webpack.config');
 
+process.on('unhandledRejection', (err) => {
+  throw err;
+});
+
 const spinner = ora('Building for production...');
 spinner.start();
 
