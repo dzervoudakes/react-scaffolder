@@ -63,9 +63,14 @@ yo react-scaffolder --skip-install
 
 ### What's Included
 
-- **Rendering:** client-side only
-- **Syntax:** react, js, jsx, ts, tsx, mjs
-- **Tooling:** eslint, stylelint, editorconfig, babel (non-TypeScript template only)
-- **Styling:** scss, css, postcss, css module syntax (`*.module.scss` and `*.module.css` nomenclature supported)
-- **Testing:** jest, react testing library
-- **Build instructions:** provided via the `README.md` file generated with each new scaffold
+✅ **Rendering:** client-side only\
+✅ **Syntax:** react, js, jsx, ts, tsx, mjs\
+✅ **Tooling:** eslint, stylelint, editorconfig, babel (non-TypeScript template only)\
+✅ **Styling:** scss, css, postcss, css module syntax (`*.module.scss` and `*.module.css` nomenclature supported)\
+✅ **Testing:** jest, react testing library\
+✅ **Build instructions:** provided via the `README.md` file generated with each new scaffold\
+
+### What's Not Included
+
+❌ **Script ejection:** there are links to the default webpack config on github in each generated `./build/webpack.*.js` file\
+❌ **Environment variables:** the boilerplate is agnostic to your preferred implementation for consuming env vars\
