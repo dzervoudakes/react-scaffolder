@@ -2,7 +2,7 @@ const OFF = 0;
 const ERROR = 2;
 
 module.exports = {
-  extends: ['@dztools/eslint-config-base'],
+  extends: ['@dztools/eslint-config-base', 'plugin:jest/recommended'],
   overrides: [
     {
       files: ['generators/app/index.js'],

@@ -1,6 +1,6 @@
 {
   "name": "generator-react-scaffolder",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Scaffolding for new enterprise scale React applications on the fly.",
   "repository": {
     "type": "git",
@@ -35,13 +35,13 @@
   },
   "dependencies": {
     "chalk": "4.1.0",
-    "yeoman-generator": "4.12.0"
+    "yeoman-generator": "4.13.0"
   },
   "devDependencies": {
-    "@dztools/eslint-config-base": "1.0.3",
+    "@dztools/eslint-config-base": "1.1.0",
     "@dztools/prettier-config": "1.0.3",
     "babel-eslint": "10.1.0",
-    "eslint": "7.18.0",
+    "eslint": "7.19.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "7.2.0",
     "eslint-config-standard": "16.0.2",

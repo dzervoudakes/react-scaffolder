@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.7.2
+
+**Release Date:** 2021-02-02
+
+* Inherit latest `webpack` dependency updates (non-breaking, still on `v4.x`).
+
 ## v1.7.1
 
 **Release Date:** 2021-01-30
