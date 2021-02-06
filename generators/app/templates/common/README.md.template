@@ -70,7 +70,7 @@
 <%= cmd %> docs
 ```
 
-### Remove All Output Directories
+### Remove Output Directories
 ```
 <%= cmd %> clean
 ```
