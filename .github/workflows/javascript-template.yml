@@ -82,6 +82,7 @@ jobs:
   documentation:
     runs-on: ubuntu-latest
     name: Generate JS Documentation
+    needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
     - name: Restore npm cache
