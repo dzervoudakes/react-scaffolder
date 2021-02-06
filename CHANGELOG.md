@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v1.7.3
+
+**Release Date** 2021-02-06
+
+* Update `README.md.template`.
+* Remove nonexistent `jest` directory from `devDependencies` list in `eslint` configs.
+
 ## v1.7.2
 
 **Release Date:** 2021-02-02

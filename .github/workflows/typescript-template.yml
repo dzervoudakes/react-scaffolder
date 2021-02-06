@@ -79,10 +79,27 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ${{ secrets.TS_ROOT }}/coverage/lcov.info
 
+  documentation:
+    runs-on: ubuntu-latest
+    name: Generate TS Documentation
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: typescript-template-dependency-cache
+      with:
+        path: ${{ secrets.TS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Generate documentation
+      run: |
+        cd ${{ secrets.TS_ROOT }}
+        npm run docs
+
   build:
     runs-on: ubuntu-latest
     name: Bundle TS App
-    needs: [eslint, stylelint, test]
+    needs: [eslint, stylelint, test, documentation]
     steps:
     - uses: actions/checkout@v2
     - name: Restore npm cache
@@ -97,20 +114,3 @@ jobs:
         cd ${{ secrets.TS_ROOT }}
         npm run build
 
-  documentation:
-    runs-on: ubuntu-latest
-    name: Generate TS Documentation
-    needs: [eslint, stylelint, test]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Restore npm cache
-      uses: actions/cache@v2
-      env:
-        cache-name: typescript-template-dependency-cache
-      with:
-        path: ${{ secrets.TS_ROOT }}/node_modules
-        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-    - name: Generate documentation
-      run: |
-        cd ${{ secrets.TS_ROOT }}
-        npm run docs

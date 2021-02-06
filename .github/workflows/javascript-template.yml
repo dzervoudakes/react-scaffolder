@@ -79,10 +79,27 @@ jobs:
         token: ${{ secrets.CODECOV_TOKEN }}
         file: ${{ secrets.JS_ROOT }}/coverage/lcov.info
 
+  documentation:
+    runs-on: ubuntu-latest
+    name: Generate JS Documentation
+    steps:
+    - uses: actions/checkout@v2
+    - name: Restore npm cache
+      uses: actions/cache@v2
+      env:
+        cache-name: javascript-template-dependency-cache
+      with:
+        path: ${{ secrets.JS_ROOT }}/node_modules
+        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+    - name: Generate documentation
+      run: |
+        cd ${{ secrets.JS_ROOT }}
+        npm run docs
+
   build:
     runs-on: ubuntu-latest
     name: Bundle JS App
-    needs: [eslint, stylelint, test]
+    needs: [eslint, stylelint, test, documentation]
     steps:
     - uses: actions/checkout@v2
     - name: Restore npm cache
@@ -97,20 +114,3 @@ jobs:
         cd ${{ secrets.JS_ROOT }}
         npm run build
 
-  documentation:
-    runs-on: ubuntu-latest
-    name: Generate JS Documentation
-    needs: [eslint, stylelint, test]
-    steps:
-    - uses: actions/checkout@v2
-    - name: Restore npm cache
-      uses: actions/cache@v2
-      env:
-        cache-name: javascript-template-dependency-cache
-      with:
-        path: ${{ secrets.JS_ROOT }}/node_modules
-        key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-    - name: Generate documentation
-      run: |
-        cd ${{ secrets.JS_ROOT }}
-        npm run docs
