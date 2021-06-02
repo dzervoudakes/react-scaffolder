@@ -1,4 +1,5 @@
 # <%= templateName %> React Template
+
 > Welcome to your new React app.
 
 [![prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://prettier.io/)
@@ -6,83 +7,100 @@
 ## Build Scripts
 
 ### Install Dependencies
-```
+
+```sh
 <%= packageManager %><% if (packageManager === 'npm') { %> install<% } %>
 ```
 
 ### Start Local Server on Port 8080
-```
+
+```sh
 <%= packageManager %> start
 ```
 
 ### Run Linting
-```
+
+```sh
 <%= cmd %> lint
 ```
 
 ### Run Linting with Fix
-```
+
+```sh
 <%= cmd %> lint:fix
 ```
 
 ### Run Style Linting
-```
+
+```sh
 <%= cmd %> stylelint
 ```
 
 ### Run Style Linting with Fix
-```
+
+```sh
 <%= cmd %> stylelint:fix
 ```
 
 ### Run Unit Tests
-```
+
+```sh
 <%= packageManager %> test
 ```
 
 ### Run Unit Tests with Coverage Report
-```
+
+```sh
 <%= cmd %> test:coverage
 ```
 
 ### Run Unit Tests with Verbose Results
-```
+
+```sh
 <%= cmd %> test:verbose
 ```
 
 ### Run Unit Tests and Watch for Changes
-```
+
+```sh
 <%= cmd %> test:watch
 ```
 
 ### Build for Production
-```
+
+```sh
 <%= cmd %> build
 ```
 
 ### Build for Production with Bundle Analyzer Report
-```
+
+```sh
 <%= cmd %> build:report
 ```
 
 ### Generate Documentation
-```
+
+```sh
 <%= cmd %> docs
 ```
 
 ### Remove Output Directories
-```
+
+```sh
 <%= cmd %> clean
 ```
 
 ## Technical Requirements
+
 > The runtime environment for this application requires `node >= <%= nodeVersion %>` and `<%= packageManager %> >= <%= packageManagerVersion %>`.
 
 ## Configuration
+
 > This application makes use of `ESLint`, `Stylelint` and `EditorConfig`. Each of these features requires
 > an extension be installed in order to work properly with IDEs and text editors such as VSCode.
 
 ## Content Structure
+
 - Shared components live under `./src/components`
 - Top-level page view components live under `./src/pages`
 - Application routes live under `./src/routes`

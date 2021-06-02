@@ -1,4 +1,5 @@
 # React Scaffolder
+
 > Yeoman generator for scaffolding new React applications.
 
 [![npm](https://img.shields.io/npm/v/generator-react-scaffolder.svg)](https://www.npmjs.com/package/generator-react-scaffolder)
@@ -22,13 +23,13 @@ This scaffolding tool is a [yeoman](https://yeoman.io/) generator, and requires 
 
 NPM
 
-```
+```sh
 npm install -g generator-react-scaffolder
 ```
 
 Yarn
 
-```
+```sh
 yarn global add generator-react-scaffolder
 ```
 
@@ -36,11 +37,12 @@ yarn global add generator-react-scaffolder
 
 To begin the scaffolding process:
 
-```
+```sh
 yo react-scaffolder
 ```
 
 At this stage, you will be prompted to provide the following:
+
 - Application name, any text of your choosing
 - Yarn, yes or no
 
@@ -48,7 +50,7 @@ At this stage, you will be prompted to provide the following:
 
 Generate with TypeScript:
 
-```
+```sh
 yo react-scaffolder --typescript
 
 // alternatively
@@ -57,7 +59,7 @@ yo react-scaffolder --ts
 
 The generator will attempt to install dependencies for you by default, though this operation can be disabled:
 
-```
+```sh
 yo react-scaffolder --skip-install
 ```
 
