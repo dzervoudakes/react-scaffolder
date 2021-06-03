@@ -1,4 +1,4 @@
-name: Build and Test TypeScript Template
+name: TypeScript Template
 
 on: [push]
 

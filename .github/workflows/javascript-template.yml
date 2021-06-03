@@ -1,4 +1,4 @@
-name: Build and Test JavaScript Template
+name: JavaScript Template
 
 on: [push]
 
