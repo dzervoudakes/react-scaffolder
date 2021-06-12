@@ -22,7 +22,7 @@ jobs:
 
   eslint:
     runs-on: ubuntu-latest
-    name: Lint JS Template Scripts
+    name: ESLint
     needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
@@ -40,7 +40,7 @@ jobs:
 
   stylelint:
     runs-on: ubuntu-latest
-    name: Lint JS Template Styles
+    name: Stylelint
     needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
@@ -58,7 +58,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    name: Unit Test JS Template
+    name: Unit Tests
     needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
@@ -81,7 +81,7 @@ jobs:
 
   documentation:
     runs-on: ubuntu-latest
-    name: Generate JS Documentation
+    name: Generate Documentation
     needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
@@ -99,7 +99,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
-    name: Bundle JS App
+    name: Bundle App
     needs: [eslint, stylelint, test, documentation]
     steps:
     - uses: actions/checkout@v2

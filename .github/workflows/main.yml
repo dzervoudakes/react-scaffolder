@@ -20,7 +20,7 @@ jobs:
 
   eslint:
     runs-on: ubuntu-latest
-    name: Lint Generator Scripts
+    name: ESLint
     needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
@@ -36,7 +36,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    name: Unit Test Generator
+    name: Unit Tests
     needs: [dependencies]
     steps:
     - uses: actions/checkout@v2
