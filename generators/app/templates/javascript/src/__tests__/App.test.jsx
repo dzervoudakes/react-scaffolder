@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from '../App';
 
 describe('App', () => {
   it('renders the header page title and footer github link', () => {
-    const { getByText } = render(
+    render(
       <Router basename="/">
         <App />
       </Router>
     );
 
-    expect(getByText('Oh, hello...')).toBeInTheDocument();
-    expect(getByText('Welcome to your new React App!')).toBeInTheDocument();
-    expect(getByText('GitHub')).toBeInTheDocument();
+    expect(screen.getByText('Oh, hello...')).toBeInTheDocument();
+    expect(screen.getByText('Welcome to your new React App!')).toBeInTheDocument();
+    expect(screen.getByText('GitHub')).toBeInTheDocument();
   });
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import SectionHeader from '..';
 
 describe('SectionHeader', () => {
@@ -9,9 +9,9 @@ describe('SectionHeader', () => {
   };
 
   it('renders the title and description', () => {
-    const { getByText } = render(<SectionHeader {...props} />);
+    render(<SectionHeader {...props} />);
 
-    expect(getByText('Foo')).toBeInTheDocument();
-    expect(getByText('Bar')).toBeInTheDocument();
+    expect(screen.getByText('Foo')).toBeInTheDocument();
+    expect(screen.getByText('Bar')).toBeInTheDocument();
   });
 });

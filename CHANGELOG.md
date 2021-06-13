@@ -1,10 +1,12 @@
 # React Scaffolder | Changelog
 
-## next
+## v1.8.0
 
-**Release Date:** unreleased
+**Release Date:** 2021-06-13
 
 - Reformat `README.md.template` to play nicely with `markdownlint`.
+- Update template dependencies for Jest `27.x` and various ESLint additions.
+- Update test suites per `eslint-plugin-testing-library`.
 
 ## v1.7.3
 

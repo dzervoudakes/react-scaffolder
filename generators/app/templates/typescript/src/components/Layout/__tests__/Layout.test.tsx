@@ -1,15 +1,15 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import Layout from '..';
 
 describe('Layout', () => {
   it('renders the child component', () => {
-    const { getByText } = render(
+    render(
       <Layout>
         <div>Child component</div>
       </Layout>
     );
 
-    expect(getByText('Child component')).toBeInTheDocument();
+    expect(screen.getByText('Child component')).toBeInTheDocument();
   });
 });
