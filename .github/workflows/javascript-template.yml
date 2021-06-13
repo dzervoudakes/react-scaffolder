@@ -1,6 +1,9 @@
 name: JavaScript Template
 
-on: [push]
+on:
+  push:
+    paths:
+      - generators/app/templates/javascript/**
 
 jobs:
   dependencies:

@@ -1,6 +1,9 @@
 name: TypeScript Template
 
-on: [push]
+on:
+  push:
+    paths:
+      - generators/app/templates/typescript/**
 
 jobs:
   dependencies:
