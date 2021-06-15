@@ -107,7 +107,7 @@ module.exports = class extends Generator {
     if (!this.options['skip-install']) {
       const { applicationName, yarn } = this.data;
 
-      const isYarn = yarn === 'Y';
+      const isYarn = yarn.toLowerCase() === 'y';
       const method = isYarn ? 'yarnInstall' : 'npmInstall';
 
       this.log(

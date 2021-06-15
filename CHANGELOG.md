@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v1.8.1
+
+**Release Date:** 2021-06-15
+
+- Handle lowercase `y` for `yarn` prompt.
+
 ## v1.8.0
 
 **Release Date:** 2021-06-13
