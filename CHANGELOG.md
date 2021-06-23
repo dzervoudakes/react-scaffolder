@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## next
+
+**Release Date:** unreleased
+
+- Update `stylelint` file mapping in both templates to include `*.css`.
+
 ## v1.8.1
 
 **Release Date:** 2021-06-15
