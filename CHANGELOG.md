@@ -5,6 +5,7 @@
 **Release Date:** unreleased
 
 - Update `stylelint` file mapping in both templates to include `*.css`.
+- Add `lang` attribute to html tags.
 
 ## v1.8.1
 
