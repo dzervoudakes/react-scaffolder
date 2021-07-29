@@ -1,11 +1,12 @@
 # React Scaffolder | Changelog
 
-## next
+## 1.8.2
 
-**Release Date:** unreleased
+**Release Date:** 2021-07-29
 
 - Update `stylelint` file mapping in both templates to include `*.css`.
 - Add `lang` attribute to html tags.
+- Accessibility fixes for scaling and color contrast.
 
 ## v1.8.1
 
