@@ -2,11 +2,11 @@
 
 ## 1.9.0
 
-**Release Date:** unreleased
+**Release Date:** 2021-08-28
 
 - Update package dependencies.
 - Apply dependency fixes for `npm v7.x`.
-- Replace `husky` with `yorkie` for pre-commit lint-staged.
+- Replace `husky` with `yorkie` for pre-commit hook.
 - Fix post-generation install.
 
 ## 1.8.2

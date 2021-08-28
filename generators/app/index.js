@@ -1,7 +1,11 @@
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
+const extend = require('lodash/extend');
 const jspkg = require('./templates/javascript/package.json');
 const tspkg = require('./templates/typescript/package.json');
+
+// enable install tasks (yeoman v4 backwards compatibility)
+extend(Generator.prototype, require('yeoman-generator/lib/actions/install'));
 
 module.exports = class extends Generator {
   constructor(args, opts) {
