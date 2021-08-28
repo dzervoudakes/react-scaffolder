@@ -46,7 +46,7 @@ module.exports = class extends Generator {
     const { typescript, ts } = this.options;
 
     const isTypeScript = typescript || ts;
-    const isYarn = yarn === 'Y';
+    const isYarn = yarn.toLowerCase() === 'y';
 
     const templateName = isTypeScript ? 'TypeScript' : 'JavaScript';
     const pkg = isTypeScript ? tspkg : jspkg;

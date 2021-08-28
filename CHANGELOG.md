@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## 1.9.1
+
+**Release Date:** 2021-08-28
+
+- Patch handling of lowercase `y` for `yarn` prompt in template writing step.
+
 ## 1.9.0
 
 **Release Date:** 2021-08-28
