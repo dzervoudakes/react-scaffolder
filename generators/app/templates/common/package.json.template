@@ -27,10 +27,8 @@
   "devDependencies": {<% Object.keys(devDependencies).forEach((key, index) => { %>
     "<%= key %>": "<%= devDependencies[key] %>"<% if (index !== Object.keys(devDependencies).length - 1) { %>,<% } %><% }); %>
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "gitHooks": {
+    "pre-commit": "lint-staged"
   },
   "engines": {
     "node": ">= <%= nodeVersion %>",

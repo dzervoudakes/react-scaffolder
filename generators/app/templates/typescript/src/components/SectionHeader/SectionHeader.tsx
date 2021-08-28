@@ -1,7 +1,7 @@
 import React from 'react';
 import './SectionHeader.scss';
 
-interface SectionHeaderProps {
+export interface SectionHeaderProps {
   title: string;
   description: string;
 }

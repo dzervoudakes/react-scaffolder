@@ -1,5 +1,14 @@
 # React Scaffolder | Changelog
 
+## 1.9.0
+
+**Release Date:** unreleased
+
+- Update package dependencies.
+- Apply dependency fixes for `npm v7.x`.
+- Replace `husky` with `yorkie` for pre-commit lint-staged.
+- Fix post-generation install.
+
 ## 1.8.2
 
 **Release Date:** 2021-07-29

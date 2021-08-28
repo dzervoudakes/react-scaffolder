@@ -65,7 +65,7 @@ The generator will attempt to install dependencies for you by default, though th
 yo react-scaffolder --skip-install
 ```
 
-### What's Included
+## What's Included
 
 ✅ **Rendering:** client-side only\
 ✅ **Syntax:** react, js, jsx, ts, tsx, mjs\
@@ -74,7 +74,12 @@ yo react-scaffolder --skip-install
 ✅ **Testing:** jest, react testing library\
 ✅ **Build instructions:** provided via the `README.md` file generated with each new scaffold
 
-### What's Not Included
+## What's Not Included
 
 ❌ **Script ejection:** there are links to the default webpack config on github in each `webpack.*.js` file\
 ❌ **Environment variables:** the boilerplate is agnostic to your preferred implementation for consuming env vars
+
+## Disclaimers
+
+- **NPM users:** Any updates to each template moving forward will be focused on optimizing for `npm >= 7.x`, though it should remain backwards compatible with `npm ^6.14.7`.
+- **Yarn users:** Current templates are optimized for `yarn ^1.22.4`, and no testing has been done for `yarn >= 2.x` as of yet.
