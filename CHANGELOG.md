@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## 1.10.0
+
+**Release Date:** 2021-08-29
+
+- Switch back to `husky` and automate new pre-commit hook setup.
+  - **Note:** Package dependencies must now be installed at the root of a git repository, or installation of pre-commit hooks will be skipped.
+
 ## 1.9.1
 
 **Release Date:** 2021-08-28

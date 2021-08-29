@@ -1,6 +1,6 @@
 {
   "name": "generator-react-scaffolder",
-  "version": "1.9.1",
+  "version": "1.10.0",
   "description": "Scaffolding for new enterprise scale React applications on the fly.",
   "repository": {
     "type": "git",
@@ -27,6 +27,8 @@
   "scripts": {
     "lint": "node scripts/eslint",
     "lint:fix": "npm run lint -- --fix",
+    "pre-commit": "lint-staged",
+    "prepare": "./scripts/prepare.sh",
     "prepublishOnly": "./scripts/prepublish.sh",
     "test": "node scripts/test",
     "test:coverage": "npm test -- --coverage",
@@ -49,16 +51,13 @@
     "eslint-plugin-import": "2.24.2",
     "eslint-plugin-jest": "24.4.0",
     "eslint-plugin-prettier": "3.4.1",
+    "husky": "7.0.2",
     "jest": "27.1.0",
     "lint-staged": "11.1.2",
     "ora": "5.4.1",
     "prettier": "2.3.2",
     "yeoman-assert": "3.1.1",
     "yeoman-environment": "3.6.0",
-    "yeoman-test": "6.2.0",
-    "yorkie": "2.0.0"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+    "yeoman-test": "6.2.0"
   }
 }

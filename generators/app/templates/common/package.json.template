@@ -10,6 +10,8 @@
     "docs": "<% if (templateName === 'TypeScript') { %>typedoc<% } else { %>jsdoc -c ./jsdoc.config.js -r<% } %>",
     "lint": "node<% if (templateName === 'TypeScript') { %> -r ts-node/register<% } %> scripts/eslint",
     "lint:fix": "<%= cmd %> lint <% if (packageManager === 'npm') { %>-- <% } %>--fix",
+    "pre-commit": "lint-staged",
+    "prepare": "./scripts/prepare.sh",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "stylelint": "<% if (templateName === 'TypeScript') { %>ts-<% } %>node scripts/stylelint",
     "stylelint:fix": "<%= cmd %> stylelint <% if (packageManager === 'npm') { %>-- <% } %>--fix",
@@ -26,9 +28,6 @@
   },
   "devDependencies": {<% Object.keys(devDependencies).forEach((key, index) => { %>
     "<%= key %>": "<%= devDependencies[key] %>"<% if (index !== Object.keys(devDependencies).length - 1) { %>,<% } %><% }); %>
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
   },
   "engines": {
     "node": ">= <%= nodeVersion %>",

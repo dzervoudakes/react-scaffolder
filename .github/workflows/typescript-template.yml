@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         cd ${{ secrets.TS_ROOT }}
-        npm install
+        npm install --ignore-scripts
 
   eslint:
     runs-on: ubuntu-latest
