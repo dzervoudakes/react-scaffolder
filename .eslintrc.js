@@ -18,6 +18,9 @@ module.exports = {
       }
     }
   ],
+  parserOptions: {
+    requireConfigFile: false
+  },
   rules: {
     'import/no-extraneous-dependencies': [
       ERROR,

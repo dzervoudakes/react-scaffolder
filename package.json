@@ -41,9 +41,9 @@
     "yeoman-generator": "5.4.2"
   },
   "devDependencies": {
-    "@dztools/eslint-config-base": "1.1.1",
+    "@babel/eslint-parser": "7.15.4",
+    "@dztools/eslint-config-base": "1.2.0",
     "@dztools/prettier-config": "1.0.4",
-    "babel-eslint": "10.1.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-config-prettier": "8.3.0",
