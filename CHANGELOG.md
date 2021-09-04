@@ -1,5 +1,13 @@
 # React Scaffolder | Changelog
 
+## v2.0.1
+
+**Release Date:** 2021-09-04
+
+- Remove unnecessary `@types/testing-library__react` dependency from TypeScript template.
+- Inherit new parser from `@dztools/eslint-config-react`.
+- Display build progress in development.
+
 ## v2.0.0
 
 **Release Date:** 2021-09-03

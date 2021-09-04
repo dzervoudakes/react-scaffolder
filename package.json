@@ -1,6 +1,6 @@
 {
   "name": "generator-react-scaffolder",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Scaffolding for new enterprise scale React applications on the fly.",
   "repository": {
     "type": "git",
