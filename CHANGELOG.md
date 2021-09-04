@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v2.0.2
+
+**Release Date:** 2021-09-04
+
+- Inherit dev server wait page middleware updates from Webpack configs.
+
 ## v2.0.1
 
 **Release Date:** 2021-09-04
