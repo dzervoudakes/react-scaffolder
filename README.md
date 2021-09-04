@@ -13,7 +13,7 @@
 
 ## A Homegrown React Template Generator
 
-While tools like Create React App and Next are objectively awesome, over time I've decided that I want to learn more about the engine behind the application. As such, I started building and evolving my own React + Webpack configuration over time as a learning experience.
+While tools like Create React App and Next.js are objectively awesome, over time I've decided that I want to learn more about the engine behind the application. As such, I started building and evolving my own React + Webpack configuration over time as a learning experience.
 
 I have since decided to share this tool with the open source community. Love it or loathe it, I will not be happy or offended either way. 🤷‍♂️
 
@@ -23,13 +23,13 @@ This scaffolding tool is a [yeoman](https://yeoman.io/) generator, and requires 
 
 ### Install the Generator
 
-NPM
+#### NPM
 
 ```sh
 npm install -g generator-react-scaffolder
 ```
 
-Yarn
+#### Yarn
 
 ```sh
 yarn global add generator-react-scaffolder
