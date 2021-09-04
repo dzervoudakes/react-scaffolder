@@ -76,8 +76,8 @@ yo react-scaffolder --skip-install
 
 ## What's Not Included
 
-❌ **Script ejection:** there are links to the default webpack config on github in each `webpack.*.js` file\
-❌ **Environment variables:** the boilerplate is agnostic to your preferred implementation for consuming env vars
+❌ **Script ejection:** There are links to the default webpack config on github in each `webpack.*.js` file.\
+❌ **Environment variables:** The boilerplate is agnostic to your preferred implementation for consuming env vars.
 
 ## Disclaimers
 
