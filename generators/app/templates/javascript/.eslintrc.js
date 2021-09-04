@@ -25,7 +25,9 @@ module.exports = {
           '**/*.spec.*'
         ]
       }
-    ]
+    ],
+    // jsx transform is enabled in this application: no need to enforce 'react-in-jsx-scope'
+    'react/react-in-jsx-scope': OFF
   },
   settings: {
     'import/resolver': {

@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - generators/**
+      - test/**
 
 jobs:
   dependencies:

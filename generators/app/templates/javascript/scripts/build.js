@@ -17,6 +17,7 @@ process.env.BABEL_ENV = 'production';
 
 webpack(webpackConfig, (err, stats) => {
   spinner.stop();
+
   if (err) {
     throw err;
   }

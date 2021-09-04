@@ -13,9 +13,9 @@
 
 ## A Homegrown React Template Generator
 
-While tools like Create React App and Next are objectively awesome, over time I've decided that I want to learn more about the engine behind the application. As such, I started crafting and evolving my own React + Webpack configuration over time as a learning experience.
+While tools like Create React App and Next are objectively awesome, over time I've decided that I want to learn more about the engine behind the application. As such, I started building and evolving my own React + Webpack configuration over time as a learning experience.
 
-I have since decided to share my work with the open source community. Love it or loathe it, I will not be happy or offended either way. 😄
+I have since decided to share this tool with the open source community. Love it or loathe it, I will not be happy or offended either way. 🤷‍♂️
 
 ## Using the Generator
 
@@ -68,7 +68,7 @@ yo react-scaffolder --skip-install
 ## What's Included
 
 ✅ **Rendering:** client-side only\
-✅ **Syntax:** react, js, jsx, ts, tsx, mjs\
+✅ **Syntax:** react, js, jsx, ts, tsx\
 ✅ **Tooling:** eslint, stylelint, editorconfig, babel (non-TypeScript template only)\
 ✅ **Styling:** scss, css, postcss, css module syntax (`*.module.scss` and `*.module.css` nomenclature supported)\
 ✅ **Testing:** jest, react testing library\
@@ -81,5 +81,6 @@ yo react-scaffolder --skip-install
 
 ## Disclaimers
 
-- **NPM users:** Any updates to each template moving forward will be focused on optimizing for `npm >= 7.x`, though it should remain backwards compatible with `npm ^6.14.7`.
+- **NPM users:** Updates to each template moving forward will be focused on optimizing for `npm >= 7.x`, though it should remain backwards compatible with `npm ^6.14.7`.
 - **Yarn users:** Current templates are optimized for `yarn ^1.22.4`, and no testing has been done for `yarn >= 2.x` as of yet.
+- **Internet Explorer:** Quite frankly, if you are still supporting IE in the 2020s, you are wrong. The templates this tool will generate have not been tested in IE, and they never will be, so use at your own risk there.

@@ -1,4 +1,3 @@
-import React from 'react';
 import './SectionHeader.scss';
 
 export interface SectionHeaderProps {

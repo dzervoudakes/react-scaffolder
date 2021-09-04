@@ -1,5 +1,18 @@
 # React Scaffolder | Changelog
 
+## v2.0.0
+
+**Release Date:** 2021-09-03
+
+- Migrate Webpack `v4` to `v5`.
+  - **Note:** Given changes to Webpack's default bundling process, apps may no longer work in IE11 unless if your local `browserslist` specifies support for it.
+  - It has been decided to no longer actively verify support for IE, for any version, moving forward.
+  - More on this here: [official documentation](https://webpack.js.org/migrate/5/#need-to-support-an-older-browser-like-ie-11)
+- Drop support for `*.mjs` files.
+- Enable JSX transform.
+
+_For more information on changes related to the Webpack migration, see the [webpack-config-react](https://github.com/dzervoudakes/dztools/blob/main/packages/bundling/webpack-config-react/CHANGELOG.md#v200) changelog for JavaScript templates, or the [webpack-config-react-typescript](https://github.com/dzervoudakes/dztools/blob/main/packages/bundling/webpack-config-react-typescript/CHANGELOG.md#v200) changelog for TypeScript templates._
+
 ## 1.10.0
 
 **Release Date:** 2021-08-29

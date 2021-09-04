@@ -45,10 +45,7 @@ describe('react scaffolder', () => {
       .then(() => {
         assert.file(commonOutput.concat(esOutput));
         assert.noFile(`${applicationName}/.gitignore.sample`);
-        assert.fileContent(
-          path.join(`${applicationName}/README.md`),
-          'JavaScript React Template'
-        );
+        assert.fileContent(path.join(`${applicationName}/README.md`), 'my-app');
       });
   });
 
@@ -69,10 +66,7 @@ describe('react scaffolder', () => {
       .then(() => {
         assert.file(commonOutput.concat(tsOutput));
         assert.noFile(`${applicationName}/.gitignore.sample`);
-        assert.fileContent(
-          path.join(`${applicationName}/README.md`),
-          'TypeScript React Template'
-        );
+        assert.fileContent(path.join(`${applicationName}/README.md`), 'my-app');
       });
   });
 
