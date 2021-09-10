@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v2.0.4
+
+**Release Date:** 2021-09-10
+
+- Fix prepare script reference in ejs template.
+
 ## v2.0.3
 
 **Release Date:** 2021-09-10
