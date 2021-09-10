@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v2.0.3
+
+**Release Date:** 2021-09-10
+
+- Convert `prepare.sh` to a Node script in each template for compatibility with different operating systems.
+- Update jest config dependency in TypeScript template for improved performance.
+
 ## v2.0.2
 
 **Release Date:** 2021-09-04
