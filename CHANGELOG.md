@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v2.0.5
+
+**Release Date:** 2021-09-11
+
+- Fix command interpreter in prepare scripts.
+- Catch unhandled rejections in prepare scripts.
+
 ## v2.0.4
 
 **Release Date:** 2021-09-10

@@ -9,7 +9,7 @@ NC='\033[0m'
 if [ -d ".git" ]
 then
    echo "${CYAN}Found local .git directory, installing husky pre-commit hook...${NC}\n"
-   rm -rf .husky/pre-commit && husky install && npx husky add .husky/pre-commit "npm run pre-commit"
+   rm -rf .husky/pre-commit && husky install && husky add .husky/pre-commit "npm run pre-commit"
 else
    echo "${CYAN}No local .git directory found, skipping husky install.${NC}\n"
    echo "${YELLOW}Tip: Pre-commit hooks with husky can only be installed at the root of a git repository.${NC}"
