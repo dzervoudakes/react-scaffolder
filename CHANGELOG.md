@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v2.0.6
+
+**Release Date:** 2021-09-19
+
+- Update Webpack configs for chunk split optimization.
+- Update `module` in TypeScript template config to `esnext`.
+
 ## v2.0.5
 
 **Release Date:** 2021-09-11
