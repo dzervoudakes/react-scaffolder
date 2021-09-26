@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v2.0.7
+
+**Release Date:** 2021-09-25
+
+- Optimize font imports in `index.html` template.
+- Update `stylelint` config for `at-rule` and `color-hex-value` changes.
+
 ## v2.0.6
 
 **Release Date:** 2021-09-19
