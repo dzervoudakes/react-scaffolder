@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v2.0.8
+
+**Release Date:** 2021-10-06
+
+- Update template dependencies.
+
 ## v2.0.7
 
 **Release Date:** 2021-09-25
