@@ -1,7 +1,7 @@
 **/.vscode
-**/.husky
 **/node_modules
 **/coverage
 **/dist
 **/docs
 **/.DS_Store
+generators/**/.husky

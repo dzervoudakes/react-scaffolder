@@ -28,7 +28,7 @@
     "lint": "node scripts/eslint",
     "lint:fix": "npm run lint -- --fix",
     "pre-commit": "lint-staged",
-    "prepare": "./scripts/prepare.sh",
+    "prepare": "husky install",
     "prepublishOnly": "./scripts/prepublish.sh",
     "test": "node scripts/test",
     "test:coverage": "npm test -- --coverage",
