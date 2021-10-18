@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v2.0.9
+
+**Release Date:** 2021-10-18
+
+- Clean up `prepare` script operation.
+
 ## v2.0.8
 
 **Release Date:** 2021-10-06
