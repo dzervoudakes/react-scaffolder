@@ -10,7 +10,6 @@
     "docs": "typedoc",
     "lint": "node -r ts-node/register scripts/eslint",
     "lint:fix": "npm run lint -- --fix",
-    "pre-commit": "lint-staged",
     "prepare": "ts-node scripts/prepare",
     "start": "cross-env NODE_ENV=development webpack serve",
     "stylelint": "ts-node scripts/stylelint",

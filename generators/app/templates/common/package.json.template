@@ -10,7 +10,6 @@
     "docs": "<% if (templateName === 'TypeScript') { %>typedoc<% } else { %>jsdoc -c ./jsdoc.config.js -r<% } %>",
     "lint": "node<% if (templateName === 'TypeScript') { %> -r ts-node/register<% } %> scripts/eslint",
     "lint:fix": "<%= cmd %> lint <% if (packageManager === 'npm') { %>-- <% } %>--fix",
-    "pre-commit": "lint-staged",
     "prepare": "<% if (templateName === 'TypeScript') { %>ts-<% } %>node scripts/prepare",
     "start": "cross-env NODE_ENV=development webpack-dev-server",
     "stylelint": "<% if (templateName === 'TypeScript') { %>ts-<% } %>node scripts/stylelint",

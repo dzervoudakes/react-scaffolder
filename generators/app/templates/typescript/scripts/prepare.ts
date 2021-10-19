@@ -21,7 +21,7 @@ process.on('unhandledRejection', (err) => {
     await commandSync('husky install');
     if (!fs.existsSync('.husky/pre-commit')) {
       const { stdout: hookResult } = await commandSync(
-        'husky add .husky/pre-commit "npm run pre-commit"',
+        'husky add .husky/pre-commit "npx lint-staged"',
         {
           shell: true
         }

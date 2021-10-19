@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v2.0.10
+
+**Release Date:** 2021-10-19
+
+- Use `npx` for `lint-staged` pre-commit hook.
+
 ## v2.0.9
 
 **Release Date:** 2021-10-18

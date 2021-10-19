@@ -1,6 +1,6 @@
 {
   "name": "generator-react-scaffolder",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "Scaffolding for new enterprise scale React applications on the fly.",
   "repository": {
     "type": "git",
@@ -27,7 +27,6 @@
   "scripts": {
     "lint": "node scripts/eslint",
     "lint:fix": "npm run lint -- --fix",
-    "pre-commit": "lint-staged",
     "prepare": "husky install",
     "prepublishOnly": "./scripts/prepublish.sh",
     "test": "node scripts/test",
