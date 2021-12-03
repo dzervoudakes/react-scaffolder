@@ -8,8 +8,9 @@
  * @packageDocumentation
  */
 import fs from 'fs';
-import { commandSync } from 'execa';
+
 import chalk from 'chalk';
+import { commandSync } from 'execa';
 
 process.on('unhandledRejection', (err) => {
   throw err;
