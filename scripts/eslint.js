@@ -1,8 +1,8 @@
 /**
  * @fileoverview Build script that runs eslint against all application script files.
  */
-const { ESLint } = require('eslint');
 const chalk = require('chalk');
+const { ESLint } = require('eslint');
 const ora = require('ora');
 
 process.on('unhandledRejection', (err) => {

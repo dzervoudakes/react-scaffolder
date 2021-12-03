@@ -1,6 +1,7 @@
 const path = require('path');
-const helpers = require('yeoman-test');
+
 const assert = require('yeoman-assert');
+const helpers = require('yeoman-test');
 
 describe('react scaffolder', () => {
   const generator = path.resolve(__dirname, '..', 'generators', 'app');

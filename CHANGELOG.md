@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v2.1.0
+
+**Release Date:** unreleased
+
+- Update template dependencies.
+- Set Node version requirement to `>= 16.13.1`.
+
 ## v2.0.10
 
 **Release Date:** 2021-10-19

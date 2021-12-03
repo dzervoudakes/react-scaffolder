@@ -1,6 +1,7 @@
-const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const extend = require('lodash/extend');
+const Generator = require('yeoman-generator');
+
 const jspkg = require('./templates/javascript/package.json');
 const tspkg = require('./templates/typescript/package.json');
 
