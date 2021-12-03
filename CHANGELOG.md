@@ -2,7 +2,7 @@
 
 ## v2.1.0
 
-**Release Date:** unreleased
+**Release Date:** 2021-12-02
 
 - Update template dependencies.
 - Set Node version requirement to `>= 16.13.1`.
