@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v2.1.1
+
+**Release Date:** 2021-12-02
+
+- Bump `@types/eslint` major version to fix `yarn` dependency resolution.
+
 ## v2.1.0
 
 **Release Date:** 2021-12-02
