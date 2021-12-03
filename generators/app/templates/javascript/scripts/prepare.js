@@ -6,8 +6,9 @@
  * if the project root is an active git repository.
  */
 const fs = require('fs');
-const { commandSync } = require('execa');
+
 const chalk = require('chalk');
+const { commandSync } = require('execa');
 
 process.on('unhandledRejection', (err) => {
   throw err;

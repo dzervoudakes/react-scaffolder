@@ -1,9 +1,9 @@
 /**
  * @fileoverview Build script that runs stylelint against all application style files.
  */
-const stylelint = require('stylelint');
 const chalk = require('chalk');
 const ora = require('ora');
+const stylelint = require('stylelint');
 
 process.on('unhandledRejection', (err) => {
   throw err;

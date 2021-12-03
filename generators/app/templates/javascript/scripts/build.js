@@ -1,9 +1,10 @@
 /**
  * @fileoverview Build script that compiles the application for production.
  */
-const webpack = require('webpack');
 const chalk = require('chalk');
 const ora = require('ora');
+const webpack = require('webpack');
+
 const webpackConfig = require('../webpack.config');
 
 process.on('unhandledRejection', (err) => {

@@ -1,4 +1,5 @@
 import { Route, Switch } from 'react-router-dom';
+
 import Home from '@src/pages/Home';
 import Missing from '@src/pages/Missing';
 
