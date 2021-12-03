@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Missing from '..';
 
@@ -7,9 +7,9 @@ describe('Missing', () => {
   it('renders the title and description', () => {
     render(
       <Router basename="/">
-        <Switch>
-          <Missing />
-        </Switch>
+        <Routes>
+          <Route path="*" element={<Missing />} />
+        </Routes>
       </Router>
     );
 

@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v2.2.0
+
+**Release Date:** unreleased
+
+- Upgrade major dependency versions.
+
 ## v2.1.1
 
 **Release Date:** 2021-12-02
