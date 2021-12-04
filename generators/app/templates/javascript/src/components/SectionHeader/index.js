@@ -1,1 +1,3 @@
-export { default } from './SectionHeader';
+import SectionHeader from './SectionHeader';
+
+export default SectionHeader;
