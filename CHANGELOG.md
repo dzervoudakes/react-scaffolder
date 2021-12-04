@@ -2,7 +2,7 @@
 
 ## v2.2.0
 
-**Release Date:** unreleased
+**Release Date:** 2021-12-03
 
 - Upgrade major dependency versions.
 - Implement necessary migrations for breaking changes.
