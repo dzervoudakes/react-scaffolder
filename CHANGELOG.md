@@ -2,7 +2,7 @@
 
 ## v2.3.0
 
-**Release Date:** unreleased
+**Release Date:** 2021-12-04
 
 - Upgrade `chalk`, `execa` and `ora` major dependencies.
 - Implement necessary migrations for ESM breaking changes.
