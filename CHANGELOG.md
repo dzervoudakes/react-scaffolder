@@ -1,5 +1,11 @@
 # React Scaffolder | Changelog
 
+## v2.2.1
+
+**Release Date:** 2021-12-03
+
+- Fix `nodeVersion` variable in generator.
+
 ## v2.2.0
 
 **Release Date:** 2021-12-03

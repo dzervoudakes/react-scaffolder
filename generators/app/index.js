@@ -58,7 +58,7 @@ module.exports = class extends Generator {
       cmd: isYarn ? 'yarn' : 'npm run',
       dependencies: pkg.dependencies,
       devDependencies: pkg.devDependencies,
-      nodeVersion: '14.6.0',
+      nodeVersion: '16.13.1',
       packageManager: isYarn ? 'yarn' : 'npm',
       packageManagerVersion: isYarn ? '1.22.4' : '6.14.7',
       templateName
