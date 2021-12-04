@@ -5,6 +5,7 @@
 **Release Date:** unreleased
 
 - Upgrade major dependency versions.
+- Implement necessary migrations for breaking changes.
 
 ## v2.1.1
 
