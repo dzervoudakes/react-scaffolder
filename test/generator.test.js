@@ -27,7 +27,7 @@ describe('react scaffolder', () => {
     `${applicationName}/webpack.config.js`
   ];
 
-  const node = '>= 14.6.0';
+  const node = '>= 16.13.1';
   const npm = '>= 6.14.7';
   const yarn = '>= 1.22.4';
 
