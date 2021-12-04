@@ -10,6 +10,7 @@ module.exports = {
       rules: {
         '@typescript-eslint/no-var-requires': OFF,
         'no-console': OFF,
+        'import/dynamic-import-chunkname': OFF,
         'jest/no-jest-import': OFF
       }
     }

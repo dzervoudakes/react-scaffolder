@@ -2,8 +2,7 @@
  * Build script that compiles the application for production.
  * @packageDocumentation
  */
-import chalk from 'chalk';
-import ora from 'ora';
+import inclusion from 'inclusion';
 import webpack from 'webpack';
 
 import webpackConfig from '../webpack.config';
@@ -12,34 +11,40 @@ process.on('unhandledRejection', (err) => {
   throw err;
 });
 
-const spinner = ora('Building for production...');
-spinner.start();
+(async () => {
+  // import esm modules
+  const chalk = (await inclusion('chalk')).default;
+  const ora = (await inclusion('ora')).default;
 
-webpack(webpackConfig, (err, stats) => {
-  spinner.stop();
+  const spinner = ora('Building for production...');
+  spinner.start();
 
-  if (err) {
-    throw err;
-  }
+  webpack(webpackConfig, (err, stats) => {
+    spinner.stop();
 
-  process.stdout.write(
-    `${stats?.toString({
-      colors: true,
-      modules: false,
-      children: false,
-      chunks: false,
-      chunkModules: false
-    })}\n\n`
-  );
+    if (err) {
+      throw err;
+    }
 
-  if (stats?.hasErrors()) {
-    console.log(chalk.red('Build failed with errors.\n'));
-    process.exit(1);
-  }
+    process.stdout.write(
+      `${stats?.toString({
+        colors: true,
+        modules: false,
+        children: false,
+        chunks: false,
+        chunkModules: false
+      })}\n\n`
+    );
 
-  console.log(
-    chalk.cyan(
-      'The application has been bundled successfully and is ready for distribution.\n'
-    )
-  );
-});
+    if (stats?.hasErrors()) {
+      console.log(chalk.red('Build failed with errors.\n'));
+      process.exit(1);
+    }
+
+    console.log(
+      chalk.cyan(
+        'The application has been bundled successfully and is ready for distribution.\n'
+      )
+    );
+  });
+})();

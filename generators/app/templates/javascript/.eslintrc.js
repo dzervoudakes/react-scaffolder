@@ -9,6 +9,7 @@ module.exports = {
       files: ['scripts/*.js'],
       rules: {
         'no-console': OFF,
+        'import/dynamic-import-chunkname': OFF,
         'jest/no-jest-import': OFF
       }
     }

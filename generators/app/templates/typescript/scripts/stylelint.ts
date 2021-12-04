@@ -2,8 +2,7 @@
  * Build script that runs stylelint against all application style files.
  * @packageDocumentation
  */
-import chalk from 'chalk';
-import ora from 'ora';
+import inclusion from 'inclusion';
 import stylelint from 'stylelint';
 
 process.on('unhandledRejection', (err) => {
@@ -11,6 +10,10 @@ process.on('unhandledRejection', (err) => {
 });
 
 (async (): Promise<void> => {
+  // import esm modules
+  const chalk = (await inclusion('chalk')).default;
+  const ora = (await inclusion('ora')).default;
+
   const spinner = ora('Linting all styles...');
   spinner.start();
 

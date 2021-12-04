@@ -14,7 +14,8 @@
     "outDir": "dist",
     "paths": {
       "@src/*": ["src/*"],
-      "react-dom": ["@hot-loader/react-dom"]
+      "react-dom": ["@hot-loader/react-dom"],
+      "inclusion": ["typings/inclusion"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": false,
@@ -30,5 +31,5 @@
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"],
-  "typeRoots": ["node_modules/@types"]
+  "typeRoots": ["node_modules/@types", "typings"]
 }

@@ -9,19 +9,22 @@
  */
 import fs from 'fs';
 
-import chalk from 'chalk';
-import { commandSync } from 'execa';
+import inclusion from 'inclusion';
 
 process.on('unhandledRejection', (err) => {
   throw err;
 });
 
 (async () => {
+  // import esm modules
+  const chalk = (await inclusion('chalk')).default;
+  const { execaCommandSync } = await inclusion('execa');
+
   if (fs.existsSync('.git')) {
     console.log(chalk.cyan('Found local .git directory, running husky install...\n'));
-    await commandSync('husky install');
+    await execaCommandSync('husky install');
     if (!fs.existsSync('.husky/pre-commit')) {
-      const { stdout: hookResult } = await commandSync(
+      const { stdout: hookResult } = await execaCommandSync(
         'husky add .husky/pre-commit "npx lint-staged"',
         {
           shell: true

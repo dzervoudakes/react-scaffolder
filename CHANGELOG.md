@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v2.3.0
+
+**Release Date:** unreleased
+
+- Upgrade `chalk`, `execa` and `ora` major dependencies.
+- Implement necessary migrations for ESM breaking changes.
+
 ## v2.2.1
 
 **Release Date:** 2021-12-03

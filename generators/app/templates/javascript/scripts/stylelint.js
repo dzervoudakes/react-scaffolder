@@ -1,8 +1,6 @@
 /**
  * @fileoverview Build script that runs stylelint against all application style files.
  */
-const chalk = require('chalk');
-const ora = require('ora');
 const stylelint = require('stylelint');
 
 process.on('unhandledRejection', (err) => {
@@ -10,6 +8,10 @@ process.on('unhandledRejection', (err) => {
 });
 
 (async () => {
+  // import esm modules
+  const chalk = (await import('chalk')).default;
+  const ora = (await import('ora')).default;
+
   const spinner = ora('Linting all styles...');
   spinner.start();
 

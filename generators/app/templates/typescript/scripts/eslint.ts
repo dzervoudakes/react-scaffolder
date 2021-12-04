@@ -2,15 +2,18 @@
  * Build script that runs eslint against all application script files.
  * @packageDocumentation
  */
-import chalk from 'chalk';
 import { ESLint } from 'eslint';
-import ora from 'ora';
+import inclusion from 'inclusion';
 
 process.on('unhandledRejection', (err) => {
   throw err;
 });
 
 (async () => {
+  // import esm modules
+  const chalk = (await inclusion('chalk')).default;
+  const ora = (await inclusion('ora')).default;
+
   const spinner = ora('Linting all scripts...');
   spinner.start();
 
