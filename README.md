@@ -17,6 +17,12 @@ While tools like Create React App and Next.js are objectively awesome, over time
 
 I have since decided to share this tool with the open source community. Love it or loathe it, I will not be happy or offended either way. 🤷‍♂️
 
+## Prerequisites
+
+- **Node version:** While each template should still work with `node ^14.6.0`, moving forward the default version is `>= 16.13.1`.
+- **NPM users:** Updates to each template moving forward will be focused on optimizing for `npm >= 7.x`, though it should remain backwards compatible with `npm ^6.14.7`.
+- **Yarn users:** Current templates are optimized for `yarn ^1.22.4`, and no testing has been done for `yarn >= 2.x` as of yet.
+
 ## Using the Generator
 
 This scaffolding tool is a [yeoman](https://yeoman.io/) generator, and requires that `yo` be installed. After installing `yo`, run the following commands.
@@ -77,10 +83,8 @@ yo react-scaffolder --skip-install
 ## What's Not Included
 
 ❌ **Script ejection:** There are links to the default webpack config on github in each `webpack.*.js` file.\
-❌ **Environment variables:** The boilerplate is agnostic to your preferred implementation for consuming env vars.
+❌ **Environment variables:** The boilerplate is agnostic to your preferred implementation for consuming environment variables.
 
 ## Disclaimers
 
-- **NPM users:** Updates to each template moving forward will be focused on optimizing for `npm >= 7.x`, though it should remain backwards compatible with `npm ^6.14.7`.
-- **Yarn users:** Current templates are optimized for `yarn ^1.22.4`, and no testing has been done for `yarn >= 2.x` as of yet.
 - **Internet Explorer:** Quite frankly, if you are still supporting IE in the 2020s, you are wrong. The templates this tool will generate have not been tested in IE, and they never will be, so use at your own risk there.
