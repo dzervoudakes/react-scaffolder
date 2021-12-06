@@ -109,6 +109,8 @@ module.exports = class extends Generator {
   }
 
   install() {
+    // yeoman test does not initialize install method; tests performed manually
+    /* istanbul ignore next */
     if (!this.options['skip-install']) {
       const { applicationName, yarn } = this.data;
 
