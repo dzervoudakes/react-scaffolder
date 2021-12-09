@@ -56,7 +56,6 @@ describe('react scaffolder', () => {
       `${applicationName}/typedoc.json`,
       `${applicationName}/typings/inclusion/index.d.ts`,
       `${applicationName}/src/globals.d.ts`,
-      `${applicationName}/src/jest-dom.d.ts`,
       `${applicationName}/src/polyfills.ts`,
       `${applicationName}/src/index.tsx`
     ];

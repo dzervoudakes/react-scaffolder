@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v2.3.1
+
+**Release Date:** 2021-12-08
+
+- Remove unneeded `@testing-library/jest-dom` dependency and `jest-dom.d.ts` declaration.
+- Upgrade `typedoc` and migrate config.
+
 ## v2.3.0
 
 **Release Date:** 2021-12-04

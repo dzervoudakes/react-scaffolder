@@ -31,5 +31,5 @@
   },
   "exclude": ["node_modules"],
   "include": ["**/*.ts", "**/*.tsx"],
-  "typeRoots": ["node_modules/@types", "typings"]
+  "typeRoots": ["node_modules/@types"]
 }
