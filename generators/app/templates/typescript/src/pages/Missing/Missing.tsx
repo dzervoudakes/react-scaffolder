@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 
 import Layout from '@src/components/Layout';
-import SectionHeader from '@src/components/SectionHeader';
+import PageHeader from '@src/components/PageHeader';
 
 const Missing: React.FC = () => (
   <Layout>
-    <SectionHeader title="That's a 404" description="You must be lost..." />
+    <PageHeader title="That's a 404" description="You must be lost..." />
     <p>
       <Link to="/" className="link-purple">
         Click here

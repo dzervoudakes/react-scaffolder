@@ -1,5 +1,12 @@
 # React Scaffolder | Changelog
 
+## v2.3.2
+
+**Release Date:** 2021-12-12
+
+- Move `main` tag to `App.(j|t)sx` files.
+- Rename `SectionHeader` component to `PageHeader`.
+
 ## v2.3.1
 
 **Release Date:** 2021-12-08

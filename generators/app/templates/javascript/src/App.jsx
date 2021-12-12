@@ -5,7 +5,9 @@ import Routes from './routes';
 const App = () => (
   <>
     <Header />
-    <Routes />
+    <main>
+      <Routes />
+    </main>
     <Footer />
   </>
 );

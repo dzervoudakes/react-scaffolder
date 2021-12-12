@@ -1,5 +1,5 @@
 import './Layout.scss';
 
-const Layout: React.FC = ({ children }) => <main className="layout">{children}</main>;
+const Layout: React.FC = ({ children }) => <div className="layout">{children}</div>;
 
 export default Layout;

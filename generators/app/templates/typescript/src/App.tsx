@@ -6,7 +6,9 @@ import Routes from './routes';
 const App: React.FC = () => (
   <>
     <Header />
-    <Routes />
+    <main>
+      <Routes />
+    </main>
     <Footer />
   </>
 );

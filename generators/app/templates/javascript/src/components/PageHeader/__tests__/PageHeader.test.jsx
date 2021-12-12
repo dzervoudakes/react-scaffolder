@@ -1,15 +1,15 @@
 import { render, screen } from '@testing-library/react';
 
-import SectionHeader from '..';
+import PageHeader from '..';
 
-describe('SectionHeader', () => {
+describe('PageHeader', () => {
   const props = {
     title: 'Foo',
     description: 'Bar'
   };
 
   it('renders the title and description', () => {
-    render(<SectionHeader {...props} />);
+    render(<PageHeader {...props} />);
 
     expect(screen.getByText('Foo')).toBeInTheDocument();
     expect(screen.getByText('Bar')).toBeInTheDocument();

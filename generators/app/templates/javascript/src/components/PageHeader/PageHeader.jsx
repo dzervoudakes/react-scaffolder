@@ -1,18 +1,18 @@
 import PropTypes from 'prop-types';
-import './SectionHeader.scss';
+import './PageHeader.scss';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 };
 
-const SectionHeader = ({ title, description }) => (
-  <div className="section-header">
+const PageHeader = ({ title, description }) => (
+  <div className="page-header">
     <h2>{title}</h2>
     <p className="t-heavy">{description}</p>
   </div>
 );
 
-SectionHeader.propTypes = propTypes;
+PageHeader.propTypes = propTypes;
 
-export default SectionHeader;
+export default PageHeader;

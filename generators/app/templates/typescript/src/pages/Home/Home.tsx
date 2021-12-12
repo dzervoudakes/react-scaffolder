@@ -1,9 +1,9 @@
 import Layout from '@src/components/Layout';
-import SectionHeader from '@src/components/SectionHeader';
+import PageHeader from '@src/components/PageHeader';
 
 const Home: React.FC = () => (
   <Layout>
-    <SectionHeader title="Welcome to your new React App!" description="Made with ❤️" />
+    <PageHeader title="Welcome to your new React App!" description="Made with ❤️" />
     <p>
       Reference <code>README.md</code> for build instructions.
     </p>

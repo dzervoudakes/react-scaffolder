@@ -5,7 +5,7 @@ const propTypes = {
   children: PropTypes.node.isRequired
 };
 
-const Layout = ({ children }) => <main className="layout">{children}</main>;
+const Layout = ({ children }) => <div className="layout">{children}</div>;
 
 Layout.propTypes = propTypes;
 
